@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Nicholas Hayek</title>
+<script src="https://kit.fontawesome.com/28200a00ab.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    * {
+        font-family: 'Georgia', 'Baskerville Old Face', 'Times New Roman', Times, serif;
+    }
+    .top {
+        color: rgb(51, 51, 51);
+        margin: 1cm;
+    }
+
+    body {
+        background-color: rgb(255, 228, 202);
+        margin: 1cm;
+    }
+
+    a {
+        border-style: solid;
+        border-width: 1.5px;
+        border-radius: 5px;
+        border-color: black;
+        padding: 10px 30px;
+        background-color: rgb(255, 228, 202);
+        font-size: 14pt;
+        transition-duration: .4s;
+        text-decoration: none;
+        color: black;
+    }
+
+    .inline {
+        padding: 3px;
+        background-color: rgb(255, 228, 202);
+    }
+
+    a:hover {
+        background-color: rgb(255, 205, 158);
+    }
+    a:visited {
+        color: black;
+    }
+    a:active{
+        background-color: rgb(255, 177, 104);
+        
+    }
+
+    p {
+        margin: 1cm;
+        font-size: 14pt; 
+        line-height: 1.8;
+    }
+
+    .buttonrow{
+        text-align: center;
+        margin-top: 4cm;
+    }
+
+
+    .butt{
+        border: transparent;
+        border-width: 1.5px;
+        border-radius: 5px;
+        border-color: black;
+        padding: 15px 10px;
+        background-color: rgb(255, 228, 202);
+        transition-duration: .4s;
+        text-decoration: none;
+        color: black;
+    }
+    .butt:hover {
+        background-color: rgb(255, 205, 158);
+    }
+    .butt:active{
+        background-color: rgb(255, 177, 104);}
+
+    .butt:focus span{
+        display: none;
+    }
+    .butt:focus:before {
+        content: "Ah! You stole me email!";
+        font-size: 14pt;
+    }
+
+</style>
+
+
+<body>
+
+    <h1 class="top">
+        Nicholas Hayek
+    </h1>
+
+    <p>
+        is an undergraduate at McGill University in beautiful <a href="https://en.wikipedia.org/wiki/Montreal" class="inline" target="_blank">Montreal, Quebec.</a> My spare time
+        is spent generously at the piano, often at a blackboard, and occationally in service
+        to my university's <a href="https://www.thetribune.ca/?s=Nicholas+Hayek&authorSearch=1" class="inline" target="_blank">newspaper</a>. You can find me reading one of 
+        <a href="https://en.wikipedia.org/wiki/Amsterdam_(novel)" class="inline" target="_blank">Ian McEwan</a>, Hemmingway, or Austen's works near the fountain in <a href="https://www.google.com/maps/place/Saint-Louis+Square/@45.5169784,-73.5725182,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91bb5422a897f:0x247ab8001d20d276!8m2!3d45.5169784!4d-73.5699433!16s%2Fm%2F0b6kn7y?hl=en&entry=ttu" class="inline" target="_blank">St. Louis Square</a>,
+        typing up my math homework, cursing the plight of the <a href="https://bleacherreport.com/articles/2625556-apples-siri-pinpoints-browns-stadium-as-sadness-in-cleveland" target="_blank" class="inline">Cleveland Browns</a>,
+        or buried somewhere in the basement of <a href="https://www.thetribune.ca/opinion/point-counterpoint-a-debate-on-the-aesthetic-of-burnside-hall/" class="inline" target="_blank">a brutalist building</a>.
+
+    <p>    
+    
+    <p class="buttonrow">
+        <a href = notes.html>
+            Course Notes
+        </a>
+        &nbsp&nbsp&nbsp
+        <a href="">
+            Bits & Bobs
+        </a>
+        <br><br>
+        <a href="https://www.linkedin.com/in/nicholas-hayek-b24b1a243/" style="padding: 15px 10px; border: transparent;" target="_blank">
+            <i class="fa-brands fa-linkedin fa-2xl" style="color: #3ca0d3;"></i>
+        </a>
+        &nbsp&nbsp
+        <a href="https://www.instagram.com/nicholas_hayek/" style="padding: 15px 10px; border: transparent;" target="_blank">
+            <i class="fa-brands fa-instagram fa-2xl" style="color: #3ca0d3;"></i>
+        </a>
+        &nbsp&nbsp
+        
+        <button onclick="copyText()" class="butt">
+            <span><i class="fa-solid fa-envelopes-bulk fa-2xl" style="color: #3ca0d3;"></i></span>
+        </button>
+        <script>
+            function copyText() {
+                navigator.clipboard.writeText
+                    ("nicholas.hayek@mail.mcgill.ca");
+            }
+        </script>
+
+    </p>
+</body>
+</html>
