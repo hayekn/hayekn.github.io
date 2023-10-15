@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=.5">
+<script src="https://kit.fontawesome.com/28200a00ab.js" crossorigin="anonymous"></script>
+<head>
+<title>Latex Template</title>
+<link rel="icon" type="image/x-icon" href="dice.svg">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap');
+</style>
+    
+<style>
+    * {
+        font-family: 'Georgia', 'Baskerville Old Face', 'Times New Roman', Times, serif;
+    }
+    .top {
+        color: rgb(51, 51, 51);
+        margin: 1cm;
+    }
+
+    body {
+        background-color: rgb(255, 228, 202);
+        margin: 1cm;
+    }
+
+    a {
+        border-style: solid;
+        border-width: 1.5px;
+        border-radius: 5px;
+        border-color: black;
+        padding: 10px 30px;
+        background-color: rgb(255, 228, 202);
+        font-size: 14pt;
+        transition-duration: .4s;
+        text-decoration: none;
+        color: black;
+        margin: 1%;
+    }
+
+    .inline {
+        padding: 3px;
+        background-color: rgb(255, 228, 202);
+    }
+
+    a:hover {
+        background-color: rgb(255, 205, 158);
+    }
+    a:visited {
+        color: black;
+    }
+    a:active{
+        background-color: rgb(255, 177, 104);
+        
+    }
+
+    p {
+        margin: 1cm;
+        font-size: 14pt; 
+        line-height: 1.8;
+    }
+
+    .buttonrow{
+        text-align: center;
+        margin-top: 4cm;
+    }
+
+    code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  font-size: 12pt;
+  padding: 3px;
+  line-height: 1.8;
+        }
+
+    i{
+        font-family: 'Courier Prime', courier, monospace;
+        font-size: 11pt;
+    }
+
+</style>
+
+
+<body>
+    <h1 class="top">
+        Latex Template
+    </h1>
+    <p class="buttonrow">
+        <a href="tex\lecturenew.cls" download>
+            Class
+        </a>
+        <br><br>
+        <a href=tex\sample.pdf style="border-style: dashed;" target="_blank">
+            Sample PDF
+        </a>
+        <a href="tex\sample.tex" style="border-style: dashed;">
+            Sample Tex File
+        </a>
+    </p>
+    <p>
+        Include this .cls file in the folder containing your latex document, and define your document class as <code>\documentclass[notoc/toc]{lecturenew}</code> (pick either notoc or toc to specify whether you want a table of contents). Your preamble should look like
+        <br><br>
+        <code>
+        \pagenumbering{gobble} <br>
+        \title{<i>Party Rockers in the House Tonight</i>} <br>
+        \subtitle{<i>ft. Martha Stewart</i>} <br>
+        \speaker{<i>Me</i>} <br>
+        \author{<i>God</i>}</code>
+        <br><br>with <code>\title</code> and <code>\speaker</code> manditory. When you compile, your definition for <code>\title</code> will appear in the header on even pages, on the left side. To define a header for odd-pages (appearing on the right), use the following command:
+        <br><br>
+        <code>\renewcommand\partcontent{<i>Current Section</i>}</code>
+        <br><br>
+        This will define the header for all subsequent pages until it is redefined (or eliminated, by using an empty argument). You can define page numbers, too, with <br><br>
+        <code>
+        	\pagenumbering{arabic} <br>
+	        \setcounter{page}{1}
+        </code>
+        <br><br>wherever you first want page numbers to start. They will appear in the header opposite the side where any text might also appear. You can reuse the <code>\pagenumbering{gobble}</code> command from above to clear page numbers.
+        <br><br>This class is preloaded with a <strong>lot</strong>, and I mean a lot, of packages and shorthand commands I find useful. Among the fun ones are: <code>xfrac</code>, which gets you some nice slant fraction action, <code>cancel</code>, which can draw lines through expressions (with arrows even), <code>epigraph</code>, which will paste a spot below the TOC to put a quote from your favorite professor, and <code>stmaryrd</code>, or St. Mary's Road, which has a bunch of cooler-than-normal looking brackets and such. As for framing, I've defined the <code>mdframed</code> style <code>theorem</code> to be a green bubble with some borders, and this can be edited manually. To use: <code>\begin{mdframed}[style=theorem] ... \end{mdframed}</code>
+        <br><br>
+        Finally, the page content will shift from left to right as you go along, and the extra real estate created by this will accomodate some margin text, which can be inserted using <code>\margintext{}</code>  
+    </p>

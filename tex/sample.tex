@@ -1,0 +1,37 @@
+\documentclass[toc]{lecturenew}
+\pagenumbering{gobble}
+
+%HEADING{
+	\title{Sample Notes}
+	\subtitle{M\footnotesize c\normalsize Gill University}
+	\speaker{Nicholas Hayek}
+	\author{Based on lectures by The Wiggles}
+	\onehalfspacing
+	\setcounter{secnumdepth}{-1}
+	\setcounter{tocdepth}{2}
+	%}
+%EXTRA PACKAGES AND SHORTCUTS{
+	\usepackage[framemethod=TikZ, xcolor]{mdframed}
+	\newcommand{\theorem}[1]{\begin{mdframed}[style=theorem]
+			#1
+	\end{mdframed}}
+	
+	\newcommand{\Ber}{\text{Ber}}
+	\newcommand{\Geom}{\text{Geom}}
+	\newcommand{\Bin}{\text{Bin}}
+	\newcommand{\Hyp}{\text{Hyp}}
+	\newcommand{\Unif}{\text{Unif}}
+	\newcommand{\Var}{\text{Var}}
+	\newcommand{\E}{\mathbb{E}}
+	%}
+\begin{document}
+	\newpage
+	\part{I \quad Introduction}
+	\renewcommand\partcontent{Introduction}
+	\pagenumbering{arabic}
+	\setcounter{page}{3}
+	\section{\underline{The Meaning of Life}}
+	$$\P\left(\bigcup_{i=1}^nA_i\right) = \sum_{k=1}^{n} (-1)^{k-1}\underbrace{\sum\P(A_{i_1}A_{i_2} ...A_{i_k})}_{1 \leq i_1 < i_2 < ... < i_k \leq n}$$
+	\subsection{Let's Talk About It}
+
+\end{document}
