@@ -5,7 +5,11 @@
 <head>
 <title>Bits & Bobs</title>
 <link rel="icon" type="image/x-icon" href="dice.svg">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 </head>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 <style>
     * {
         font-family: 'Georgia', 'Baskerville Old Face', 'Times New Roman', Times, serif;
@@ -61,9 +65,8 @@
     }
 
     .albumimg {
-        width: 12%;
-        margin: 15px;
-        border-radius: 7px;
+        width: 70%;
+        border-radius: 8px;
     }
 
 
@@ -82,8 +85,57 @@
 
     audio{
         background-color: rgb(255, 228, 202);
-        color: rgb(255, 228, 202);;
+        color: rgb(255, 228, 202);
     }
+
+    .barry {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        font-size: 14pt; 
+        line-height: 1.8;
+        }
+
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; }
+        .div3 { grid-area: 1 / 3 / 2 / 4; }
+    
+    .recording {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 12px;
+        grid-row-gap: 0px;
+        font-size: 12pt; 
+        line-height: 1.8;
+        }
+
+    .div4 { grid-area: 1 / 1 / 2 / 2; }
+    .div5 { grid-area: 1 / 2 / 2 / 3; }
+    .div6 { grid-area: 1 / 3 / 2 / 4; }
+
+    .albums {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 18px;
+        grid-row-gap: 18px;
+        font-size: 12pt; 
+        line-height: 1.8;
+    }
+
+    .div7 { grid-area: 1 / 1 / 2 / 2; }
+    .div8 { grid-area: 1 / 2 / 2 / 3; }
+    .div9 { grid-area: 1 / 3 / 2 / 4; }
+    .div10 { grid-area: 1 / 4 / 2 / 5; }
+    .div11 { grid-area: 1 / 5 / 2 / 6; }
+    .div12 { grid-area: 2 / 1 / 3 / 2; }
+    .div13 { grid-area: 2 / 2 / 3 / 3; }
+    .div14 { grid-area: 2 / 3 / 3 / 4; }
+    .div15 { grid-area: 2 / 4 / 3 / 5; }
+    .div16 { grid-area: 2 / 5 / 3 / 6; }
 </style>
 
 
@@ -93,49 +145,94 @@
         Bits & Bobs
     </h1>
     
-    <p style="text-align: center;">
-    <a href="https://www.cantorsparadise.com/math-based-decision-making-the-secretary-problem-a30e301d8489" class="aim" target="_blank">
-        <img src="images/secretary-modified.png" style="width: 50%;"> 
-    </a>
-    </p>
+    <div style="overflow:hidden; padding: 1cm;" >
+            <a href="https://www.cantorsparadise.com/math-based-decision-making-the-secretary-problem-a30e301d8489" class="aim" target="_blank" style="float: left;">
+                <img src="images/secretary-modified.png" style="width: 95%;"> 
+            </a>
+            <p style="text-align: justify;">
+            Suppose you, a mathematician, are trying to find love (we must suspend reality for this). Suppose further that an arbitrary \(N\) amount of people are lining up to see if you'll pick them, but you don't know who exactly is the best among them. How might you optimize the probability that, supposing your soulmate is in line, you pick him\her? The answer to this (initial) question is a somewhat interesting: you interview and reject \(k\) candidates, and then pick the first \((k+i)^{th}\) candidate who is better than all those previous. What is <i>very</i> interesting is the fact that, if \(k\) is picked ideally, the odds of choosing your soulmate are approximately \(\frac{1}{e}\), and what's more, the ideal ratio of \(\frac{k}{N}\) is also \(\frac{1}{e}\)! Here is a rough sketch of the proof:
+            \[
+            \begin{array}{rl}
+            \mathbb{P}(\text{Soulmate chosen}) =& \;  \mathbb{P}(\text{Soulmate chosen in first interview after rejects})\\
+            +&  \;  \mathbb{P}(\text{Soulmate chosen in second interview after rejects})\\
+            \vdots&\\
+            +&  \;  \mathbb{P}(\text{Soulmate chosen in ${N-k}^{th}$ interview after rejects})\\
+            =& \sum_{i=1}^{N-k} \mathbb{P}(\text{Soulmate chosen in $i^{th}$ interview after rejects})
+	        \end{array}
+            \]
+            We can apply a little conditional probability as follows:
+            \[\sum_{i=1}^{N-k}\mathbb{P}(S \text{ chosen in interview } i) = \sum_{i=1}^{N-k}\mathbb{P}(\text{Given that }S_i = S, \; S_i \text{ is chosen })\mathbb{P}(S_i = S)\]
+            where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \(\frac{1}{N}\). If \(S_i\) is given to be the one, they are chosen only if the lovliest lover thus far was insta-rejected (otherwise, he\she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\text{ chosen }|S_i = S) = \frac{k}{k+i-1}\). 
+            \[\mathbb{P}(S \text{ is chosen}) = \sum_{i=1}^{N-k}\mathbb{P}(S \text{ chosen in interview } i) = \sum_{i=1}^{N-k}\frac{k}{N(k+i-1)}\]
+            One can express this summation, using some calculus, as an approximation of a Reimman integral, as follows:
+            \[m \int_{m}^{1-\varepsilon}\frac{1}{x}dx = m\ln(x)\left|_{m}^{1-\varepsilon}\right. = m\ln(1-\epsilon) - m\ln(m)= -m\ln(m)\]
+            where \(m\) is the ratio \(\frac{k}{N}\) as \(N \to \infty\) (and by turns, \(k\) as well). When this expression is maximixed by differentiating and setting to 0, one yields
+            <p style="text-align: center;">
+            \(\frac{k}{N} = \frac{1}{e} \) and the probability of picking your soulmate with the above-defined ratio is also \(\frac{1}{e}\). That's almost 37%! Out of infinte choice!
+            </p>
+            </p>
+    </div>
+    <br>
     <hr color="black">
     <p style="text-align: center;">
         <i class="fa-solid fa-radio fa-2xl" style="color: #000;"></i>
     </p>
-    <p>
-        <a href="https://music.apple.com/ca/album/small-change-remastered/1485074801" target="_blank" class="aim">
-            <img src="images/smallchange.jpg" class="albumimg">
-        </a>
-        <a href="https://music.apple.com/us/album/im-your-man/511065875" target="_blank" class="aim">
-            <img src="images/imyourman.jpg" class="albumimg">
-        </a>
-        <a href="https://music.apple.com/us/album/paul-simon-bonus-tracks-edition/380588824" target="_blank" class="aim">
-            <img src="images/paulsimon.jpg" class="albumimg">
-        </a>
-        <a href="https://music.apple.com/us/album/young-gifted-and-black/934216863" target="_blank" class="aim">
-            <img src="images/aretha.jpg" class="albumimg">
-        </a>
-        <a href="https://music.apple.com/us/album/mule-variations-remastered/1485070836" target="_blank" class="aim">
-            <img src="images/mule.jpg" class="albumimg">
-        </a>
-        <a href="https://music.apple.com/us/album/blood-on-the-tracks/158320766" target="_blank" class="aim">
-            <img src="images/dylan.jpg" class="albumimg">
-        </a>
-        <a href="https://music.apple.com/us/album/hunky-dory-2015-remaster/1039798000" target="_blank" class="aim">
-            <img src="images/hunky.jpg" class="albumimg">
-        </a>
-        <a href="https://music.apple.com/us/album/an-insatiable-high/1443141169" target="_blank" class="aim">
-            <img src="images/insatiablehigh.jpg" class="albumimg">
-        </a>
-        <a href="https://music.apple.com/us/album/silk-soul/209415965" target="_blank" class="aim">
-            <img src="images/silksoul.webp" class="albumimg">
-        </a>
-        <a href="https://music.apple.com/us/album/there-goes-rhymin-simon-bonus-tracks-edition/380589462" target="_blank" class="aim">
-            <img src="images/rhyminsimon.jpg" class="albumimg">
-        </a>
-        <p style="text-align: center;">
-        <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/6v8mOtpRlXbG3BOauqPRHC?utm_source=generator&theme=0" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </p>
+
+    <div class="albums">
+        <div class="div7">
+            <a href="https://music.apple.com/ca/album/small-change-remastered/1485074801" target="_blank" class="aim">
+                <img src="images/smallchange.jpg" class="albumimg">
+            </a>
+        </div>
+        <div class="div8">
+            <a href="https://music.apple.com/us/album/im-your-man/511065875" target="_blank" class="aim">
+                <img src="images/imyourman.jpg" class="albumimg">
+            </a>
+        </div>
+        <div class="div9">
+            <a href="https://music.apple.com/us/album/paul-simon-bonus-tracks-edition/380588824" target="_blank" class="aim">
+                <img src="images/paulsimon.jpg" class="albumimg">
+            </a>
+        </div>
+        <div class="div10">
+            <a href="https://music.apple.com/us/album/young-gifted-and-black/934216863" target="_blank" class="aim">
+                <img src="images/aretha.jpg" class="albumimg">
+            </a>
+        </div>
+        <div class="div11">
+            <a href="https://music.apple.com/us/album/mule-variations-remastered/1485070836" target="_blank" class="aim">
+                <img src="images/mule.jpg" class="albumimg">
+            </a>
+        </div>
+        <div class="div12">
+            <a href="https://music.apple.com/us/album/blood-on-the-tracks/158320766" target="_blank" class="aim">
+                <img src="images/dylan.jpg" class="albumimg">
+            </a>
+        </div>
+        <div class="div13">
+            <a href="https://music.apple.com/us/album/hunky-dory-2015-remaster/1039798000" target="_blank" class="aim">
+                <img src="images/hunky.jpg" class="albumimg">
+            </a>
+        </div>
+        <div class="div14">
+            <a href="https://music.apple.com/us/album/an-insatiable-high/1443141169" target="_blank" class="aim">
+                <img src="images/insatiablehigh.jpg" class="albumimg">
+            </a>
+        </div>
+        <div class="div15">
+            <a href="https://music.apple.com/us/album/silk-soul/209415965" target="_blank" class="aim">
+                <img src="images/silksoul.webp" class="albumimg">
+            </a>
+        </div>
+        <div class="div16">
+            <a href="https://music.apple.com/us/album/there-goes-rhymin-simon-bonus-tracks-edition/380589462" target="_blank" class="aim">
+                <img src="images/rhyminsimon.jpg" class="albumimg">
+            </a>
+        </div>
+    </div>
+
+    <p style="text-align: center;">
+    <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/6v8mOtpRlXbG3BOauqPRHC?utm_source=generator&theme=0" width="40%" height="230" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </p>
     <hr color="black">
 
@@ -143,33 +240,42 @@
         Some years ago I created a virtual instrument using a model B Steinway I had available to me. If you happen to use the DAW <a href="https://www.reasonstudios.com/" class="inline" target="_blank">Reason</a>, in <a href="https://mcgill-my.sharepoint.com/:u:/g/personal/nicholas_hayek_mail_mcgill_ca/EfAcfL2cuSRJom7Nsg9iwS0BZ5mXprXEn4m9uCDn4cgKdw?e=ciHIHP" class="inline" target="_blank">this zip file</a> you'll find an .sxt <a href="https://www.reasonstudios.com/en/reason/instruments/nn-xt" class="inline" target="_blank">instrument</a> compatible with Reason, along with all the 416 individual clip recordings of a piano from my hometown. Below are some audio samples of a robot (credits to <a href="https://bushgrafts.com/" class="inline" target="_blank">Doug McKenzie</a> for the midi files) playing it.
         <br><br>
     </p>
-    <p style="text-align: left; width: 18%; float: right; font-size: 10pt; text-align: end;">
-            <br><br><br><br>for gearheads: KSM 137 overheads, TLM102s close-miked, thru a couple Pheonix preamps modded inside an API lunchbox. All converted with a MOTU a/d.
-    </p>
-    <img src="images/piano.HEIC" style="border-radius: 10px; width: 45%; max-width: 400px; float:right;">
 
-    <p style="margin-left: 10%; text-align: left; width: 100%;">
-        Georgia on my Mind
-        <br>
-        <audio src="audio/georgia.wav" controls style="width: 25%;"></audio>
-        <br>
-        For Sentimental Reasons
-        <br>
-        <audio src="audio/sentimental.wav" controls style="width: 25%;"></audio>
-        <br>
-        My Funny Valentine
-        <br>
-        <audio src="audio/funnyval.wav" controls style="width: 25%;"></audio>
-    </p>
-    <hr color="black">
-    <p style="float: right; width: 40%; margin-right: 5%; max-width: 35%; font-size: 12pt;" >
-        Some required viewing. Taken from lectures at the Royal Conservatory by the late great <a href="https://en.wikipedia.org/wiki/Barry_Harris" class="inline" style="font-size: 12pt;">Barry Harris</a> (left: a discussion of and-beats, playing "out"; right: jabs at George Sheering, McGill, and wide voicings).
-    </p>
-    <div style="text-align: center;">
-        <video src="video/theand.mp4" controls style="border-radius: 10px; width: 26%; max-width: 380px;" poster="images/thumbnailand.PNG"></video>
-        <video src="video/bigchords.mp4" controls style="border-radius: 10px; width: 27%; max-width: 400px;" poster="images/thumbnailbig.PNG"></video>
+    <div class="recording">
+        <div class="div4" style="text-align: center;">
+            Georgia on my Mind
+            <br>
+            <audio src="audio/georgia.wav" controls></audio>
+            <br>
+            For Sentimental Reasons
+            <br>
+            <audio src="audio/sentimental.wav" controls></audio>
+            <br>
+            My Funny Valentine
+            <br>
+            <audio src="audio/funnyval.wav" controls></audio>
+        </div>
+        <div class="div5" style="text-align: center;">
+            <img src="images/piano.HEIC" style="border-radius: 10px; width: 85%; max-width: 400px">
+        </div>
+        <div class="div6" style="text-align: right; width: 70%; font-size: 11pt;">
+            for gearheads: KSM 137 overheads, TLM102s close-miked, thru a couple Pheonix preamps modded inside an API lunchbox. All converted with a MOTU a/d.
+        </div>
     </div>
 
+    <hr color="black">
+
+    <div class="barry">
+        <div class="div1" style="text-align: center;"> 
+            <video src="video/theand.mp4" controls style="border-radius: 10px; width: 80%; max-width: 380px;" poster="images/thumbnailand.PNG"></video>
+        </div>
+        <div class="div2" style="text-align: center;">
+            <video src="video/bigchords.mp4" controls style="border-radius: 10px; width: 80%; max-width: 400px;" poster="images/thumbnailbig.PNG"></video>
+        </div>
+        <div class="div3" style="width: 80%; font-size: 11pt; text-align: right;">
+            Some required viewing. Taken from lectures at the Royal Conservatory by the late great <a href="https://en.wikipedia.org/wiki/Barry_Harris" class="inline" style="font-size: 11pt;">Barry Harris</a> (left: a discussion of and-beats, playing "out"; right: jabs at George Sheering, McGill, and wide voicings).
+        </div>
+    </div>
 
     <hr color="black">
     <p style="position: relative; bottom: 0; text-align: left;">
