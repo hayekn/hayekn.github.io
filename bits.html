@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=.35">
+<meta name="viewport" content="width=device-width, initial-scale=.45">
 <script src="https://kit.fontawesome.com/28200a00ab.js" crossorigin="anonymous"></script>
 <head>
 <title>Bits & Bobs</title>
@@ -14,10 +14,11 @@
     * {
         font-family: 'Georgia', 'Baskerville Old Face', 'Times New Roman', Times, serif;
     }
+
     .top {
         color: rgb(51, 51, 51);
     }
-    .MJX-TEX { font-size:110%; }
+    .MJX-TEX { font-size:100%; }
 
     body {
         background-color: rgb(255, 228, 202);
@@ -84,7 +85,14 @@
         font-size: 14pt; 
         line-height: 1.8;
         text-align: justify;
-        width: 93%;
+        width: 100%;
+    }
+
+    .mcgill{
+        font-size: 12pt; 
+        line-height: 1.8;
+        text-align: justify;
+        width: 75%;
     }
 
     .buttonrow{
@@ -117,7 +125,7 @@
         grid-template-rows: 1fr;
         grid-column-gap: 12px;
         grid-row-gap: 0px;
-        font-size: 12pt; 
+        font-size: 14pt; 
         line-height: 1.8;
         }
 
@@ -145,6 +153,19 @@
     .div14 { grid-area: 2 / 3 / 3 / 4; }
     .div15 { grid-area: 2 / 4 / 3 / 5; }
     .div16 { grid-area: 2 / 5 / 3 / 6; }
+
+    .secretary{
+        overflow:hidden;
+        padding: 1cm;
+    }
+
+    @media screen and (max-width: 1000px) {
+
+        .mcgill{width: 100%;}
+        .MJX-TEX { font-size:155%; }
+        .secretary{width: 100%; margin-right: 3%;}
+
+    }
 </style>
 
 
@@ -154,7 +175,7 @@
         Bits & Bobs
     </h1><br>
     <h2 style="color: rgb(51, 51, 51);">Privatize McGill.</h2><br>
-    <p style="font-size: 12pt; width: 75%;">
+    <p class="mcgill">
         As McGill University continues to commit the heinous crime of existing in its enclave of lower Montreal, a <a href="https://montrealgazette.com/news/quebec/jean-talon-byelection-results" class="inlinep" target="_blank">politically-weakened</a> Francois Legault has found it necessary to strangle its baby in the crib. This University, which provides Quebec with researchers and professionals, which contributes to the roughly <a href="https://globalnews.ca/news/10033679/critics-slam-quebec-tuition-hike-plan-students-protest/" class="inlinep" target="_blank">half a billion dollars</a> international and out-of-province students circualate in its economy, and which is, by far, the single most respected institution in the province is, unfortunately, an embarrassment. Why? Because, were it not for McGill, there would be 40,000 less English-speakers polluting the downtown air. And, were it not for McGill, Francois Legault wouldn't have to sheild his face when outsiders show respect for one of his province's anglophone institutions. This pesky truth has led the current provincial government on a new front in their language war: <i>strangle the anglo universities.</i> <br><br>
 
         Because that's where they're all coming from, these purveyors of dirty English, with their horrid words like "rural" and "moist." Certainly, it isn't because Quebec is located in a continent with 334 million English speakers, or because English has become, in an age of increased global trade, the preferred language of business. Or perhaps (hear me out), the historical bilingualism of its bad-child metropolis, Montreal, is hard to snuff out completely (one can only imagine global talents like Oscar Peterson flourishing here today; one can already see that the operational headquarters of the Bank of Montreal is in Toronto). No, I think I know the <i>real</i> reason why <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?LANG=E&GENDERlist=1,2,3&STATISTIClist=1,4&DGUIDlist=2021A000224&HEADERlist=,15,13,18,12,16,14,17&SearchText=Quebec" class="inlinep" target="_blank">6.30%</a> of Quebecers don't speak the CAQ's beloved faux français: it's that 3 out of their 19 public universities teach in English.<br><br>
@@ -180,29 +201,29 @@
         </i>
     </p>
     <hr color="black">
-    <div style="overflow:hidden; padding: 1cm;" >
+    <div class="secretary" >
             <a href="https://www.cantorsparadise.com/math-based-decision-making-the-secretary-problem-a30e301d8489" class="aim" target="_blank" style="float: left;">
                 <img src="images/secretary-modified.png" style="width: 95%;"> 
             </a>
-            <p style="text-align: justify; font-size: 12pt;">
+            <p style="text-align: justify; font-size: 12pt; width: 100%;">
             Suppose you, a mathematician, are trying to find love (we must suspend reality for this). Suppose further that an arbitrary \(N\) amount of people are lining up to see if you'll pick them, but you don't know who exactly is the best among them. How might you optimize the probability that, supposing your soulmate is in line, you pick him\her? The answer to this (initial) question is a somewhat interesting: you interview and reject \(k\) candidates, and then pick the first \((k+i)^{th}\) candidate who is better than all those previous. What is <i>very</i> interesting is the fact that, if \(k\) is picked ideally, the odds of choosing your soulmate are approximately \(\frac{1}{e}\), and what's more, the ideal ratio of \(\frac{k}{N}\) is also \(\frac{1}{e}\)! Here is a rough sketch of the proof:
             \[
             \begin{array}{rl}
-            \mathbb{P}(\text{Soulmate chosen}) =& \;  \mathbb{P}(\text{Soulmate chosen in first interview after rejects})\\
-            +&  \;  \mathbb{P}(\text{Soulmate chosen in second interview after rejects})\\
+            \mathbb{P}(\text{Soulmate chosen}) =& \;  \mathbb{P}(\text{Soulmate chosen in \(k+1^{th}\) interview})\\
+            +&  \;  \mathbb{P}(\text{Soulmate chosen in \(k+2^{nd}\) interview})\\
             \vdots&\\
-            +&  \;  \mathbb{P}(\text{Soulmate chosen in ${N-k}^{th}$ interview after rejects})\\
-            =& \sum_{i=1}^{N-k} \mathbb{P}(\text{Soulmate chosen in $i^{th}$ interview after rejects})
+            +&  \;  \mathbb{P}(\text{Soulmate chosen in ${N}^{th}$ interview})\\
+            =& \sum_{i=1}^{N-k} \mathbb{P}(\text{Soulmate chosen in $(k+i)^{th}$ interview})
 	        \end{array}
             \]
             We can apply a little conditional probability as follows:
-            \[\sum_{i=1}^{N-k}\mathbb{P}(S \text{ chosen in interview } i) = \sum_{i=1}^{N-k}\mathbb{P}(\text{Given that }S_i = S, \; S_i \text{ is chosen })\mathbb{P}(S_i = S)\]
+            \[\sum_{i=1}^{N-k}\mathbb{P}(S \text{ chosen @ } i) = \sum_{i=1}^{N-k}\mathbb{P}(\text{Given that }S_i = S, \; S_i \text{ chosen })\mathbb{P}(S_i = S)\]
             where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \(\frac{1}{N}\). If \(S_i\) is given to be the one, they are chosen only if the lovliest lover thus far was insta-rejected (otherwise, he\she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\text{ chosen }|S_i = S) = \frac{k}{k+i-1}\). 
             \[\mathbb{P}(S \text{ is chosen}) = \sum_{i=1}^{N-k}\mathbb{P}(S \text{ chosen in interview } i) = \sum_{i=1}^{N-k}\frac{k}{N(k+i-1)}\]
             One can express this summation, using some calculus, as an approximation of a Reimman integral, as follows:
             \[m \int_{m}^{1-\varepsilon}\frac{1}{x}dx = m\ln(x)\left|_{m}^{1-\varepsilon}\right. = m\ln(1-\epsilon) - m\ln(m)= -m\ln(m)\]
             where \(m\) is the ratio \(\frac{k}{N}\) as \(N \to \infty\) (and by turns, \(k\) as well). When this expression is maximixed by differentiating and setting to 0, one yields
-            <p style="text-align: center;">
+            <p style="text-align: center; font-size: 12pt;">
             \(\frac{k}{N} = \frac{1}{e} \) and the probability of picking your soulmate with the above-defined ratio is also \(\frac{1}{e}\). That's almost 37%! Out of infinte choice!
             </p>
             </p>
@@ -277,7 +298,7 @@
     </p>
 
     <div class="recording">
-        <div class="div4" style="text-align: center;">
+        <div class="div4" style="text-align: center; width: 90%;">
             Georgia on my Mind
             <br>
             <audio src="audio/georgia.wav" controls></audio>
