@@ -36,11 +36,10 @@
         transition-duration: .4s;
         text-decoration: none;
         color: black;
-        margin: 1%;
     }
 
     .inline {
-        padding: 3px;
+        padding: 3.5px;
         background-color: rgb(255, 228, 202);
     }
 
@@ -94,13 +93,13 @@
         <br><br>
         <a href="tex/sample.pdf" style="border-style: dashed;" target="_blank">
             Sample PDF
-        </a>
+        </a>&nbsp
         <a href="tex/sample.tex" style="border-style: dashed;" download="sample.tex">
             Sample Tex File
         </a>
     </p>
     <p>
-        Include this .cls file in the folder containing your latex document, and define your document class as <code>\documentclass[notoc/toc]{lecturenew}</code> (pick either notoc or toc to specify whether you want a table of contents). Your preamble should look like
+        The original maker of this template is V.H. Belvadi, and here is his <a href="https://vhbelvadi.github.io/LaTeX-lecture-notes-class/" class="inline" target="_blank">page</a>. Include the .cls file above in the folder containing your latex document, and define your document class as <code>\documentclass[notoc/toc]{lecturenew}</code> (pick either notoc or toc to specify whether you want a table of contents). Your preamble should look like
         <br><br>
         <code>
         \pagenumbering{gobble} <br>
@@ -118,7 +117,7 @@
 	        \setcounter{page}{1}
         </code>
         <br><br>wherever you first want page numbers to start. They will appear in the header opposite the side where any text might also appear. You can reuse the <code>\pagenumbering{gobble}</code> command from above to clear page numbers.
-        <br><br>This class is preloaded with a <strong>lot</strong>, and I mean a lot, of packages and shorthand commands I find useful. Among the fun ones are: <code>xfrac</code>, which gets you some nice slant fraction action, <code>cancel</code>, which can draw lines through expressions (with arrows even), <code>epigraph</code>, which will paste a spot below the TOC to put a quote from your favorite professor, and <code>stmaryrd</code>, or St. Mary's Road, which has a bunch of cooler-than-normal looking brackets and such. As for framing, I've defined the <code>mdframed</code> style <code>theorem</code> to be a green bubble with some borders, and this can be edited manually. To use: <code>\begin{mdframed}[style=theorem] ... \end{mdframed}</code>
+        <br><br>This class is preloaded with a lot of packages and shorthand commands I find useful. Among the more interesting ones are: <code>xfrac</code>, which gets you some nice slant fraction action, <code>cancel</code>, which can draw lines through expressions (with arrows even), <code>epigraph</code>, which will paste a spot below the TOC to put a quote from your favorite professor, and <code>stmaryrd</code>, which has a bunch of cooler-than-normal looking brackets and such. As for framing, I've defined the <code>mdframed</code> style <code>theorem</code> to be a colored bubble with some borders, and this can be edited manually. To use: <code>\begin{mdframed}[style=theorem] ... \end{mdframed}</code>
         <br><br>
         Finally, the page content will shift from left to right as you go along, and the extra real estate created by this will accomodate some margin text, which can be inserted using <code>\margintext{}</code>  
     </p>
