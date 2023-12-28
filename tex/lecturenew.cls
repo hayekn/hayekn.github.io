@@ -60,13 +60,14 @@
 
 \RequirePackage[widermath,narrowiints,fullsumlimits,fullintlimits]{kpfonts}
 
-\RequirePackage{tikz}
+
+	\RequirePackage[dvipsnames]{xcolor}
+	\RequirePackage{tikz}
 	\usetikzlibrary{arrows}
 	\usetikzlibrary{patterns}
 	\usetikzlibrary{shapes}
-\RequirePackage{xcolor}
-\RequirePackage{pgfplots}
-\RequirePackage{graphicx}
+	\RequirePackage{pgfplots}
+	\RequirePackage{graphicx}
 
 		%%%%%%THEOREM MDFRAMED
 		\RequirePackage{empheq}
@@ -74,8 +75,12 @@
 			\mdfdefinestyle{theorem}{%
 				roundcorner=10pt,
 				linewidth=2pt,
-				backgroundcolor=green!10,
-				linecolor=blue!70}
+				backgroundcolor=orange!10,
+				linecolor=RawSienna}
+			\mdfdefinestyle{proof}{%
+				roundcorner=5pt,
+				linewidth=0pt,
+				backgroundcolor=gray!10}
 
 \RequirePackage{fancyhdr}
 \RequirePackage{mathdots}
@@ -190,7 +195,7 @@
 \setlength{\abovedisplayshortskip}{0ex}%
 \setlength{\belowdisplayskip}{2ex}%
 \setlength{\belowdisplayshortskip}{2ex}%
-\renewcommand{\\}{\par\vspace{1.5ex}\noindent}%
+\renewcommand{\\}{\par\vspace{1ex}\noindent}%
 \newcommand{\nl}{\par\noindent}%
 \newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
 

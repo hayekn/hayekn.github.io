@@ -1,0 +1,41 @@
+\documentclass[toc]{lecturenew} %notoc for no table of contents
+\pagenumbering{gobble} %reset page numbers
+
+%HEADING{
+	\title{Sample Notes}
+	\subtitle{M\footnotesize c\normalsize Gill University}
+	\speaker{Nicholas Hayek}
+	\author{The Wiggles}
+	\setcounter{secnumdepth}{-1} %setting toc parameters (optional)
+	\setcounter{tocdepth}{2}
+	%}
+%PROOF AND THEOREM ENVIRONMENTS{
+	\usepackage[framemethod=TikZ, xcolor]{mdframed}
+	\newcommand{\say}[1]{\margintext{\runin{#1}}}
+	\newcommand{\theorem}[1]{\begin{mdframed}[style=theorem]
+			#1
+	\end{mdframed}}
+	\renewcommand{\proof}[2][]{\say{\vspace{.4cm}\\Proof#1.}\begin{mdframed}[style=proof]
+			#2\qed
+	\end{mdframed}}
+%}
+\begin{document}
+	\newpage
+	\part{I \quad Introduction}
+	\renewcommand\partcontent{Introduction}
+	\pagenumbering{arabic}
+	\setcounter{page}{3}
+	\section{\underline{The Meaning of Life}}
+	$$\P\left(\bigcup_{i=1}^nA_i\right) = \sum_{k=1}^{n} (-1)^{k-1}\underbrace{\sum\P(A_{i_1}A_{i_2} ...A_{i_k})}_{1 \leq i_1 < i_2 < ... < i_k \leq n}$$
+	\subsection{Let's Talk About It}
+	\theorem{
+	\textbf{This is a theorem}
+	$$a^2+b^2=c^2$$
+		}
+	\proof{
+	This is a proof.
+		}
+	
+	
+	
+\end{document}
