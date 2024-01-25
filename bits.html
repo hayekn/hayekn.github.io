@@ -181,6 +181,19 @@
     .div17 { grid-area: 1 / 1 / 2 / 2; }
     .div18 { grid-area: 1 / 2 / 2 / 3; }
 
+    .julia{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) .5fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        text-align: center;
+    }
+
+    .div19 { grid-area: 1 / 1 / 2 / 3;}
+    .div20 { grid-area: 1 / 3 / 2 / 4;  margin-top: auto; margin-bottom: auto; height: 50%;}
+    .juliagraph{width: 70%;}
+    
     @media screen and (max-width: 1200px) {
 
         .mcgill{width: 100%; font-size: 14pt;}
@@ -197,6 +210,8 @@
             line-height: 2;
         }
         li{width: 100%; font-size: 14pt; .MJX-TEX { font-size:100%; }}
+
+        .juliagraph{width: 100%;}
     }
 
     .none{
@@ -287,8 +302,14 @@
             \(\frac{k}{N} = \frac{1}{e} \) and the probability of picking your soulmate with the above-defined ratio is also \(\frac{1}{e}\). That's almost 37%! Out of infinte choice!
             </p>
     </div>
-    <img src="images/secretaryprob1.svg", style="display: block; margin-left: auto; margin-right: auto; width: 50%;"> 
-    <iframe src="images/secretaryprob.html" type="text/html", style="text-align: justify;">
+    <div class="julia">
+        <div class = "div19">
+            <img src="images/secretaryprob1.svg", class="juliagraph"> 
+        </div>
+        <div class = "div20">
+            <iframe src="images/secretaryprob.html" type="text/html"></iframe>
+        </div>
+    </div>
     <br>
     <hr color="black">
     <p style="text-align: center;">
