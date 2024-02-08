@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=.4">
-<script src="https://kit.fontawesome.com/28200a00ab.js" crossorigin="anonymous"></script>
 <head>
-<title>Bits & Bobs</title>
-<link rel="icon" type="image/x-icon" href="dice.svg">
-<link rel="stylesheet" href="style.css">
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-</head>
-<script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-<style>
 
-    .MJX-TEX { font-size:100%; }
+<title>Bits & Bobs</title>
+<script src="https://kit.fontawesome.com/28200a00ab.js" crossorigin="anonymous"></script>
+<link rel="icon" type="image/x-icon" href="dice.svg">
+<link rel="stylesheet" href="style/style.css">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+
+<style>
 
     .shortcutButtons{
         padding: 3px;
@@ -21,18 +21,18 @@
         font-size: 11pt;
     }
 
-    .aim {
+    .albumLinks {
         border: none;
         padding: none;
         width: fit-content;
         height: fit-content;
     }
 
-    .aim:hover {
+    .albumLinks:hover {
         background-color: rgb(255, 228, 202);
     }
 
-    .albumimg {
+    .albumImages {
         width: 70%;
         border-radius: 6px;
     }
@@ -49,11 +49,6 @@
         }
     }
 
-    audio{
-        background-color: rgb(255, 228, 202);
-        color: rgb(255, 228, 202);
-    }
-
     .barry {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -63,7 +58,6 @@
         font-size: 14pt; 
         line-height: 1.8;
         }
-
         .div1 { grid-area: 1 / 1 / 2 / 2; }
         .div2 { grid-area: 1 / 2 / 2 / 3; }
         .div3 { grid-area: 1 / 3 / 2 / 4; }
@@ -77,11 +71,10 @@
         font-size: 14pt; 
         line-height: 1.8;
         }
-
-    .div4 { grid-area: 1 / 1 / 2 / 2; }
-    .div5 { grid-area: 1 / 2 / 2 / 3; }
-    .div6 { grid-area: 1 / 3 / 2 / 4; }
-
+        .div4 { grid-area: 1 / 1 / 2 / 2; }
+        .div5 { grid-area: 1 / 2 / 2 / 3; }
+        .div6 { grid-area: 1 / 3 / 2 / 4; }
+    
     .albums {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -91,27 +84,20 @@
         font-size: 12pt; 
         line-height: 1.8;
     }
-
-    .div7 { grid-area: 1 / 1 / 2 / 2; }
-    .div8 { grid-area: 1 / 2 / 2 / 3; }
-    .div9 { grid-area: 1 / 3 / 2 / 4; }
-    .div10 { grid-area: 1 / 4 / 2 / 5; }
-    .div11 { grid-area: 1 / 5 / 2 / 6; }
-    .div12 { grid-area: 2 / 1 / 3 / 2; }
-    .div13 { grid-area: 2 / 2 / 3 / 3; }
-    .div14 { grid-area: 2 / 3 / 3 / 4; }
-    .div15 { grid-area: 2 / 4 / 3 / 5; }
-    .div16 { grid-area: 2 / 5 / 3 / 6; }
+        .div7 { grid-area: 1 / 1 / 2 / 2; }
+        .div8 { grid-area: 1 / 2 / 2 / 3; }
+        .div9 { grid-area: 1 / 3 / 2 / 4; }
+        .div10 { grid-area: 1 / 4 / 2 / 5; }
+        .div11 { grid-area: 1 / 5 / 2 / 6; }
+        .div12 { grid-area: 2 / 1 / 3 / 2; }
+        .div13 { grid-area: 2 / 2 / 3 / 3; }
+        .div14 { grid-area: 2 / 3 / 3 / 4; }
+        .div15 { grid-area: 2 / 4 / 3 / 5; }
+        .div16 { grid-area: 2 / 5 / 3 / 6; }
 
     .secretary{
         overflow:hidden;
-        padding: 1cm;
-    }
-
-    li{
-        font-size: 12pt; 
-        line-height: 1.8;
-        text-align: justify;
+        padding: 0cm;
     }
 
     .proof {
@@ -121,9 +107,8 @@
         grid-column-gap: 30px;
         grid-row-gap: 0px;
         }
-
-    .div17 { grid-area: 1 / 1 / 2 / 2; }
-    .div18 { grid-area: 1 / 2 / 2 / 3; }
+        .div17 { grid-area: 1 / 1 / 2 / 2; }
+        .div18 { grid-area: 1 / 2 / 2 / 3; }
 
     .julia{
         display: grid;
@@ -133,35 +118,24 @@
         grid-row-gap: 0px;
         text-align: center;
     }
-
-    .div19 { grid-area: 1 / 1 / 2 / 3;}
-    .div20 { grid-area: 1 / 3 / 2 / 4;  margin-top: auto; margin-bottom: auto; height: 50%;}
-    .juliagraph{width: 70%;}
+        .div19 { grid-area: 1 / 1 / 2 / 3;}
+        .div20 { grid-area: 1 / 3 / 2 / 4;  margin-top: auto; margin-bottom: auto; height: 50%;}
+        .juliagraph{width: 70%;}
     
-    @media screen and (max-width: 1200px) {
 
+    @media screen and (max-width: 1200px) {
         .mcgill{width: 100%; font-size: 14pt;}
         .MJX-TEX { font-size:100; }
         .secretary{width: 100%; margin-right: 3%;}
         .inline{font-size: 14pt;}
-        h1{
-            font-size: 45pt;
-        }
-        h2{
-            font-size: 25pt;
-        }
-        h3{
-            line-height: 2;
-        }
+
+        h1{font-size: 45pt;}
+        h2{font-size: 25pt;}
+        h3{line-height: 2;}
+
         li{width: 100%; font-size: 14pt; .MJX-TEX { font-size:100%; }}
 
         .juliagraph{width: 100%;}
-    }
-
-    .none{
-        content: none;
-        width: 0%;
-        border: none;
     }
 </style>
 
@@ -172,8 +146,8 @@
         Bits & Bobs
     </h1> <h3 style="font-size: 11pt;">Skip to: <a href="#SEC" class="shortcutButtons">the k-strategy</a>, <a href="#MUS"class="shortcutButtons">what I'm listening to</a>, <a href="#VST"class="shortcutButtons">virtual instruments and Barry Harris</a>, <a href="#CAQ" class="shortcutButtons">another reason to hate the CAQ</a></h3>
     <br>
-    <h2 style="color: rgb(51, 51, 51);">36 Methods of Mathematical Proof</h2>
-    <h4 style="color: rgb(51, 51, 51);">by Prof. Jim Wilson</h4>
+    <h2>36 Methods of Mathematical Proof</h2>
+    <h4>by Prof. Jim Wilson</h4>
     <div class="proof">
         <div class="div17">
             <ol>
@@ -221,28 +195,29 @@
         </div>
     </div>
     <hr color="black">
-    <a id="SEC" style="visibility: hidden;"></a><div class="secretary" >
-            <a href="https://www.cantorsparadise.com/math-based-decision-making-the-secretary-problem-a30e301d8489" class="aim" target="_blank" style="float: left;">
+    <h2>A Relatable Scenario</h2>
+    <a id="SEC" style="visibility: hidden;"></a><div class="secretary">
+            <a href="https://www.cantorsparadise.com/math-based-decision-making-the-secretary-problem-a30e301d8489" class="albumLinks" target="_blank" style="float: left;">
                 <img src="images/secretary-modified.png" style="width: 95%;"> 
             </a>
             <p style="text-align: justify; font-size: 12pt; width: 100%;">
-            Suppose you, a mathematician, are trying to find love (we must suspend reality for this). Suppose further that an arbitrary \(N\) amount of people are lining up to see if you'll pick them, but you don't know who exactly is the best among them. How might you optimize the probability that, supposing your soulmate is in line, you pick him\her? The answer to this (initial) question is a somewhat interesting: you interview and reject \(k\) candidates, and then pick the first \((k+i)^{th}\) candidate who is better than all those previous. What is <i>very</i> interesting is the fact that, if \(k\) is picked ideally, the odds of choosing your soulmate are approximately \(\frac{1}{e}\), and what's more, the ideal ratio of \(\frac{k}{N}\) is also \(\frac{1}{e}\)! Here is a rough sketch of the proof:
+            Let's postulate that you are trying to find love. Suppose further that an arbitrary \(N\) amount of people are lining up to see if you'll pick them, but you don't know who exactly is the best among them. How might you optimize the probability that, supposing your soulmate is in line, you pick him/her? The answer to this (preliminary) question is odd: you interview and reject \(k\) candidates, and then pick the first \((k+i)^{th}\) candidate who is better than all those previous. If \(k\) is picked ideally, the odds of choosing your soulmate are approximately \(\frac{1}{e}\), and what's more, the ideal ratio of \(\frac{k}{N}\) is also \(\frac{1}{e}\)! Here is a rough sketch of the proof:
             \[
             \begin{array}{rl}
-            \mathbb{P}(\text{Soulmate chosen}) =& \;  \mathbb{P}(\text{Soulmate chosen in \(k+1^{th}\) interview})\\
-            +&  \;  \mathbb{P}(\text{Soulmate chosen in \(k+2^{nd}\) interview})\\
+            \mathbb{P}(\texttt{Soulmate chosen}) =& \;  \mathbb{P}(\texttt{Soulmate chosen in \(k+1^{th}\) interview})\\
+            +&  \;  \mathbb{P}(\texttt{Soulmate chosen in \(k+2^{nd}\) interview})\\
             \vdots&\\
-            +&  \;  \mathbb{P}(\text{Soulmate chosen in ${N}^{th}$ interview})\\
-            =& \sum_{i=1}^{N-k} \mathbb{P}(\text{Soulmate chosen in $(k+i)^{th}$ interview})
+            +&  \;  \mathbb{P}(\texttt{Soulmate chosen in ${N}^{th}$ interview})\\
+            =& \sum_{i=1}^{N-k} \mathbb{P}(\texttt{Soulmate chosen in $(k+i)^{th}$ interview})
 	        \end{array}
             \]
             We can apply a little conditional probability as follows:
-            \[\sum_{i=1}^{N-k}\mathbb{P}(S \text{ chosen @ } i) = \sum_{i=1}^{N-k}\mathbb{P}(\text{Given that }S_i = S, \; S_i \text{ chosen })\mathbb{P}(S_i = S)\]
-            where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \(\frac{1}{N}\). If \(S_i\) is given to be the one, they are chosen only if the lovliest lover thus far was insta-rejected (otherwise, he\she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\text{ chosen }|S_i = S) = \frac{k}{k+i-1}\). 
-            \[\mathbb{P}(S \text{ is chosen}) = \sum_{i=1}^{N-k}\mathbb{P}(S \text{ chosen in interview } i) = \sum_{i=1}^{N-k}\frac{k}{N(k+i-1)}\]
+            \[\sum_{i=1}^{N-k}\mathbb{P}(S \texttt{ chosen @ } i) = \sum_{i=1}^{N-k}\mathbb{P}(\texttt{Given that }S_i = S, \; S_i \texttt{ chosen})\mathbb{P}(S_i = S)\]
+            where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \(\frac{1}{N}\). If \(S_i\) is given to be the one, they are chosen only if the lovliest lover thus far was insta-rejected (otherwise, he\she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\texttt{ chosen | }S_i = S) = \frac{k}{k+i-1}\). 
+            \[\mathbb{P}(S \texttt{ is chosen}) = \sum_{i=1}^{N-k}\mathbb{P}(S \texttt{ chosen in interview } i) = \sum_{i=1}^{N-k}\frac{k}{N(k+i-1)}\]
             One can express this summation, using some calculus, as an approximation of a Reimman integral, as follows:
             \[m \int_{m}^{1-\varepsilon}\frac{1}{x}dx = m\ln(x)\left|_{m}^{1-\varepsilon}\right. = m\ln(1-\epsilon) - m\ln(m)= -m\ln(m)\]
-            where \(m\) is the ratio \(\frac{k}{N}\) as \(N \to \infty\) (and by turns, \(k\) as well). When this expression is maximixed by differentiating and setting to 0, one yields
+            where \(m\) is the limiting case of \(\frac{k}{N}\). When this expression is maximixed by differentiating and setting to 0, one yields
             \(\frac{k}{N} = \frac{1}{e} \) and the probability of picking your soulmate with the above-defined ratio is also \(\frac{1}{e}\). That's almost 37%! Out of infinte choice!
             </p>
     </div>
@@ -251,78 +226,76 @@
             <img src="images/secretaryprob1.svg", class="juliagraph"> 
         </div>
         <div class = "div20">
-            <iframe src="images/secretaryprob.html" type="text/html"></iframe>
+            <iframe src="images/secretaryjulia.txt" type="text/html"></iframe>
         </div>
     </div>
     <br>
     <hr color="black">
-    <p style="text-align: center;">
-        <i class="fa-solid fa-radio fa-2xl" style="color: #000;"></i>
-    </p><a id="MUS" style="visibility: hidden;"></a>
+    <h2>A Record Collection</h2>
+    <a id="MUS" style="visibility: hidden;"></a>
 
     <div class="albums">
         <div class="div7">
-            <a href="https://music.apple.com/ca/album/small-change-remastered/1485074801" target="_blank" class="aim">
-                <img src="images/smallchange.jpg" class="albumimg">
+            <a href="https://music.apple.com/ca/album/small-change-remastered/1485074801" target="_blank" class="albumLinks">
+                <img src="images/smallchange.jpg" class="albumImages">
             </a>
         </div>
         <div class="div8">
-            <a href="https://music.apple.com/us/album/im-your-man/511065875" target="_blank" class="aim">
-                <img src="images/imyourman.jpg" class="albumimg">
+            <a href="https://music.apple.com/us/album/im-your-man/511065875" target="_blank" class="albumLinks">
+                <img src="images/imyourman.jpg" class="albumImages">
             </a>
         </div>
         <div class="div9">
-            <a href="https://music.apple.com/us/album/paul-simon-bonus-tracks-edition/380588824" target="_blank" class="aim">
-                <img src="images/paulsimon.jpg" class="albumimg">
+            <a href="https://music.apple.com/us/album/paul-simon-bonus-tracks-edition/380588824" target="_blank" class="albumLinks">
+                <img src="images/paulsimon.jpg" class="albumImages">
             </a>
         </div>
         <div class="div10">
-            <a href="https://music.apple.com/us/album/young-gifted-and-black/934216863" target="_blank" class="aim">
-                <img src="images/aretha.jpg" class="albumimg">
+            <a href="https://music.apple.com/us/album/young-gifted-and-black/934216863" target="_blank" class="albumLinks">
+                <img src="images/aretha.jpg" class="albumImages">
             </a>
         </div>
         <div class="div11">
-            <a href="https://music.apple.com/us/album/mule-variations-remastered/1485070836" target="_blank" class="aim">
-                <img src="images/mule.jpg" class="albumimg">
+            <a href="https://music.apple.com/us/album/mule-variations-remastered/1485070836" target="_blank" class="albumLinks">
+                <img src="images/mule.jpg" class="albumImages">
             </a>
         </div>
         <div class="div12">
-            <a href="https://music.apple.com/us/album/blood-on-the-tracks/158320766" target="_blank" class="aim">
-                <img src="images/dylan.jpg" class="albumimg">
+            <a href="https://music.apple.com/us/album/blood-on-the-tracks/158320766" target="_blank" class="albumLinks">
+                <img src="images/dylan.jpg" class="albumImages">
             </a>
         </div>
         <div class="div13">
-            <a href="https://music.apple.com/us/album/highway-rider/359077400" target="_blank" class="aim">
-                <img src="images/highway.jpeg" class="albumimg">
+            <a href="https://music.apple.com/us/album/highway-rider/359077400" target="_blank" class="albumLinks">
+                <img src="images/highway.jpeg" class="albumImages">
             </a>
         </div>
         <div class="div14">
-            <a href="https://music.apple.com/us/album/an-insatiable-high/1443141169" target="_blank" class="aim">
-                <img src="images/insatiablehigh.jpg" class="albumimg">
+            <a href="https://music.apple.com/us/album/an-insatiable-high/1443141169" target="_blank" class="albumLinks">
+                <img src="images/insatiablehigh.jpg" class="albumImages">
             </a>
         </div>
         <div class="div15">
-            <a href="https://music.apple.com/us/album/pastel-blues/1445668394" target="_blank" class="aim">
-                <img src="images/pastel.jpg" class="albumimg">
+            <a href="https://music.apple.com/us/album/pastel-blues/1445668394" target="_blank" class="albumLinks">
+                <img src="images/pastel.jpg" class="albumImages">
             </a>
         </div>
         <div class="div16">
-            <a href="https://music.apple.com/us/album/cheap-thrills/203773381" target="_blank" class="aim">
-                <img src="images/janis.webp" class="albumimg">
+            <a href="https://music.apple.com/us/album/cheap-thrills/203773381" target="_blank" class="albumLinks">
+                <img src="images/janis.webp" class="albumImages">
             </a>
         </div>
     </div>
-
-    <p style="text-align: center;">
-    <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/6v8mOtpRlXbG3BOauqPRHC?utm_source=generator&theme=0" width="40%" height="230" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <br><br><br>
+    <p style="text-align: center; line-height: 0;">
+    <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/6v8mOtpRlXbG3BOauqPRHC?utm_source=generator&theme=0" width="40%" height="130" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <hr color="black" style="margin: none;">
     </p>
-    <hr color="black">
-
+    <h2>Model B VST</h2>
     <p>
-        Some years ago I created a virtual instrument using a model B Steinway I had available to me. If you happen to use the DAW <a href="https://www.reasonstudios.com/" class="inline" target="_blank">Reason</a>, in <a href="https://mcgill-my.sharepoint.com/:u:/g/personal/nicholas_hayek_mail_mcgill_ca/EfAcfL2cuSRJom7Nsg9iwS0BZ5mXprXEn4m9uCDn4cgKdw?e=ciHIHP" class="inline" target="_blank">this zip file</a> you'll find an .sxt <a href="https://www.reasonstudios.com/en/reason/instruments/nn-xt" class="inline" target="_blank">instrument</a> compatible with Reason, along with all the 416 individual clip recordings of a piano from my hometown. Below are some audio samples of a robot (credits to <a href="https://bushgrafts.com/" class="inline" target="_blank">Doug McKenzie</a> for the midi files) playing it.
+        Some years ago I created a virtual instrument using a baby grand from my high school. If you happen to use the DAW <a href="https://www.reasonstudios.com/" class="inline" target="_blank">Reason</a>, in <a href="https://mcgill-my.sharepoint.com/:u:/g/personal/nicholas_hayek_mail_mcgill_ca/EfAcfL2cuSRJom7Nsg9iwS0BZ5mXprXEn4m9uCDn4cgKdw?e=ciHIHP" class="inline" target="_blank">this zip file</a> you'll find an .sxt <a href="https://www.reasonstudios.com/en/reason/instruments/nn-xt" class="inline" target="_blank">instrument</a> compatible with Reason, along with all the 416 individual clip recordings of this gorgeous Steinway. Below are some audio samples of a "robot" (credit to <a href="https://bushgrafts.com/" class="inline" target="_blank">Doug McKenzie</a> for the midi files) playing it.
         <br><a id="VST" style="visibility: hidden;"></a>
     </p>
-
     <div class="recording">
         <div class="div4" style="text-align: center; width: 90%;">
             Georgia on my Mind
@@ -344,9 +317,7 @@
             for gearheads: KSM 137 overheads, TLM102s close-miked, thru a couple Pheonix preamps modded inside an API lunchbox. All converted with a MOTU a/d.
         </div>
     </div>
-
-    <hr color="black">
-
+    <!--
     <div class="barry">
         <div class="div1" style="text-align: center;"> 
             <video src="video/theand.mp4" controls style="border-radius: 10px; width: 80%; max-width: 380px;" poster="images/thumbnailand.PNG"></video>
@@ -358,7 +329,9 @@
             Some required viewing. Taken from lectures at the Royal Conservatory by the late great <a href="https://en.wikipedia.org/wiki/Barry_Harris" class="inline" style="font-size: 11pt;">Barry Harris</a> (left: a discussion of and-beats, playing "out"; right: jabs at George Sheering, McGill, and wide voicings).
         </div>
     </div>
-    <hr color="black">
+    <br>-->
+    <br>
+    <hr color="black"><br>
     <h2 style="color: rgb(51, 51, 51);"><i>Strangle the Anglo Universities</i></h2>
     <p class="mcgill">
         <a id="CAQ" style="visibility: hidden;"></a><br>
@@ -395,8 +368,7 @@
         <br><br>
         Much credit to Prof. Joseph Heath, who encouraged me to write this, and whose <a href="https://josephheath.substack.com/p/privatize-mcgill" class="inline" style="font-size: 10pt;" target="_blank">blog post</a> on privatization is a much better read. 
     </p>
-
-    <hr color="black">
+    <br>
     <p style="position: relative; bottom: 0; text-align: left;">
         <a href="index.html" style="border: transparent;">
             <i class="fa-solid fa-house-chimney fa-2xl" style="color: #3ca0d3;"></i>

@@ -1,5 +1,10 @@
+@font-face {
+    font-family: RobotoMono;
+    src: url(Ubuntu.ttf);
+}
+
 * {
-    font-family: 'Georgia', 'Baskerville Old Face', 'Times New Roman', Times, serif;
+    font-family: 'RobotoMono', 'Georgia', 'Times New Roman', Times, serif;
     overflow-wrap: normal;
     object-fit: contain;
 }
@@ -41,6 +46,9 @@ a:active{
     background-color: rgb(255, 228, 202);
 }
 
+.MJX-TEX { 
+    font-size:120%;}
+
 p {
     font-size: 14pt; 
     line-height: 1.8;
@@ -54,7 +62,18 @@ p {
 }
 
 hr{
-    width: 100%;
-    margin-right: 18%;
-    color: black;
+    width: 50%;
+    margin-right: 25%;
+}
+
+li{
+    font-size: 12pt; 
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.none{
+    content: none;
+    width: 0%;
+    border: none;
 }

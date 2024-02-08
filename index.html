@@ -2,71 +2,16 @@
 <html>
 
 <head>
-
+<link rel="stylesheet" href="style/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=.5">
 <title>Nicholas Hayek</title>
 <script src="https://kit.fontawesome.com/28200a00ab.js" crossorigin="anonymous"></script>
-
 <link rel="icon" type="image/x-icon" href="dice.svg">
 
 </head>
 <style>
-    * {
-        font-family: 'Georgia', 'Baskerville Old Face', 'Times New Roman', Times, serif;
-        overflow-wrap: normal;
-        object-fit: contain;
-    }
-    .top {
-        color: rgb(51, 51, 51);
-        margin: 1cm;
-    }
 
-    body {
-        background-color: rgb(255, 228, 202);
-        margin: 1cm;
-    }
-
-    a {
-        border-style: solid;
-        border-width: 1.5px;
-        border-radius: 5px;
-        border-color: black;
-        padding: 10px 30px;
-        background-color: rgb(255, 228, 202);
-        font-size: 14pt;
-        transition-duration: .4s;
-        text-decoration: none;
-        color: black;
-    }
-
-    .inline {
-        padding: 3.5px;
-        background-color: rgb(255, 228, 202);
-    }
-
-    a:hover {
-        background-color: rgb(255, 205, 158);
-    }
-    a:visited {
-        color: black;
-    }
-    a:active{
-        background-color: rgb(255, 177, 104);
-    }
-
-    p {
-        margin: 1cm;
-        font-size: 14pt; 
-        line-height: 1.8;
-    }
-
-    .buttonrow{
-        text-align: center;
-        margin-top: 4cm;
-    }
-
-
-    .butt{
+    .emailButton{
         border: transparent;
         border-width: 1.5px;
         border-radius: 5px;
@@ -77,28 +22,25 @@
         text-decoration: none;
         color: black;
     }
-    .butt:hover {
+    .emailButton:hover {
         background-color: rgb(255, 205, 158);
     }
 
-    .butt:active{
+    .emailButton:active{
         background-color: rgb(255, 177, 104);}
 
-    .butt:focus span{
+    .emailButton:focus span{
         display: none;
     }
-    .butt:focus:after {
+    .emailButton:focus:after {
         transition: 3s;
-        content: "Ah! You stole me email!";
+        content: "In your clipboard!";
         font-size: 14pt;
     }
 
-    .butt:focus{
+    .emailButton:focus{
         padding: 15px 10px;
     }
-
-
-
 
 </style>
 
@@ -118,9 +60,9 @@
         or buried somewhere in the basement of <a href="https://www.thetribune.ca/opinion/point-counterpoint-a-debate-on-the-aesthetic-of-burnside-hall/" class="inline" target="_blank">a brutalist building</a>.
     <p>    
     
-    <p class="buttonrow">
+    <p class="buttonrow" style="text-align: center;">
         <a href = notes.html>
-            Math
+             Math
         </a>
         &nbsp&nbsp&nbsp
         <a href="bits.html">
@@ -135,7 +77,7 @@
         <i class="fa-brands fa-instagram fa-2xl" style="color: #3ca0d3;"></i>
         </a>
         &nbsp&nbsp
-        <button onclick="copyText()" class="butt">
+        <button onclick="copyText()" class="emailButton">
             <span><i class="fa-solid fa-envelopes-bulk fa-2xl" style="color: #3ca0d3;"></i></span>
         </button>
         <script>
