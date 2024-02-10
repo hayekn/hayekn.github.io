@@ -47,6 +47,16 @@
             background-color: rgb(255, 228, 202);
             font-size: 12pt;
         }
+
+        a:hover {
+            background-color: rgb(255, 205, 158);
+        }
+        a:visited {
+            color: black;
+        }
+        a:active{
+            background-color: rgb(255, 177, 104);
+        }
     }
 
     .barry {
@@ -124,7 +134,7 @@
     
 
     @media screen and (max-width: 1200px) {
-        .mcgill{width: 100%; font-size: 14pt;}
+        .mcgill{width: 100%; font-size: 14pt; .inline{font-size: 14pt}}
         .MJX-TEX { font-size:100; }
         .secretary{width: 100%; margin-right: 3%;}
         .inline{font-size: 14pt;}
@@ -213,12 +223,12 @@
             \]
             We can apply a little conditional probability as follows:
             \[\sum_{i=1}^{N-k}\mathbb{P}(S \texttt{ chosen @ } i) = \sum_{i=1}^{N-k}\mathbb{P}(\texttt{Given that }S_i = S, \; S_i \texttt{ chosen})\mathbb{P}(S_i = S)\]
-            where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \(\frac{1}{N}\). If \(S_i\) is given to be the one, they are chosen only if the lovliest lover thus far was insta-rejected (otherwise, he\she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\texttt{ chosen | }S_i = S) = \frac{k}{k+i-1}\). 
+            where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \(\frac{1}{N}\). If \(S_i\) is given to be the one, they are chosen only if the loveliest lover thus far was insta-rejected (otherwise, he\she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\texttt{ chosen | }S_i = S) = \frac{k}{k+i-1}\). 
             \[\mathbb{P}(S \texttt{ is chosen}) = \sum_{i=1}^{N-k}\mathbb{P}(S \texttt{ chosen in interview } i) = \sum_{i=1}^{N-k}\frac{k}{N(k+i-1)}\]
-            One can express this summation, using some calculus, as an approximation of a Reimman integral, as follows:
+            One can express this summation, using some calculus, as an approximation of a Riemann integral, as follows:
             \[m \int_{m}^{1-\varepsilon}\frac{1}{x}dx = m\ln(x)\left|_{m}^{1-\varepsilon}\right. = m\ln(1-\epsilon) - m\ln(m)= -m\ln(m)\]
-            where \(m\) is the limiting case of \(\frac{k}{N}\). When this expression is maximixed by differentiating and setting to 0, one yields
-            \(\frac{k}{N} = \frac{1}{e} \) and the probability of picking your soulmate with the above-defined ratio is also \(\frac{1}{e}\). That's almost 37%! Out of infinte choice!
+            where \(m\) is the limiting case of \(\frac{k}{N}\). When this expression is maximized by differentiating and setting to 0, one yields
+            \(\frac{k}{N} = \frac{1}{e} \) and the probability of picking your soulmate with the above-defined ratio is also \(\frac{1}{e}\). That's almost 37%! Out of infinite* choice!
             </p>
     </div>
     <div class="julia">
@@ -231,7 +241,8 @@
     </div>
     <br>
     <hr color="black">
-    <h2>A Record Collection</h2>
+    <h2>Virtual Record Collection <a href="https://www.discogs.com/user/Nicholas_Hayek/collection?header=1" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: .3cm; border: none;"><b>(and my actual collection)</b></a></h2>
+    <br><br>
     <a id="MUS" style="visibility: hidden;"></a>
 
     <div class="albums">
@@ -333,6 +344,7 @@
     <br>
     <hr color="black"><br>
     <h2 style="color: rgb(51, 51, 51);"><i>Strangle the Anglo Universities</i></h2>
+    <h3>November, 2023</h3>
     <p class="mcgill">
         <a id="CAQ" style="visibility: hidden;"></a><br>
         Last month, the office of a <a href="https://montrealgazette.com/news/quebec/jean-talon-byelection-results" class="inline" target="_blank">politically-weakened</a> Francois Legault found it necessary to crank the heat on Quebec's three anglophone universities, all but financially strangling McGill, Concordia, and Bishop's University. Since the 1970s, McGill University, in particular, has been a source of bitterness in the face of the preeminent Francophone zeitgeist. McGill is Quebec's colonial baby, which—aside from providing Quebec with doctors, researchers, professionals, and contributing <a href="https://www.mcgill.ca/newsroom/channels/news/mcgill-university-injects-49-billion-quebec-economy-over-ten-years-9572" class="inline" target="_blank">billions</a> to its economy—is perhaps only seen as a roadblock to the complete Francization of its public education system.<br><br>
