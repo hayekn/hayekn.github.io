@@ -8,13 +8,22 @@
 <link rel="icon" type="image/x-icon" href="dice.svg">
 <link rel="stylesheet" href="style/style.css">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'],['\\(', '\\)']],
+        
+      }
+    };
+</script>
+    
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
 
 
 <style>
-
+    .MJX-TEX { font-size:12pt; }
     .shortcutButtons{
         padding: 3px;
         background-color: rgb(255, 228, 202);
@@ -135,7 +144,7 @@
 
     @media screen and (max-width: 1200px) {
         .mcgill{width: 100%; font-size: 14pt; .inline{font-size: 14pt}}
-        .MJX-TEX { font-size:100; }
+        .MJX-TEX { font-size:90; }
         .secretary{width: 100%; margin-right: 3%;}
         .inline{font-size: 14pt;}
 
@@ -148,14 +157,19 @@
         .juliagraph{width: 100%;}
     }
 </style>
-
+<link rel="stylesheet" href="htpps://pyscript.net/alpha/pyscript.css" />
+<script defer src="htpps://pyscript.net/alpha/pyscript.js"> </script>
 
 <body>
-
     <h1 class="top">
         Bits & Bobs
     </h1> <h3 style="font-size: 11pt;">Skip to: <a href="#SEC" class="shortcutButtons">the k-strategy</a>, <a href="#MUS"class="shortcutButtons">what I'm listening to</a>, <a href="#VST"class="shortcutButtons">Steinway sampler</a>, <a href="#CAQ" class="shortcutButtons">another reason to hate the CAQ</a></h3>
     <br>
+    <h2>Mystery Fractal</h2>
+    <p style="text-align: justify; font-size: 12pt; width: 100%;">If one were to slice a rectangle into $n$ equally-spaced strips, and further subdivide each one in widths proportional to $2^{-k}$ for $k \in [1, n]$, we can observe some fractal geometry encoded in how block borders align with each-other:</p>
+    <p style="text-align: center;"><img src="images/mysteryfracnoback.png" style="width: 75%"></p>
+    <p style="text-align: justify; font-size: 12pt; width: 100%;">There's nothing particularly fascinating about these lines, except how they're revealed, and how no one has put a name to them yet (to the best of my knowledge and that of StackExchange). I first noticed the pattern during a comp-sci lecture on merge sort, in which a similar graphic was used to elucidate its running time of $O(n\log(n))$ (the strips denoting recursion depth, each level of which contains a process which runs in $n$ time), and in the spirit of this discovery, its implementation is also a simple recursion:</p>
+    <py-script src="/main.py"></py-script>
     <h2>36 Methods of Mathematical Proof</h2>
     <h4>by Prof. Jim Wilson</h4>
     <div class="proof">
