@@ -173,7 +173,7 @@
     <h2>Mystery Fractal</h2>
     <p style="text-align: justify; font-size: 12pt; width: 100%;">If one were to slice a rectangle into $n$ equally-spaced strips, and further subdivide each one in widths proportional to $2^{-k}$ for $k \in [1, n]$, we can observe some fractal geometry encoded in how block borders align with each-other:</p>
     <p style="text-align: center;"><img src="images/mysteryfracnoback.png" style="width: 75%"></p>
-    <p style="text-align: justify; font-size: 12pt; width: 100%;">There's nothing particularly fascinating about these lines, except how they're revealed, and how no one has put a name to them yet (to the best of my knowledge and that of StackExchange). I first noticed the pattern during a comp-sci lecture on merge sort, in which a similar graphic was used to elucidate its running time of $O(n\log(n))$ (the strips denoting recursion depth, each level of which contains a process which runs in $n$ time), and in the spirit of this discovery, its implementation is also a simple recursion:</p>
+    <p style="text-align: justify; font-size: 12pt; width: 100%;">There's nothing particularly fascinating about these lines, except how they're revealed, and how no one has put a name to them yet (to the best of my knowledge and that of StackExchange). I first noticed the pattern during a comp-sci lecture on merge sort, in which a similar graphic was used to elucidate its running time of $O(n\log(n))$ (the strips denoting recursion depth, each containing a process which runs in $n$ time), and in the spirit of this discovery, its implementation is also a simple recursion:</p>
     <pre><code>def mysteryFractal(n):
         if n==0:
             return
