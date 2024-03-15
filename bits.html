@@ -137,10 +137,17 @@
         grid-row-gap: 0px;
         text-align: center;
     }
-        .div19 { grid-area: 1 / 1 / 2 / 3;}
-        .div20 { grid-area: 1 / 3 / 2 / 4;  margin-top: auto; margin-bottom: auto; height: 50%;}
-        .juliagraph{width: 70%;}
+    .div19 { grid-area: 1 / 1 / 2 / 3;}
+    .div20 { grid-area: 1 / 3 / 2 / 4;  margin-top: auto; margin-bottom: auto; height: 50%;}
+    .juliagraph{width: 70%;}
     
+    code {
+        border-radius: 3px;
+        font-family: courier, monospace;
+        font-size: 11pt;
+        padding: 3px;
+        line-height: 1.8;
+    }
 
     @media screen and (max-width: 1200px) {
         .mcgill{width: 100%; font-size: 14pt; .inline{font-size: 14pt}}
@@ -157,8 +164,6 @@
         .juliagraph{width: 100%;}
     }
 </style>
-<link rel="stylesheet" href="htpps://pyscript.net/alpha/pyscript.css" />
-<script defer src="htpps://pyscript.net/alpha/pyscript.js"> </script>
 
 <body>
     <h1 class="top">
@@ -169,7 +174,14 @@
     <p style="text-align: justify; font-size: 12pt; width: 100%;">If one were to slice a rectangle into $n$ equally-spaced strips, and further subdivide each one in widths proportional to $2^{-k}$ for $k \in [1, n]$, we can observe some fractal geometry encoded in how block borders align with each-other:</p>
     <p style="text-align: center;"><img src="images/mysteryfracnoback.png" style="width: 75%"></p>
     <p style="text-align: justify; font-size: 12pt; width: 100%;">There's nothing particularly fascinating about these lines, except how they're revealed, and how no one has put a name to them yet (to the best of my knowledge and that of StackExchange). I first noticed the pattern during a comp-sci lecture on merge sort, in which a similar graphic was used to elucidate its running time of $O(n\log(n))$ (the strips denoting recursion depth, each level of which contains a process which runs in $n$ time), and in the spirit of this discovery, its implementation is also a simple recursion:</p>
-    <py-script src="/main.py"></py-script>
+    <pre><code>def mysteryFractal(n):
+        if n==0:
+            return
+        else:
+            for i in range(1, 2**n):
+                plt.plot([i*(2**(-n)), i*(2**(-n))], [0, 2**(-n)])
+                mysteryFractal(n-1, big)</code></pre>
+    <p style="text-align: center;"><img src="images/mysteryfrac.png" style="width: 75%;"></p>
     <h2>36 Methods of Mathematical Proof</h2>
     <h4>by Prof. Jim Wilson</h4>
     <div class="proof">
