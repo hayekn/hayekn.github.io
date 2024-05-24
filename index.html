@@ -16,11 +16,11 @@
         border-width: 1.5px;
         border-radius: 5px;
         border-color: black;
-        padding: 20px 10px 16px 10px;
-        background-color: rgb(255, 228, 202);
+        padding: 10px 10px 4px 10px;
+        background-color: rgb(255, 255, 255);
         transition-duration: .4s;
         text-decoration: none;
-        color: black;
+        /*color: black;*/
     }
     .emailButton:hover {
         background-color: rgb(255, 205, 158);
@@ -31,6 +31,7 @@
 
     .emailButton:focus span{
         display: none;
+        padding-bottom: 5px;
     }
     .emailButton:focus:after {
         transition: 3s;
@@ -61,33 +62,28 @@
     <p>    
     
     <p class="buttonrow" style="text-align: center;">
-        <a class="nav-link" href = https://nicholashayek.com/notes.html>
+        <a class="nav-link" href = https://nicholashayek.com/notes.html style="margin-right: 2vw;">
              Math
         </a>
-        &nbsp&nbsp&nbsp
+
         <a class="nav-link" href = https://nicholashayek.com/bits.html>
             Bits & Bobs
         </a>
         <br><br>
-        <a href="https://www.linkedin.com/in/nicholas-hayek-b24b1a243/" style="padding: 16px 6px 15px 10px; border: transparent;" target="_blank">
-        <i class="fa-brands fa-linkedin fa-2xl" style="color: #3ca0d3;"></i>
-        </a>
-        &nbsp&nbsp
-        <a href="https://www.instagram.com/nicholas_hayek/" style="padding: 16px 6px 15px 10px; border: transparent;" target="_blank">
-        <i class="fa-brands fa-instagram fa-2xl" style="color: #3ca0d3;"></i>
-        </a>
-        &nbsp&nbsp
-        <button onclick="copyText()" class="emailButton">
-            <span><i class="fa-solid fa-envelopes-bulk fa-2xl" style="color: #3ca0d3;"></i></span>
-        </button>
+        <a href="https://www.instagram.com/nicholas_hayek/" style="padding: 27px 10px 5px 10px; margin-right: 1vw; border: transparent;"  target="_blank"><img src="images/insta.svg" width="30vw"></a>
+
+        <button onclick="copyText()" class="emailButton" style="margin-right: 1vw;"><span><img src="images/envelope.svg" width="30vw" style="padding-bottom: 3px;"></span></button>
         <script>
             function copyText() {
                 navigator.clipboard.writeText
                     ("nicholas.hayek@mail.mcgill.ca");
                 
             }
-        
         </script>
+
+        <a href="https://www.linkedin.com/in/nicholas-hayek-b24b1a243/" style="padding: 27px 10px 5px 10px; border: transparent;" target="_blank">
+            <img src="images/linkedin.svg" width="30fr">
+        </a>
 
     </p>
 
