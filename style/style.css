@@ -110,4 +110,14 @@ li{
         margin-left: 5vw;
         margin-right: 5vw;
     }
+
+    h1{
+        font-weight: normal;
+    }
+    h2{
+        font-weight: normal;
+    }
+    h3{
+        font-weight: normal;
+    }
 }
