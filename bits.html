@@ -185,19 +185,50 @@
 <body>
     <h1 class="top">
         Bits & Bobs
-    </h1> <h3 style="font-size: 11pt;">Skip to: <a href="#SEC" class="shortcutButtons">the k-strategy</a>, <a href="#MUS"class="shortcutButtons">what I'm listening to</a>, <a href="#VST"class="shortcutButtons">Steinway sampler</a></h3>
+    </h1> <h3 style="font-size: 11pt;">Skip to: <a href="#BEZ"class="shortcutButtons">Bézier stuff</a>, <a href="#SEC" class="shortcutButtons">the k-strategy</a>, <a href="#MUS"class="shortcutButtons">music</a>, <a href="#VST"class="shortcutButtons">Steinway sampler</a></h3>
     <br>
-    <!-- <h2>Inefficiency of Matrix Reduction Distributed as Values Are</h2>
+    <h2>Distribution of Matrix Reduction Efficiency</h2>
     <p>
-        Here's a cool observation: if we generate a large batch of matrices
-
-    </p> !--> 
+    During partial pivoting Guassian elimination (PPGE) of a matrix (just like regular GE, except we choose as a pivot the element which satisfies max\({}_i|a_{ij}|\) for each column \(A^{(j)}\)), one sometimes accumulates large intermediate values&mdash;&mdash;so much so that the final result in unreachable because of overflow. The following is a classical example:
+    \[
+    A = \begin{bmatrix}
+    1 & 0 & 0 & 0 & 1\\
+    -1 & 1 & 0 & 0 & 1\\
+    -1 & -1 & 1 & 0 & 1\\
+    -1 & -1 & -1 & 1 & 1\\
+    -1 & -1 & -1 & -1 & 1\\\\
+    \end{bmatrix} \to
+    \begin{bmatrix}
+    1 & 0 & 0 & 0 & 1\\
+    0 & 1 & 0 & 0 & 2\\
+    0 & 0 & 1 & 0 & 4\\
+    0 & 0 & 0 & 1 & 8\\
+    0 & 0 & 0 & 0 & 16\\\\
+    \end{bmatrix} = B
+    \]
+    For a \(n\) by \(n\) matrix as formulated above, PPGE will result in a matrices whose maximal element is \(\leq 2^{n-1}\). In fact, this is the worst case scenario. For much larger matrices, say 1000x1000, we are going to run into problems. Despite this, PPGE is by far the most popular method for accomplishing LU decomposition, and system solving. Why? Basically, the catastrophic example above is possible, but unrealistic.
+    </p>
+    <p>
+    One calls the ratio of the maximal elements in absolute value of \(A\) and \(B\) the "growth factor" of \(A\), or \(g(A)\). As one would expect, the larger the matrix \(A\), the larger its growth factor (in the example above, this relationship is \(2^{n-1}\)):
+    <div style="text-align: center;"> <img src="images/ppge.png" width=35%> </div>
+    </p>
+    <p>This data is derived from normally distributed real matrices. Surprisingly, we don't see as exaggerated growth factors as the contrived example let on, and even the \(\approx\)1000x1000 matrices are well suited for computation with PPGE. Hence: how likely is it that we run into examples remotely as bad as the initial example? We plot to find out that the answer is "almost never":
+    <div style="text-align: center;"> <img src="images/growthfac.png" width="70%"> </div>
+    </p>
+    <p>
+        The above analysis only involves a few hundred sample matrices of each size. A sample of 5000 16x16 matrices yields similar behavior:
+        <div style="text-align: center;"> <img src="images/manysamples.png" width="55%"></div>
+    </p>
+    <p>
+        Which is to say, with growth factors that cap out at \(e^{1.7} \approx 5.5\), we are not ever getting close to the foretold bound of \(g(A) \leq 2^{16 }\approx 65,000\) 
+        <a id="BEZ" style="visibility: hidden;"></a></p>
+        <hr color="black">
     <h2>Animated Bi-Quintic \(\alpha\)-Bezier Surface Patch</h2>
     <div style="text-align: center;"> <video width="500vw" controls muted> <source src="video/Alphabez.mp4" type="video/mp4" style="text-align: center;"> </video> </div>
     <p>A <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve" target="_blank" class="inline">Bézier curve</a> interpolates between some data in \(\mathbb{R}^n\), usually points on a plane (one can shift control points to fit a desired shape, and it isn't too hard to succeed this way). <a href="https://link.springer.com/article/10.1007/s40574-022-00341-9" class="inline" target="_blank">Kaur and Goyal</a> recently developed an "\(\alpha\)-Bézier," where, the larger the parameter \(\alpha \in \mathbb{R}\) is, the closer the Bézier interpolation will hug our control points. Conversely, a sufficiently low \(\alpha\) parameter will make the control polygon repel the Bézier. So, given some points in \(\mathbb{R}^2\), we could observe increasingly strict interpolations, say through animation, including that of a standard Bézer (\(\alpha=1\)). 
     </p>
     <p>
-    A Bézier curve typically maps the unit interval onto a curve in \(\mathbb{R}^n\). One can generate a "curve of curves" to map the unit square onto a surface. This is called a tensor product surface, or <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_surface" class="inline" target="_blank">Bézier surface</a>, in the case of ordinary Bézier curves. Hence, we apply the ideas above, generating increasingly strict interpolations of roughly paraboloidic control data via \(\alpha\)-Bézier tensor surface patches. The result is disconcerting, but cool  (\(-1 \leq\alpha\leq 3\)). If one spent enough time designing a control grid, one may be able to use this method to generate the world's most computationally inefficient animation of a beating heart. The math:
+    A Bézier curve typically maps the unit interval onto a curve in \(\mathbb{R}^n\). One can generate a "curve of curves" to map the unit square onto a surface. This is called a tensor product surface, or <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_surface" class="inline" target="_blank">Bézier surface</a>, in the case of ordinary Bézier curves. Hence, we apply the ideas above, generating increasingly strict interpolations of roughly paraboloidic control data via \(\alpha\)-Bézier tensor surface patches. The result is disconcerting, but cool  (\(-1 \leq\alpha\leq 3\)). If one spends enough time designing a control grid, one may be able to use this method to generate the world's most computationally inefficient animation of a beating heart. The math:
     \[\left\{\sum{_{i=0}^{3}}\sum{_{j=0}^{3}}B_i^n(t, \alpha)B_j^m(s, \alpha)\vec{v_{ij}} : \alpha \in (-1, 3) \right\} \texttt{ <-- tensor surface computation}\]
     \[B_i^n := \left[\binom{n-2}{i}(1-\alpha)t + \binom{n-2}{i-2}(1-\alpha)(1-t) +\binom{n}{i} \alpha t(1-t)\right]t^{i-1}(1-t)^{n-i-1} \texttt{ <-- alpha-Bezier definition}\]
     </p>
@@ -260,11 +291,10 @@
             <li><b>Proof by authority:</b> "Well, Don Knuth says it's true, so it must be!"</li>
             <li><b>Proof by intuition:</b> "I have this gut feeling."</li>
            </ol>
-        </div>
+        </div><a id="SEC" style="visibility: hidden;"></a><div class="secretary"></div>
     </div>
     <hr color="black">
     <h2>A Relatable Scenario</h2>
-    <a id="SEC" style="visibility: hidden;"></a><div class="secretary">
             <a href="https://www.icanbarelydraw.com/comic/397" target="_blank" class="secpic">
                 <img src="images/secretary-modified.png" style="width: 95%;"> 
             </a>
