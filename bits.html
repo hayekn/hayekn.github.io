@@ -24,7 +24,12 @@
 
 
 <style>
-    .MJX-TEX { font-size:12pt; }
+    .MJX-TEX { font-size:14pt; }
+
+    h2{
+        .MJX-TEX { font-size:20pt; }
+    }
+
     .shortcutButtons{
         padding: 3px;
         background-color: rgb(255, 255, 255);
@@ -180,8 +185,23 @@
 <body>
     <h1 class="top">
         Bits & Bobs
-    </h1> <h3 style="font-size: 11pt;">Skip to: <a href="#SEC" class="shortcutButtons">the k-strategy</a>, <a href="#MUS"class="shortcutButtons">what I'm listening to</a>, <a href="#VST"class="shortcutButtons">Steinway sampler</a>, <a href="#CAQ" class="shortcutButtons">another reason to hate the CAQ</a></h3>
+    </h1> <h3 style="font-size: 11pt;">Skip to: <a href="#SEC" class="shortcutButtons">the k-strategy</a>, <a href="#MUS"class="shortcutButtons">what I'm listening to</a>, <a href="#VST"class="shortcutButtons">Steinway sampler</a></h3>
     <br>
+    <!-- <h2>Inefficiency of Matrix Reduction Distributed as Values Are</h2>
+    <p>
+        Here's a cool observation: if we generate a large batch of matrices
+
+    </p> !--> 
+    <h2>Animated Bi-Quintic \(\alpha\)-Bezier Surface Patch</h2>
+    <div style="text-align: center;"> <video width="500vw" controls muted> <source src="video/Alphabez.mp4" type="video/mp4" style="text-align: center;"> </video> </div>
+    <p>A <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve" target="_blank" class="inline">Bézier curve</a> interpolates between some data in \(\mathbb{R}^n\), usually points on a plane (one can shift control points to fit a desired shape, and it isn't too hard to succeed this way). <a href="https://link.springer.com/article/10.1007/s40574-022-00341-9" class="inline" target="_blank">Kaur and Goyal</a> recently developed an "\(\alpha\)-Bézier," where, the larger the parameter \(\alpha \in \mathbb{R}\) is, the closer the Bézier interpolation will hug our control points. Conversely, a sufficiently low \(\alpha\) parameter will make the control polygon repel the Bézier. So, given some points in \(\mathbb{R}^2\), we could observe increasingly strict interpolations, say through animation, including that of a standard Bézer (\(\alpha=1\)). 
+    </p>
+    <p>
+    A Bézier curve typically maps the unit interval onto a curve in \(\mathbb{R}^n\). One can generate a "curve of curves" to map the unit square onto a surface. This is called a tensor product surface, or <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_surface" class="inline" target="_blank">Bézier surface</a>, in the case of ordinary Bézier curves. Hence, we apply the ideas above, generating increasingly strict interpolations of roughly paraboloidic control data via \(\alpha\)-Bézier tensor surface patches. The result is disconcerting, but cool  (\(-1 \leq\alpha\leq 3\)). If one spent enough time designing a control grid, one may be able to use this method to generate the world's most computationally inefficient animation of a beating heart. The math:
+    \[\left\{\sum{_{i=0}^{3}}\sum{_{j=0}^{3}}B_i^n(t, \alpha)B_j^m(s, \alpha)\vec{v_{ij}} : \alpha \in (-1, 3) \right\} \texttt{ <-- tensor surface computation}\]
+    \[B_i^n := \left[\binom{n-2}{i}(1-\alpha)t + \binom{n-2}{i-2}(1-\alpha)(1-t) +\binom{n}{i} \alpha t(1-t)\right]t^{i-1}(1-t)^{n-i-1} \texttt{ <-- alpha-Bezier definition}\]
+    </p>
+    <hr color="black">
     <!-- <h2>Mystery Fractal</h2>
     <p style="text-align: justify; font-size: 12pt; width: 100%;">If one were to slice a rectangle into $n$ equally-spaced strips, and further subdivide each one in widths proportional to $2^{-k}$ for $k \in [1, n]$, we can observe some fractal geometry encoded in how block borders align with each-other:</p>
     <p style="text-align: center;"><img src="images/mysteryfracnoback.png" style="width: 75%"></p>
@@ -249,7 +269,7 @@
                 <img src="images/secretary-modified.png" style="width: 95%;"> 
             </a>
             <p style="text-align: justify; font-size: 12pt; width: 100%;">
-            Let's postulate that you are trying to find love. Suppose further that an arbitrary \(N\) amount of people are lining up to see if you'll pick them, but you don't know who exactly is the best among them. How might you optimize the probability that, supposing your soulmate is in line, you pick him/her? The answer to this (preliminary) question is odd: you interview and reject \(k\) candidates, and then pick the first \((k+i)^{th}\) candidate who is better than all those previous. If \(k\) is picked ideally, the odds of choosing your soulmate are approximately \(\frac{1}{e}\), and what's more, the ideal ratio of \(\frac{k}{N}\) is also \(\frac{1}{e}\)! Here is a rough sketch of the proof:
+            You are tying to find your soulmate, and thankfully \(N\) people have lined up for a "date." You don't know who exactly is the best candidate among them, but you can conduct interviews, one by one, to gather information. You can only interview a person once, and you must decide to choose them, or not, after the interview concludes. What strategy should you use to optimize the probability that, supposing your soulmate is in line, you pick him/her? The answer to this (preliminary) question is odd: you interview and reject \(k\) candidates, and then pick the first \((k+i)^{th}\) candidate who is better than all those previous. If \(k\) is picked ideally, the odds of choosing your soulmate are approximately \(1/e\), and what's more, the ideal ratio of \({k}/{N}\) is also \({1}/{e}\)! Here is the logic:
             \[
             \begin{array}{rl}
             \mathbb{P}(\texttt{Soulmate chosen}) =& \;  \mathbb{P}(\texttt{Soulmate chosen in \(k+1^{th}\) interview})\\
@@ -259,14 +279,14 @@
             =& \sum_{i=1}^{N-k} \mathbb{P}(\texttt{Soulmate chosen in $(k+i)^{th}$ interview})
 	        \end{array}
             \]
-            We can apply a little conditional probability as follows:
+            Applying Bayes':
             \[\sum_{i=1}^{N-k}\mathbb{P}(S \texttt{ chosen @ } i) = \sum_{i=1}^{N-k}\mathbb{P}(\texttt{Given that }S_i = S, \; S_i \texttt{ chosen})\mathbb{P}(S_i = S)\]
-            where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \(\frac{1}{N}\). If \(S_i\) is given to be the one, they are chosen only if the loveliest lover thus far was insta-rejected (otherwise, he\she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\texttt{ chosen | }S_i = S) = \frac{k}{k+i-1}\). 
+            where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \({1}/{N}\). If \(S_i\) is given to be "the one," they are chosen only if the best candidate thus far was preliminarily rejected (otherwise, he/she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\texttt{ chosen | }S_i = S) = {k}/{(k+i-1)}\). 
             \[\mathbb{P}(S \texttt{ is chosen}) = \sum_{i=1}^{N-k}\mathbb{P}(S \texttt{ chosen in interview } i) = \sum_{i=1}^{N-k}\frac{k}{N(k+i-1)}\]
             One can express this summation, using some calculus, as an approximation of a Riemann integral, as follows:
             \[m \int_{m}^{1-\varepsilon}\frac{1}{x}dx = m\ln(x)\left|_{m}^{1-\varepsilon}\right. = m\ln(1-\epsilon) - m\ln(m)= -m\ln(m)\]
-            where \(m\) is the limiting case of \(\frac{k}{N}\). When this expression is maximized by differentiating and setting to 0, one yields
-            \(\frac{k}{N} = \frac{1}{e} \) and the probability of picking your soulmate with the above-defined ratio is also \(\frac{1}{e}\). That's almost 37%! Out of infinite* choice!
+            where \(m\) is the limiting case of \({k}/{N}\). When this expression is maximized by differentiating and setting to 0, one yields
+            \({k}/{N} = {1}/{e} \), and thus the probability of picking your soulmate with the above-defined ratio is also \({1}/{e}\). That's 37%!
             </p>
     </div>
     <div class="julia">
