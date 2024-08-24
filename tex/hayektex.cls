@@ -1,6 +1,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{hayektex}[2024/04/25]
 
+%Adapted from V.H. Belvadi's essay template
+%Check out his work at https://vhbelvadi.com/
+
 %OPTIONS{
 \DeclareOption{center}{\newcommand{\@wantscenter}{}}
 \DeclareOption{copyright}{\newcommand{\@copyright}{}}
@@ -56,12 +59,15 @@
 %}
 
 %SECTION FORMATTING{
+%\newcommand{\@stitle}{}
+\newcommand{\stitle}[1]{\newcommand{\@stitle}{#1}}
 \renewcommand{\@author}{}
 \newcommand{\@email}{}
 \newcommand{\email}[1]{\renewcommand{\@email}{#1}}
 \newcommand{\subtitle}[1]{\newcommand{\@subtitle}{#1}}
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
 \newcommand{\note}[1]{\newcommand{\@note}{#1}}
+
 \titleformat{\section}{\relax\centering\large\lsstyle}{}{0.5em}{\otherscshape\MakeLowercase}
 \titleformat{\subsection}{\relax\centering}{}{1em}{\large\itshape}
 \titleformat{\subsubsection}{\relax}{}{0em}{\normalsize\textbf}
@@ -117,7 +123,8 @@
 
 %HEADERS{
 \cfoot{}
-\fancyhead[LE]{\smallcaps\@title}
+\ifthenelse{\isundefined{\@stitle}}{\fancyhead[LE]{\smallcaps\@title}}{\fancyhead[LE]{\smallcaps\@stitle}}
+
 \fancyhead[RE]{\smallcaps\thepage}
 \ifthenelse{\isundefined{\@authhead}}{
 	\fancyhead[RO]{\smallcaps\protect\MakeLowercase{\protect\textls[70]{\@curpart}}}
