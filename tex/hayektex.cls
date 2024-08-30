@@ -14,6 +14,7 @@
 \ProcessOptions\relax
 %}
 
+\DeclareRobustCommand{\@stitle}{\@title}
 \DeclareRobustCommand{\smallcaps}[1]{\scshape{#1}}
 \LoadClass[letterpaper,11pt]{article}
 
@@ -60,13 +61,13 @@
 
 %SECTION FORMATTING{
 %\newcommand{\@stitle}{}
-\newcommand{\stitle}[1]{\newcommand{\@stitle}{#1}}
 \renewcommand{\@author}{}
 \newcommand{\@email}{}
 \newcommand{\email}[1]{\renewcommand{\@email}{#1}}
 \newcommand{\subtitle}[1]{\newcommand{\@subtitle}{#1}}
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
 \newcommand{\note}[1]{\newcommand{\@note}{#1}}
+\newcommand{\stitle}[1]{\renewcommand{\@stitle}{#1}}
 
 \titleformat{\section}{\relax\centering\large\lsstyle}{}{0.5em}{\otherscshape\MakeLowercase}
 \titleformat{\subsection}{\relax\centering}{}{1em}{\large\itshape}
@@ -123,7 +124,7 @@
 
 %HEADERS{
 \cfoot{}
-\ifthenelse{\isundefined{\@stitle}}{\fancyhead[LE]{\smallcaps\@title}}{\fancyhead[LE]{\smallcaps\@stitle}}
+\ifthenelse{\isundefined{\@stitle}}{\fancyhead[LE]{\smallcaps\@title}}{\fancyhead[LE]{\smallcaps \@stitle}}
 
 \fancyhead[RE]{\smallcaps\thepage}
 \ifthenelse{\isundefined{\@authhead}}{
