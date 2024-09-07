@@ -9,16 +9,32 @@
 <link rel="canonical" href="https://nicholashayek.com/bits.html">
 <link rel="stylesheet" href="style/style.css">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 <script>
     MathJax = {
-      tex: {
-        inlineMath: [['$', '$'],['\\(', '\\)']],
-        
-      }
-    };
+        loader: {load: ['[tex]/textmacros']},
+        tex: {packages: {'[+]': ['textmacros']},
+        inlineMath: [['$', '$'],['\\(', '\\)']]},
+
+        svg: { fontCache: 'global', mtextFontInherit: false}};
+</script> -->
+
+<!-- <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
 </script>
-    
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.5.3/MathJax.js?config=TeX-MML-AM_CHTML">
+</script> -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@2.5.1/es5/tex-mml-chtml.js">
+</script>
 
 </head>
 
@@ -189,7 +205,7 @@
     <br>
     <h2>Distribution of Matrix Reduction Efficiency</h2>
     <p>
-    During partial pivoting Guassian elimination (PPGE) of a matrix (just like regular GE, except we choose as a pivot the element which satisfies max\({}_i|a_{ij}|\) for each column \(A^{(j)}\)), one sometimes accumulates large intermediate values&mdash;&mdash;so much so that the final result in unreachable because of overflow. The following is a classical example:
+    During $test \text{test}$ \(sdf\) partial pivoting Guassian elimination (PPGE) of a matrix (just like regular GE, except we choose as a pivot the element which satisfies max\({}_i|a_{ij}|\) for each column \(A^{(j)}\)), one sometimes accumulates large intermediate values&mdash;&mdash;so much so that the final result in unreachable because of overflow. The following is a classical example:
     \[
     A = \begin{bmatrix}
     1 & 0 & 0 & 0 & 1\\
