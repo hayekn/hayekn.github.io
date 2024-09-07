@@ -33,12 +33,12 @@
     MathJax.Hub.Config({
         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
         extensions: ["tex2jax.js"],
-        jax: ["input/TeX","output/HTML-CSS"],
         "HTML-CSS": {
           availableFonts:[],
           styles: {".MathJax_Preview": {visibility: "hidden"}}
         }
       });
+    MathJax.Hub.setRenderer("SVG");
 </script>
 
 <script type="text/javascript" src="scripts/mathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js"></script>
@@ -49,7 +49,7 @@
 
 
 <style>
-    .MJX-TEX { font-size:14pt; }
+    .MJX-TEX { font-size:12pt; }
 
     h2{
         .MJX-TEX { font-size:20pt; }
@@ -231,13 +231,13 @@
     0 & 0 & 0 & 0 & 16\\
     \end{bmatrix} = B
     \]
-    For a \(n\) by \(n\) matrix as formulated above, PPGE will result in a matrices whose maximal element is \(\leq 2^{n-1}\). In fact, this is the worst case scenario. For much larger matrices, say 1000x1000, we are going to run into problems. Despite this, PPGE is by far the most popular method for accomplishing LU decomposition, and system solving. Why? Basically, the catastrophic example above is possible, but unrealistic.
+    For a \(n\) by \(n\) matrix as formulated above, PPGE will result in a matrices whose maximal element is \(\leq 2^{n-1}\). In fact, this is the worst case scenario. For much larger matrices, say $1000 \times 1000$, we are going to run into problems. Despite this, PPGE is by far the most popular method for accomplishing LU decomposition, and system solving. Why? Basically, the catastrophic example above is possible, but unrealistic.
     </p>
     <p>
     One calls the ratio of the maximal elements in absolute value of \(A\) and \(B\) the "growth factor" of \(A\), or \(g(A)\). As one would expect, the larger the matrix \(A\), the larger its growth factor (in the example above, this relationship is \(2^{n-1}\)):
     <div style="text-align: center;"> <img src="images/ppge.png" width=35%> </div>
     </p>
-    <p>This data is derived from normally distributed real matrices. Surprisingly, we don't see as exaggerated growth factors as the contrived example let on, and even the \(\approx\)1000x1000 matrices are well suited for computation with PPGE. Hence: how likely is it that we run into examples remotely as bad as the initial example? We plot to find out that the answer is "almost never":
+    <p>This data is derived from normally distributed real matrices. Surprisingly, we don't see as exaggerated growth factors as the contrived example let on, and even the $\approx1000\times1000$ matrices are well suited for computation with PPGE. Hence: how likely is it that we run into examples remotely as bad as the initial example? We plot to find out that the answer is "almost never":
     <div style="text-align: center;"> <img src="images/growthfac.png" width="70%"> </div>
     </p>
     <p>
@@ -254,8 +254,8 @@
     </p>
     <p>
     A Bézier curve typically maps the unit interval onto a curve in \(\mathbb{R}^n\). One can generate a "curve of curves" to map the unit square onto a surface. This is called a tensor product surface, or <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_surface" class="inline" target="_blank">Bézier surface</a>, in the case of ordinary Bézier curves. Hence, we apply the ideas above, generating increasingly strict interpolations of roughly paraboloidic control data via \(\alpha\)-Bézier tensor surface patches. The result is disconcerting, but cool  (\(-1 \leq\alpha\leq 3\)). If one spends enough time designing a control grid, one may be able to use this method to generate the world's most computationally inefficient animation of a beating heart. The math:
-    \[\left\{\sum{_{i=0}^{3}}\sum{_{j=0}^{3}}B_i^n(t, \alpha)B_j^m(s, \alpha)\vec{v_{ij}} : \alpha \in (-1, 3) \right\} \texttt{ <-- tensor surface computation}\]
-    \[B_i^n := \left[\binom{n-2}{i}(1-\alpha)t + \binom{n-2}{i-2}(1-\alpha)(1-t) +\binom{n}{i} \alpha t(1-t)\right]t^{i-1}(1-t)^{n-i-1} \texttt{ <-- alpha-Bezier definition}\]
+    \[ \{ T(t, s) \}_{\alpha \in (-1, 3)} = \left\{\sum{_{i=0}^{3}}\sum{_{j=0}^{3}}B_i^n(t, \alpha)B_j^m(s, \alpha)\vec{v_{ij}} : \alpha \in (-1, 3) \right\} \leftarrow \text{ tensor surface computation}\]
+    \[\text{where } B_i^n := \left[\binom{n-2}{i}(1-\alpha)t + \binom{n-2}{i-2}(1-\alpha)(1-t) +\binom{n}{i} \alpha t(1-t)\right]t^{i-1}(1-t)^{n-i-1} \leftarrow \text{ alpha-Bezier}\]
     </p>
     <hr color="black">
     <!-- <h2>Mystery Fractal</h2>
@@ -327,19 +327,19 @@
             You are tying to find your soulmate, and thankfully \(N\) people have lined up for a "date." You don't know who exactly is the best candidate among them, but you can conduct interviews, one by one, to gather information. You can only interview a person once, and you must decide to choose them, or not, after the interview concludes. What strategy should you use to optimize the probability that, supposing your soulmate is in line, you pick him/her? The answer to this (preliminary) question is odd: you interview and reject \(k\) candidates, and then pick the first \((k+i)^{th}\) candidate who is better than all those previous. If \(k\) is picked ideally, the odds of choosing your soulmate are approximately \(1/e\), and what's more, the ideal ratio of \({k}/{N}\) is also \({1}/{e}\)! Here is the logic:
             \[
             \begin{array}{rl}
-            \mathbb{P}(\texttt{Soulmate chosen}) =& \;  \mathbb{P}(\texttt{Soulmate chosen in \(k+1^{th}\) interview})\\
-            +&  \;  \mathbb{P}(\texttt{Soulmate chosen in \(k+2^{nd}\) interview})\\
+            \mathbb{P}(\text{Soulmate chosen}) =& \;  \mathbb{P}(\text{Soulmate chosen in \(k+1^{th}\) interview})\\
+            +&  \;  \mathbb{P}(\text{Soulmate chosen in \(k+2^{nd}\) interview})\\
             \vdots&\\
-            +&  \;  \mathbb{P}(\texttt{Soulmate chosen in ${N}^{th}$ interview})\\
-            =& \sum_{i=1}^{N-k} \mathbb{P}(\texttt{Soulmate chosen in $(k+i)^{th}$ interview})
+            +&  \;  \mathbb{P}(\text{Soulmate chosen in ${N}^{th}$ interview})\\
+            =& \sum_{i=1}^{N-k} \mathbb{P}(\text{Soulmate chosen in $(k+i)^{th}$ interview})
 	        \end{array}
             \]
             Applying Bayes':
-            \[\sum_{i=1}^{N-k}\mathbb{P}(S \texttt{ chosen @ } i) = \sum_{i=1}^{N-k}\mathbb{P}(\texttt{Given that }S_i = S, \; S_i \texttt{ chosen})\mathbb{P}(S_i = S)\]
-            where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \({1}/{N}\). If \(S_i\) is given to be "the one," they are chosen only if the best candidate thus far was preliminarily rejected (otherwise, he/she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\texttt{ chosen | }S_i = S) = {k}/{(k+i-1)}\). 
-            \[\mathbb{P}(S \texttt{ is chosen}) = \sum_{i=1}^{N-k}\mathbb{P}(S \texttt{ chosen in interview } i) = \sum_{i=1}^{N-k}\frac{k}{N(k+i-1)}\]
+            \[\sum_{i=1}^{N-k}\mathbb{P}(S \text{ chosen @ } i) = \sum_{i=1}^{N-k}\mathbb{P}(\text{Given that }S_i = S, \; S_i \text{ chosen})\mathbb{P}(S_i = S)\]
+            where \(S_i\) is the \(i^{th}\) person interviewed after the initial round of rejects, and \(S\) is your soulmate. Immediately, we see that the probability of any candidate being your soulmate, \(\mathbb{P}(S_i = S)\), is \({1}/{N}\). If \(S_i\) is given to be "the one," they are chosen only if the best candidate thus far was preliminarily rejected (otherwise, he/she would have been selected, not \(S_i\)). Thus, we have \(\mathbb{P}(S_i\text{ chosen | }S_i = S) = {k}/{(k+i-1)}\). 
+            \[\mathbb{P}(S \text{ is chosen}) = \sum_{i=1}^{N-k}\mathbb{P}(S \text{ chosen in interview } i) = \sum_{i=1}^{N-k}\frac{k}{N(k+i-1)}\]
             One can express this summation, using some calculus, as an approximation of a Riemann integral, as follows:
-            \[m \int_{m}^{1-\varepsilon}\frac{1}{x}dx = m\ln(x)\left|_{m}^{1-\varepsilon}\right. = m\ln(1-\epsilon) - m\ln(m)= -m\ln(m)\]
+            \[m \int_{m}^{1}\frac{1}{x}dx = m\ln(x)\left|_{m}^{1}\right. =  -m\ln(m)\]
             where \(m\) is the limiting case of \({k}/{N}\). When this expression is maximized by differentiating and setting to 0, one yields
             \({k}/{N} = {1}/{e} \), and thus the probability of picking your soulmate with the above-defined ratio is also \({1}/{e}\). That's 37%!
             </p>
@@ -417,7 +417,7 @@
     </p>
     <h2>Model B Plugin</h2>
     <p>
-        Some years ago I recorded a sample library of the piano pictured below, comprised of 88 notes * 4 velocities * 4 channels of audio = 1,408 clips. Recently, I put together <a href="https://en.wikipedia.org/wiki/Virtual_Studio_Technology" class="inline" target="_blank">VST</a> and <a href="https://en.wikipedia.org/wiki/Audio_Units" class="inline" target="_blank">AU</a> plugins using the <a href="https://juce.com/" class="inline" target="_blank"> JUCE C++ framework </a>, which maps each MIDI channel (corresponding to the acoustic piano layout) to a group of 4 samples, which are chosen based on the strength at which the note was triggered. You can <a href="https://github.com/hayekn/ssSampler?tab=readme-ov-file" class="inline" target="_blank">take it for a spin</a> yourself, or check out some "recordings" of jazz classics below, made with MIDI from <a href="https://bushgrafts.com/" class="inline" target="_blank">Doug McKenzie</a>.
+        Some years ago I recorded a sample library of the piano pictured below, comprised of each note played at 4 volumes, in 4 audio channels. Recently, I put together <a href="https://en.wikipedia.org/wiki/Virtual_Studio_Technology" class="inline" target="_blank">VST</a> and <a href="https://en.wikipedia.org/wiki/Audio_Units" class="inline" target="_blank">AU</a> plugins using the <a href="https://juce.com/" class="inline" target="_blank"> JUCE C++ framework</a>, which maps each MIDI channel (corresponding to the acoustic piano layout) to a group of samples, which are chosen based on the strength at which the note was triggered. You can <a href="https://github.com/hayekn/ssSampler?tab=readme-ov-file" class="inline" target="_blank">take it for a spin</a> yourself, or check out some "recordings" of jazz classics below, made with MIDI from <a href="https://bushgrafts.com/" class="inline" target="_blank">Doug McKenzie</a>.
     <!-- you happen to use the DAW <a href="https://www.reasonstudios.com/" class="inline" target="_blank">Reason</a>, in <a href="https://mcgill-my.sharepoint.com/:u:/g/personal/nicholas_hayek_mail_mcgill_ca/EfAcfL2cuSRJom7Nsg9iwS0BZ5mXprXEn4m9uCDn4cgKdw?e=ciHIHP" class="inline" target="_blank">this zip file</a> you'll find an .sxt <a href="https://www.reasonstudios.com/en/reason/instruments/nn-xt" class="inline" target="_blank">instrument</a> compatible with Reason, along with all the 416 individual clip recordings of this gorgeous Steinway. Below are some audio samples of a "robot" (credit to <a href="https://bushgrafts.com/" class="inline" target="_blank">Doug McKenzie</a> for the midi files) playing it. -->
         <br><a id="VST" style="visibility: hidden;"></a>
     </p>
