@@ -30,11 +30,20 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.5.3/MathJax.js?config=TeX-MML-AM_CHTML">
 </script> -->
 <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-  </script>
-  <script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@2.5.1/es5/tex-mml-chtml.js">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        "HTML-CSS": {
+          availableFonts:[],
+          styles: {".MathJax_Preview": {visibility: "hidden"}}
+        }
+      });
 </script>
+
+<script type="text/javascript" src="scripts/mathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js"></script>
+
+
 
 </head>
 
@@ -205,21 +214,21 @@
     <br>
     <h2>Distribution of Matrix Reduction Efficiency</h2>
     <p>
-    During $test \text{test}$ \(sdf\) partial pivoting Guassian elimination (PPGE) of a matrix (just like regular GE, except we choose as a pivot the element which satisfies max\({}_i|a_{ij}|\) for each column \(A^{(j)}\)), one sometimes accumulates large intermediate values&mdash;&mdash;so much so that the final result in unreachable because of overflow. The following is a classical example:
+    During partial pivoting Guassian elimination (PPGE) of a matrix (just like regular GE, except we choose as a pivot the element which satisfies \({\max}_i|a_{ij}|\) for each column \(A^{(j)}\)), one sometimes accumulates large intermediate values&mdash;&mdash;so much so that the final result in unreachable because of overflow. The following is a classical example:
     \[
     A = \begin{bmatrix}
     1 & 0 & 0 & 0 & 1\\
     -1 & 1 & 0 & 0 & 1\\
     -1 & -1 & 1 & 0 & 1\\
     -1 & -1 & -1 & 1 & 1\\
-    -1 & -1 & -1 & -1 & 1\\\\
+    -1 & -1 & -1 & -1 & 1\\
     \end{bmatrix} \to
     \begin{bmatrix}
     1 & 0 & 0 & 0 & 1\\
     0 & 1 & 0 & 0 & 2\\
     0 & 0 & 1 & 0 & 4\\
     0 & 0 & 0 & 1 & 8\\
-    0 & 0 & 0 & 0 & 16\\\\
+    0 & 0 & 0 & 0 & 16\\
     \end{bmatrix} = B
     \]
     For a \(n\) by \(n\) matrix as formulated above, PPGE will result in a matrices whose maximal element is \(\leq 2^{n-1}\). In fact, this is the worst case scenario. For much larger matrices, say 1000x1000, we are going to run into problems. Despite this, PPGE is by far the most popular method for accomplishing LU decomposition, and system solving. Why? Basically, the catastrophic example above is possible, but unrealistic.
