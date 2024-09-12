@@ -7,6 +7,21 @@
 <link rel="canonical" href="https://nicholashayek.com/notes.html">
 <title>Course Notes</title>
 <link rel="icon" type="image/x-icon" href="dice.svg">
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        extensions: ["tex2jax.js"],
+        "HTML-CSS": {
+          availableFonts:[],
+          styles: {".MathJax_Preview": {visibility: "hidden"}}
+        }
+      });
+    MathJax.Hub.setRenderer("SVG");
+</script>
+
+<script type="text/javascript" src="scripts/mathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js"></script>
+
 </head>
 <style>
 
@@ -31,7 +46,7 @@
     
     <p class="buttonrow">
         <a href = "https://nicholashayek.com/tex/hayektex.cls" download="hayektex.cls", style="margin-right: 1vw;">
-            LaTex Template
+            $\LaTeX$ Template (.cls)
         </a> <a  href = "https://nicholashayek.com/tex/README.pdf", target="_blank">
             Readme
         </a>
@@ -78,9 +93,6 @@
         <sup>†</sup>in progress
         
 
-
-
-
         <!--<a class="nav-link" href = https://nicholashayek.com/num.html>
             MATH 387 &mdash; Numerical Analysis
         </a>
@@ -91,7 +103,7 @@
         </a> -->
     </p>
 
-    <p style="position: absolute; bottom: 0; text-align: right;">
+    <p style="position: relative; bottom: 0; text-align: right;">
         <a href="index.html" style="border: transparent; margin-right: 20vw; padding: 40px 10px  10px  10px ;">
             <img src="images/home.svg" width="50vw">
         </a>
