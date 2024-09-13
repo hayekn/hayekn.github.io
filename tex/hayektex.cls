@@ -27,7 +27,7 @@
 	\usetikzlibrary{shapes}
 \RequirePackage{pgfplots}
 \RequirePackage{graphicx}
-\usepackage{sourcecodepro}
+\RequirePackage{sourcecodepro}
 
 \RequirePackage{geometry}
 \RequirePackage{ifthen}
@@ -43,6 +43,7 @@
 \RequirePackage{textcase}
 \RequirePackage{setspace}
 \RequirePackage{xfrac}
+\RequirePackage{xhfill}
 \RequirePackage{mathtools}
 \RequirePackage{faktor}
 \RequirePackage{cancel}
