@@ -19,14 +19,19 @@
 \LoadClass[letterpaper,11pt]{article}
 
 %PACKAGES{
-\RequirePackage{geometry}
-\RequirePackage{ifthen}
-\ifthenelse{\isundefined{\@wantscenter}}{\geometry{verbose,letterpaper,top=1.45in,bottom=1.35in,left=1.15in,right=2in,asymmetric,twoside}}{\geometry{verbose,letterpaper,top=1.45in,bottom=1.35in,left=1.25in,right=1.25in,asymmetric,twoside}}
 \RequirePackage[widermath,narrowiints,fullsumlimits,fullintlimits]{kpfonts}
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{tikz}
+	\usetikzlibrary{arrows}
+	\usetikzlibrary{patterns}
+	\usetikzlibrary{shapes}
 \RequirePackage{pgfplots}
 \RequirePackage{graphicx}
+\usepackage{sourcecodepro}
+
+\RequirePackage{geometry}
+\RequirePackage{ifthen}
+\ifthenelse{\isundefined{\@wantscenter}}{\geometry{verbose,letterpaper,top=1.45in,bottom=1.35in,left=1.15in,right=2in,asymmetric,twoside,marginparwidth=115pt,marginparsep=15pt}}{\geometry{verbose,letterpaper,top=1.45in,bottom=1.35in,left=1.25in,right=1.25in,asymmetric,twoside}}
 \RequirePackage{empheq}
 \RequirePackage[framemethod=TikZ, xcolor]{mdframed}
 \RequirePackage{fancyhdr}
@@ -73,9 +78,9 @@
 \titleformat{\subsection}{\relax\centering}{}{1em}{\large\itshape}
 \titleformat{\subsubsection}{\relax}{}{0em}{\normalsize\textbf}
 \titleformat{\paragraph}[runin]{}{}{}{\normalsize\smallcaps}
-\newcommand{\@curpart}{}
+\newcommand{\thecurpart}{}
 \let\oldpart\part
-\renewcommand{\part}[1]{\oldpart{#1}\renewcommand{\@curpart}{#1}}
+\renewcommand{\part}[1]{\oldpart{#1}\renewcommand{\thecurpart}{#1}}
 
 \renewcommand{\cftsecfont}{}
 \setcounter{secnumdepth}{-1}
@@ -128,7 +133,7 @@
 
 \fancyhead[RE]{\smallcaps\thepage}
 \ifthenelse{\isundefined{\@authhead}}{
-	\fancyhead[RO]{\smallcaps\protect\MakeLowercase{\protect\textls[70]{\@curpart}}}
+	\fancyhead[RO]{\smallcaps\protect\MakeLowercase{\protect\textls[70]{\thecurpart}}}
 }{
 	\fancyhead[RO]{\smallcaps\protect\MakeLowercase{\protect\textls[70]{\@author}}}
 }
@@ -136,6 +141,9 @@
 %}
 
 %ENVIORNMENTS{
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\newcommand{\code}[1]{\colorbox{backcolour}{\texttt{\footnotesize#1}}}
+
 \newcommand{\@theoremcolor}{Maroon}
 \newcommand{\theoremcolor}[1]{\renewcommand{\@theoremcolor}{#1}}
 \mdfdefinestyle{theorem}{
@@ -149,8 +157,13 @@
 	backgroundcolor=gray!10}
 
 \newenvironment{theorem}{\begin{mdframed}[style=theorem]}{\end{mdframed}}
-\renewenvironment{proof}[1][]{\say{\vspace{.4cm}\\Proof#1.}\begin{mdframed}[style=proof]}{\qed\end{mdframed}}
-\newenvironment{proofn}[1][]{\say{\vspace{.4cm}\\Proof#1.}\begin{mdframed}[style=proof]}{\end{mdframed}}
+\renewenvironment{proof}[1][Proof.]{\say{\vspace{.4cm}\\#1}\begin{mdframed}[style=proof]}{\qed\end{mdframed}}
+\newenvironment{proofn}[1][Proof.]{\say{\vspace{.4cm}\\#1}\begin{mdframed}[style=proof]}{\end{mdframed}}
+\newenvironment{example}{
+	\noindent\xrfill[2pt]{.75pt}[black]\,$\spadesuit$\,\textit{Examples}\,$\clubsuit$\,\xrfill[2pt]{.75pt}[black]\\
+}{
+	\\\noindent\xrfill[2pt]{.75pt}[black]
+}
 
 %}
 
