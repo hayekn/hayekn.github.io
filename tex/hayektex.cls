@@ -35,6 +35,7 @@
 \RequirePackage{empheq}
 \RequirePackage[framemethod=TikZ, xcolor]{mdframed}
 \RequirePackage{fancyhdr}
+\RequirePackage{xargs}
 \RequirePackage{mathdots}
 \RequirePackage{microtype}
 \RequirePackage{stmaryrd}
@@ -79,9 +80,13 @@
 \titleformat{\subsection}{\relax\centering}{}{1em}{\large\itshape}
 \titleformat{\subsubsection}{\relax}{}{0em}{\normalsize\textbf}
 \titleformat{\paragraph}[runin]{}{}{}{\normalsize\smallcaps}
+
+
+\newcounter{partNum}
+
 \newcommand{\thecurpart}{}
 \let\oldpart\part
-\renewcommand{\part}[1]{\oldpart{#1}\renewcommand{\thecurpart}{#1}}
+\renewcommand{\part}[1]{\stepcounter{partNum}\oldpart{\Roman{partNum} \quad #1}\renewcommand{\thecurpart}{#1}}
 
 \renewcommand{\cftsecfont}{}
 \setcounter{secnumdepth}{-1}
@@ -145,6 +150,9 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \newcommand{\code}[1]{\colorbox{backcolour}{\texttt{\footnotesize#1}}}
 
+\newcounter{propNum}[partNum]
+\newcommand{\prop}[1][-.2]{\noindent\stepcounter{propNum}\margintext{\vspace{#1cm}\hypertarget{prop\arabic{partNum}.\arabic{propNum}}{\runin{Prop \arabic{partNum}.\arabic{propNum}}}}}
+
 \newcommand{\@theoremcolor}{Maroon}
 \newcommand{\theoremcolor}[1]{\renewcommand{\@theoremcolor}{#1}}
 \mdfdefinestyle{theorem}{
@@ -157,8 +165,12 @@
 	linewidth=0pt,
 	backgroundcolor=gray!10}
 
-\newenvironment{theorem}{\begin{mdframed}[style=theorem]}{\end{mdframed}}
-\renewenvironment{proof}[1][Proof.]{\say{\vspace{.4cm}\\#1}\begin{mdframed}[style=proof]}{\qed\end{mdframed}}
+
+\newcounter{theoremNum}[partNum]
+\newenvironment{theorem}[1][]{\stepcounter{theoremNum}\begin{mdframed}[style=theorem]\textbf{\arabic{partNum}.\arabic{theoremNum}\quad #1\\[8pt]}}{\end{mdframed}}
+\renewenvironmentx{proof}[2][1=\qed, 2=Proof.]{\def\endArg{#1}\say{\vspace{.4cm}\\#2}\begin{mdframed}[style=proof]}
+	{\hfill\endArg\end{mdframed}}
+
 \newenvironment{proofn}[1][Proof.]{\say{\vspace{.4cm}\\#1}\begin{mdframed}[style=proof]}{\end{mdframed}}
 \newenvironment{example}{
 	\noindent\xrfill[2pt]{.75pt}[black]\,$\spadesuit$\,\textit{Examples}\,$\clubsuit$\,\xrfill[2pt]{.75pt}[black]\\
