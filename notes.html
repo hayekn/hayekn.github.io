@@ -43,6 +43,89 @@
     <h1 class="top">
         Course Notes
     </h1>
+
+  <style>
+    .button-group {
+      margin-top: 10px;
+      overflow: hidden;
+      max-height: 500px; /* large enough for content */
+      transition: max-height 0.4s ease;
+    }
+
+    /* Collapsed state */
+    .button-group.hidden {
+      max-height: 0;
+    }
+
+    .arrow {
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .arrow.collapsed {
+      transform: rotate(90deg);
+    }
+
+    /* Buttons initially invisible */
+    .button-group button {
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    /* When container is expanded, fade in buttons */
+    .button-group.show button {
+      opacity: 1;
+    }
+
+    /* Staggered delays for phasing in */
+    .button-group.show button:nth-child(1) { transition-delay: 0.1s; }
+    .button-group.show button:nth-child(2) { transition-delay: 0.2s; }
+    .button-group.show button:nth-child(3) { transition-delay: 0.3s; }
+  </style>
+  <div>
+    <span class="arrow" id="toggle-arrow">▶</span><span class="arrow">&nbsp; Old Notes</span>
+    <div class="button-group hidden" id="button-group">
+        <br>
+        <a href="https://nicholashayek.com/tex/MATH/325/ODE%20Notes.pdf" target="_blank">
+            MATH 325 &mdash; ODEs
+        </a>
+        <a href="https://www.mcgill.ca/study/2023-2024/courses/math-325" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
+        <br><br><br>
+        <a href = "tex/MATH/248/Vector Calculus Notes.pdf", target="_blank">
+            MATH 248 &mdash; Vector Calculus<sup>†</sup>
+        </a>
+        <a href="https://www.mcgill.ca/study/2024-2025/courses/math-248" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
+        <br><br><br>
+         <a href = "https://nicholashayek.com/tex/MATH/235/Algebra%20Notes.pdf", target="_blank">
+            MATH 235 &mdash; Algebra 1
+        </a>
+        <a href="https://www.mcgill.ca/study/2023-2024/courses/math-235" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
+        <br><br>
+    </div>
+  </div>
+
+  <script>
+    const arrow = document.getElementById("toggle-arrow");
+    const buttonGroup = document.getElementById("button-group");
+
+    arrow.addEventListener("click", () => {
+      const isHidden = buttonGroup.classList.contains("hidden");
+      buttonGroup.classList.toggle("hidden");
+
+      if (isHidden) {
+        requestAnimationFrame(() => {
+          buttonGroup.classList.add("show");
+        });
+      } else {
+        buttonGroup.classList.remove("show");
+      }
+
+      arrow.classList.toggle("collapsed");
+    });
+  </script>
     
     <p class="buttonrow">
         <a href = "https://nicholashayek.com/tex/hayektex.cls" download="hayektex.cls", style="margin-right: 1vw;">
@@ -52,17 +135,17 @@
         </a>
         <br><br>
         
-        <a href = "https://nicholashayek.com/tex/MATH/235/Algebra%20Notes.pdf", target="_blank">
+        <!-- <a href = "https://nicholashayek.com/tex/MATH/235/Algebra%20Notes.pdf", target="_blank">
             MATH 235 &mdash; Algebra 1
         </a>
         <a href="https://www.mcgill.ca/study/2023-2024/courses/math-235" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br> -->
         
-        <a href = "tex/MATH/248/Vector Calculus Notes.pdf", target="_blank">
+        <!-- <a href = "tex/MATH/248/Vector Calculus Notes.pdf", target="_blank">
             MATH 248 &mdash; Vector Calculus<sup>†</sup>
         </a>
         <a href="https://www.mcgill.ca/study/2024-2025/courses/math-248" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br> -->
         
         <a href = "https://nicholashayek.com/tex/MATH/251/Algebra%202%20Notes.pdf", target="_blank">
             MATH 251 &mdash; Algebra 2
@@ -70,11 +153,11 @@
         <a href="https://www.mcgill.ca/study/2023-2024/courses/math-251" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
         <br><br>
 
-        <a href="https://nicholashayek.com/tex/MATH/325/ODE%20Notes.pdf" target="_blank">
+        <!-- <a href="https://nicholashayek.com/tex/MATH/325/ODE%20Notes.pdf" target="_blank">
             MATH 325 &mdash; ODEs
         </a>
         <a href="https://www.mcgill.ca/study/2023-2024/courses/math-325" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br> -->
 
         <a href="tex/MATH/350/Discrete Math Notes.pdf" target="_blank">
             MATH 350 &mdash; Graph Theory
@@ -88,11 +171,11 @@
         <a href="https://www.mcgill.ca/study/2023-2024/courses/math-356" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
         <br><br>
 
-        <a href = "tex/MATH/454/Analysis 3 Notes.pdf", target="_blank">
+        <!-- <a href = "tex/MATH/454/Analysis 3 Notes.pdf", target="_blank">
             MATH 454 &mdash; Analysis 3<sup>†</sup>
         </a>
         <a href="https://www.mcgill.ca/study/2024-2025/courses/math-454" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br> -->
 
         <a href = "tex/MATH/456/Algebra 3 Notes.pdf", target="_blank">
             MATH 456 &mdash; Algebra 3
