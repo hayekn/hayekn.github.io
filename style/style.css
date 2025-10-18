@@ -28,7 +28,7 @@
 }
 
 * {
-    font-family: 'Slab', 'Georgia', 'Times New Roman', Times, serif;
+    font-family: 'Comic Sans MS', 'Slab', 'Georgia', 'Times New Roman', Times, serif;
     overflow-wrap: normal;
     object-fit: contain;
 }
@@ -65,7 +65,7 @@ a:visited {
     color: black;
 }
 a:active{
-    background-color: rgb(255, 177, 104);
+    background-color: rgb(255, 160, 70);
 }
 
 .inline {
