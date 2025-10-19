@@ -28,12 +28,12 @@
 }
 
 @font-face {
-    font-family: My Comic Sans;
+    font-family: MyComic;
     src: url(Comic\ Sans\ MS.ttf);
 }
 
 * {
-    font-family: 'Comic Sans', 'My Comic Sans', 'Slab', 'Georgia', 'Times New Roman', Times, serif;
+    font-family: 'Comic Sans', 'MyComic', 'Slab', 'Georgia', 'Times New Roman', Times, serif;
     overflow-wrap: normal;
     object-fit: contain;
 }
