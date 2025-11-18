@@ -43,7 +43,6 @@
 }
 
 body {
-    /*background-color: rgb(255, 228, 202);*/
     background-color: rgb(255, 255, 255);
     margin: 5vw;
     margin-left: 15vw;
@@ -56,11 +55,22 @@ a {
     border-radius: 5px;
     border-color: black;
     padding: 10px 30px;
-    /*background-color: rgb(255, 228, 202);*/
     font-size: 14pt;
     transition-duration: .4s;
     text-decoration: none;
     color: black;
+}
+
+a.nav-link {
+    display: inline-block;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 0.4rem 1rem;
+    font-size: clamp(1.1rem, 1vw, 1.1rem);
+    text-decoration: none;
+    color: black;
+    transition: 0.4s;
+    margin: 0 .75rem;
 }
 
 a:hover {
@@ -75,7 +85,6 @@ a:active{
 
 .inline {
     padding: 1.5px;
-    /*background-color: rgb(255, 228, 202);*/
 }
 
 .MJX-TEX { 
@@ -88,10 +97,21 @@ p {
     width: 100%;
 }
 
-.buttonrow{
+.buttonrow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;       
+    text-align: center;
+    align-items: flex-start;
+
+}
+
+/* .buttonrow{
     text-align: center;
     margin-top: 4cm;
-}
+} */
+
 
 hr{
     width: 50%;
