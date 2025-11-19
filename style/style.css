@@ -70,7 +70,7 @@ a.nav-link {
     text-decoration: none;
     color: black;
     transition: 0.4s;
-    margin: 0 .75rem;
+    margin: 0 .5rem;
 }
 
 a:hover {
