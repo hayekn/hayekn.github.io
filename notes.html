@@ -47,11 +47,11 @@
     h2{
           .MJX-TEX { font-size:20pt; }
     }
-
+/* 
     .buttonrow{
         text-align: justify;
         margin-left: 35%;
-    }
+    } */
 
     @media screen and (max-width: 1200px) {
     .buttonrow{text-align: center;
@@ -91,22 +91,28 @@
     .arrow.collapsed {
       transform: rotate(90deg);
     }
-
-    /* Buttons initially invisible */
     .button-group button {
       opacity: 0;
       transition: opacity 0.4s ease;
     }
-
-    /* When container is expanded, fade in buttons */
     .button-group.show button {
       opacity: 1;
     }
-
-    /* Staggered delays for phasing in */
     .button-group.show button:nth-child(1) { transition-delay: 0.1s; }
     .button-group.show button:nth-child(2) { transition-delay: 0.2s; }
     .button-group.show button:nth-child(3) { transition-delay: 0.3s; }
+
+    a {
+      display: inline-block;
+      border: 1.5px solid black;
+      border-radius: 5px;
+      padding: .7rem 1.5rem;
+      font-size: clamp(1.1rem, 1vw, 1.1rem);
+      text-decoration: none;
+      color: black;
+      transition: 0.4s;
+      margin: 0 .5rem;
+    }
   </style>
   <div>
     <span class="arrow" id="toggle-arrow">▶</span><span class="arrow">&nbsp; Older (235/325/248)</span>
@@ -150,13 +156,14 @@
     });
   </script>
     
-    <p class="buttonrow">
+    <div style="text-align: center; margin-top: 2rem">
+       <div style="display: inline-block; text-align: left; margin-left: 2rem;">
         <a href = "https://nicholashayek.com/tex/hayektex.cls" download="hayektex.cls", style="margin-right: 1vw;">
             $\LaTeX$ Template (.cls)
         </a> <a  href = "tex/README.pdf", target="_blank">
             Readme
         </a>
-        <br><br>
+        <br><br><br>
 
         <!-- <a href = "https://nicholashayek.com/tex/MATH/235/Algebra%20Notes.pdf", target="_blank">
             MATH 235 &mdash; Algebra 1
@@ -174,7 +181,7 @@
             MATH 251 &mdash; Algebra 2
         </a>
         <a href="https://www.mcgill.ca/study/2023-2024/courses/math-251" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br><br>
 
         <!-- <a href="https://nicholashayek.com/tex/MATH/325/ODE%20Notes.pdf" target="_blank">
             MATH 325 &mdash; ODEs
@@ -186,13 +193,13 @@
             MATH 350 &mdash; Graph Theory
         </a>
         <a href="https://www.mcgill.ca/study/2024-2025/courses/math-350" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br><br>
 
         <a href = "tex/MATH/356/Probability Notes.pdf", target="_blank">
             MATH 356 &mdash; Probability
         </a>
         <a href="https://www.mcgill.ca/study/2023-2024/courses/math-356" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br><br>
 
         <!-- <a href = "tex/MATH/454/Analysis 3 Notes.pdf", target="_blank">
             MATH 454 &mdash; Analysis 3<sup>†</sup>
@@ -204,31 +211,31 @@
             MATH 456 &mdash; Algebra 3
         </a>
         <a href="https://www.mcgill.ca/study/2024-2025/courses/math-456" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br><br>
 
         <a href = "tex/MATH/457/Algebra 4 Notes.pdf", target="_blank">
             MATH 457 &mdash; Algebra 4
         </a>
         <a href="https://www.mcgill.ca/study/2024-2025/courses/math-457" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br><br>
 
         <a href = "tex/MATH/470/470report.pdf", target="_blank">
             MATH 470 &mdash; Supersingular Elliptic Curves
         </a>
         <a href="https://coursecatalogue.mcgill.ca/courses/math-470/" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br><br>
 
         <a href = "tex/COMP/532/Proof Complexity Notes.pdf", target="_blank">
             COMP 532 &mdash; Propositional Proof Complexity<sup>†</sup>
         </a>
         <a href="https://www.mcgill.ca/study/2024-2025/courses/comp-532" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br><br>
 
         <a href = "tex/MATH/576/Topology Notes.pdf", target="_blank">
             MATH 576 &mdash; Topology<sup>†</sup>
         </a>
         <a href="https://coursecatalogue.mcgill.ca/courses/math-576/" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br>
+        <br><br><br>
 
         <sup>†</sup>in progress/incomplete
         <!--<a class="nav-link" href = https://nicholashayek.com/num.html>
@@ -239,10 +246,11 @@
         <a href=temp.html style="border-style: dashed;">
             Latex Template
         </a> -->
-    </p>
+        </div>
+    </div>
 
     <p style="position: relative; bottom: 0; text-align: right;">
-        <a href="index.html" style="border: transparent; margin-right: 20vw; padding: 40px 10px  10px  10px ;">
+        <a href="index.html" style="border: transparent; margin-right: 20vw; padding: 12px 10px  8px  10px ;">
             <img src="images/home.svg" width="50vw">
         </a>
     </p>
