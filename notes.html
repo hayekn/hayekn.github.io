@@ -16,18 +16,6 @@
 <link rel="canonical" href="https://nicholashayek.com/notes.html">
 <title>Course Notes</title>
 <link rel="icon" type="image/x-icon" href="dice.svg">
-
-<!-- <script type="text/javascript" src="scripts/mathJax/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script> -->
-<!-- <script type="text/javascript" src="scripts/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
-<!-- <script type="text/javascript" src="scripts/mathjax/config/TeX-AMS_HTML.js"></script> -->
- <!-- <script type="text/javascript" src="scripts/mathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js"></script> -->
-<!-- <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
-    });
-  </script>
-  <script src="scripts/mathJax/MathJax.js?config=TeX-AMS_HTML"></script> -->
-
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
@@ -47,11 +35,6 @@
     h2{
           .MJX-TEX { font-size:20pt; }
     }
-/* 
-    .buttonrow{
-        text-align: justify;
-        margin-left: 35%;
-    } */
 
     @media screen and (max-width: 1200px) {
     .buttonrow{text-align: center;
@@ -86,10 +69,11 @@
       user-select: none;
       transition: transform 0.3s ease;
       display: inline-block;
+      transform: translateY(5px);
     }
 
     .arrow.collapsed {
-      transform: rotate(90deg);
+      transform: translateY(5px) rotate(90deg);
     }
     .button-group button {
       opacity: 0;
@@ -115,7 +99,11 @@
     }
   </style>
   <div>
-    <span class="arrow" id="toggle-arrow">▶</span><span class="arrow">&nbsp; Older (235/325/248)</span>
+    <div id="collapsible-line" class="collapsible-line">
+    <img id="toggle-arrow" class="arrow" style="padding: 0;" src="images/arrow-circle-right-solid.svg" width="25px">
+    <span class="arrow" style="transform: none;">&nbsp; Older (235, 325, 248)</span>
+    </div>
+
     <div class="button-group hidden" id="button-group">
         <br>
         <a href="https://nicholashayek.com/tex/MATH/325/ODE%20Notes.pdf" target="_blank">
@@ -136,25 +124,28 @@
     </div>
   </div>
 
-  <script>
-    const arrow = document.getElementById("toggle-arrow");
-    const buttonGroup = document.getElementById("button-group");
+<script>
+  const arrow = document.getElementById("toggle-arrow");
+  const buttonGroup = document.getElementById("button-group");
+  const collapsibleLine = document.getElementById("collapsible-line"); // Make the whole line clickable
 
-    arrow.addEventListener("click", () => {
-      const isHidden = buttonGroup.classList.contains("hidden");
-      buttonGroup.classList.toggle("hidden");
+  collapsibleLine.addEventListener("click", () => {
+    const isHidden = buttonGroup.classList.contains("hidden");
 
-      if (isHidden) {
-        requestAnimationFrame(() => {
-          buttonGroup.classList.add("show");
-        });
-      } else {
-        buttonGroup.classList.remove("show");
-      }
+    buttonGroup.classList.toggle("hidden");
 
-      arrow.classList.toggle("collapsed");
-    });
-  </script>
+    if (isHidden) {
+      requestAnimationFrame(() => {
+        buttonGroup.classList.add("show");
+      });
+    } else {
+      buttonGroup.classList.remove("show");
+    }
+
+    arrow.classList.toggle("collapsed");
+  });
+</script>
+
     
     <div style="text-align: center; margin-top: 2rem">
        <div style="display: inline-block; text-align: left; margin-left: 2rem;">
@@ -235,6 +226,12 @@
             MATH 576 &mdash; Topology<sup>†</sup>
         </a>
         <a href="https://coursecatalogue.mcgill.ca/courses/math-576/" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
+        <br><br>
+
+        <a href = "tex/MATH/553/Game Theory Review.pdf", target="_blank">
+            MATH 553 &mdash; Game Theory (Important Results)<sup>†</sup>
+        </a>
+        <a href="https://coursecatalogue.mcgill.ca/courses/math-553/" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
         <br><br>
 
         <sup>†</sup>in progress/incomplete
