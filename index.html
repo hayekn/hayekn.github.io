@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
+<meta charset="utf-8">
+<title>Homepage</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="homepage of Nicholas Hayek's personal website">
+
+<link rel="stylesheet" href="style/style.css">
+<link rel="canonical" href="https://nicholashayek.com/index.html">
+<link rel="icon" type="image/x-icon" href="dice.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMM8GRX6JC"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -11,24 +24,18 @@
 
   gtag('config', 'G-GMM8GRX6JC');
 </script>
-<link rel="stylesheet" href="style/style.css">
-<link rel="canonical" href="https://nicholashayek.com/index.html">
-<meta name="viewport" content="width=device-width, initial-scale=.5">
-<title>Nicholas Hayek</title>
-<script src="https://kit.fontawesome.com/28200a00ab.js" crossorigin="anonymous"></script>
-<link rel="icon" type="image/x-icon" href="dice.svg">
+
 </head>
 <style>
 
     .emailButton{
-        border: transparent;
+        border: none;
         border-width: 1.5px;
         border-radius: 5px;
         border-color: black;
-        background-color: rgb(255, 255, 255);
+        background-color: #F8F8F8;
         transition-duration: .4s;
         text-decoration: none;
-        /*color: black;*/
     }
     .emailButton:hover {
         background-color: rgb(255, 205, 158);
@@ -39,17 +46,14 @@
 
     .emailButton:focus span{
         display: none;
-        padding-bottom: 5px;
     }
     .emailButton:focus:after {
         transition: 3s;
         content: "In your clipboard!";
-        font-size: 14pt;
+        font-size: 12pt;
+        line-height: 45px; 
     }
 
-    .emailButton:focus{
-        padding: 15px 10px;
-    }
 
 
 </style>
@@ -64,20 +68,21 @@
     <p>
         is an undergraduate at McGill University in beautiful <a href="https://en.wikipedia.org/wiki/Montreal" class="inline" target="_blank">Montreal, Quebec</a>. My spare time
         is spent at the piano, occasionally in service
-        to the school <a href="https://www.thetribune.ca/" class="inline" target="_blank">paper</a>, and <a href="https://www.goodreads.com/user/show/143174413-nicholas" class="inline" target="_blank">reading</a>. You can find me sitting in <a href="https://www.google.com/maps/place/Saint-Louis+Square/@45.5169784,-73.5725182,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91bb5422a897f:0x247ab8001d20d276!8m2!3d45.5169784!4d-73.5699433!16s%2Fm%2F0b6kn7y?hl=en&entry=ttu" class="inline" target="_blank">St. Louis Square</a> (weather permitting),
+        to the <a href="https://www.thetribune.ca/" class="inline" target="_blank">school paper</a>, and <a href="https://www.goodreads.com/user/show/143174413-nicholas" class="inline" target="_blank">reading</a>. You can find me sitting in <a href="https://www.google.com/maps/place/Saint-Louis+Square/@45.5169784,-73.5725182,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91bb5422a897f:0x247ab8001d20d276!8m2!3d45.5169784!4d-73.5699433!16s%2Fm%2F0b6kn7y?hl=en&entry=ttu" class="inline" target="_blank">St. Louis Square</a> (weather permitting),
         rooting for the <a href="https://bleacherreport.com/articles/2625556-apples-siri-pinpoints-browns-stadium-as-sadness-in-cleveland" target="_blank" class="inline">Cleveland Browns</a> (in vain),
         or buried in the basement of <a href="https://www.thetribune.ca/opinion/point-counterpoint-a-debate-on-the-aesthetic-of-burnside-hall/" class="inline" target="_blank">a brutalist building</a>.
-    <p>    
+    <p>   
     <div style="margin-top: 5rem;"></div>
     <p class="buttonrow">
-        <a class="nav-link" href = https://nicholashayek.com/notes.html style="color: rgb(147, 60, 253);">
+        <a class="nav-link" href = https://nicholashayek.com/notes.html>
             Math Notes
         </a>
         <a class="nav-link" href = "matchmaker" style="background: url(./images/lotsofhearts.gif) no-repeat; background-size: cover;">
             Matchmaker
         </a>
-        <a class="nav-link" href = "goodcalendar" style="background: url(./images/sparkles.gif) no-repeat; background-size: cover; 
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent">
+        <!-- style="background: url(./images/sparkles.gif) no-repeat; background-size: cover; 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;" -->
+        <a class="nav-link" href = "goodcalendar">
             Good Calendar
         </a>
          <a class="nav-link" href = "https://pictures.nicholashayek.com/" style="background-color: black; color: white; border-color: gray; font-family: 'Courier New', Courier, monospace;">
@@ -86,10 +91,10 @@
     </p>
     <p class="buttonrow">
         <a class="nav-link" href = "proj.html">
-            Steinway Midi Plugin
+            Virtual Piano
         </a>
         <a class="nav-link" href = "https://nicholashayek.com/bits.html">
-            Math Junkyard
+            Math Scraps
         </a>
         <a class="nav-link" target="_blank" href = "https://nbviewer.org/github/hayekn/git_cv/blob/main/NicholasHayekCV.pdf">
             CV
@@ -97,9 +102,9 @@
     </p>
     <div style="margin-top: 7rem;"></div>
     <p class="buttonrow">
-        <a href="https://www.instagram.com/nicholas_hayek/" style="padding: 10px 10px 0px 10px; border: transparent;"  target="_blank"><img src="images/insta.svg" width="30vw"></a>
+        <a href="https://www.instagram.com/nicholas_hayek/" style="border: none;"  target="_blank"><img src="images/insta.svg" width="30vw"></a>
 
-        <button onclick=copyText() class="emailButton" style="padding: 10px 10px 10px 10px;"><span><img src="images/envelope.svg" width="30vw"></span></button>
+        <button onclick=copyText() class="emailButton" style="font-style:italic"><span><img src="images/envelope.svg" style="display: block;" width="30vw"></span></button>
         <script>
             function copyText() {
                 navigator.clipboard.writeText
@@ -108,7 +113,7 @@
             }
         </script>
 
-        <a href="https://www.linkedin.com/in/nicholas-hayek-b24b1a243/" style="padding: 10px 10px 0px 10px; border: transparent;" target="_blank">
+        <a href="https://www.linkedin.com/in/nicholas-hayek-b24b1a243/" target="_blank">
             <img src="images/linkedin.svg" width="30fr">
         </a>
 

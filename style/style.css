@@ -32,8 +32,10 @@
     src: url(Comic\ Sans\ MS.ttf);
 }
 
+
 * {
-    font-family: 'Comic Sans', 'MyComic', 'Slab', 'Georgia', 'Times New Roman', Times, serif;
+    /* font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+    /* font-family: 'Comic Sans', 'MyComic', 'Slab', 'Georgia', 'Times New Roman', Times, serif; */
     overflow-wrap: normal;
     object-fit: contain;
 }
@@ -41,50 +43,67 @@
 .top {
     color: rgb(51, 51, 51);
 }
-
-body {
-    background-color: rgb(255, 255, 255);
-    margin: 5vw;
-    margin-left: 15vw;
-    margin-right: 15vw;
+body { 
+    margin: 5% auto; 
+    max-width: 55em; 
+    line-height: 1.7; 
+    font-size: 1.125em; 
+    color: #0a0a0a; 
+    padding: 0 2%; 
+    font-weight: 475;
+    font-style: normal;
+    font-family:  -apple-system, 'Inter', sans-serif, 'Comic Sans', 'MyComic', 'Slab', 'Georgia';
+    background-color: #F8F8F8;
 }
 
 a {
-    border-style: solid;
-    border-width: 1.5px;
     border-radius: 5px;
-    border-color: black;
-    padding: 10px 30px;
+    background-color: #F8F8F8;
     font-size: 14pt;
     transition-duration: .4s;
     text-decoration: none;
     color: black;
 }
 
-a.nav-link {
-    display: inline-block;
-    border: 1.5px solid black;
-    border-radius: 5px;
-    padding: 0.4rem 1rem;
-    font-size: clamp(1.1rem, 1vw, 1.1rem);
-    text-decoration: none;
-    color: black;
-    transition: 0.4s;
-    margin: 0 .5rem;
+
+a.inline {
+    background-color: #ddd;
+    padding: 2px;
 }
 
-a:hover {
-    background-color: rgb(255, 205, 158);
+a.inlineinfo {
+    background-color: #ddd;
+    padding: 0px 5px;
+    font-size: 10pt; 
+    margin-left: 1vw; 
+    border: none;
 }
+
+a.nav-link {
+    display: inline-block;
+    border: 3px double rgb(59, 59, 59);
+    padding: 0.4rem 1rem;
+    font-size: clamp(1.1rem, 1vw, 1.1rem);
+    margin: 0 .5rem;
+    font-weight: 500;
+}
+
 a:visited {
     color: black;
 }
 a:active{
-    background-color: rgb(255, 160, 70);
-}
+    background-color: rgb(255, 160, 70) !important;
+    -webkit-background-clip: none !important;
+    -webkit-text-fill-color: black !important;
 
-.inline {
-    padding: 1.5px;
+
+}
+a:hover {
+    background-color: rgb(255, 205, 158) !important;
+    -webkit-background-clip: border-box !important;
+    -webkit-text-fill-color: black !important;
+
+
 }
 
 .MJX-TEX { 
@@ -107,11 +126,10 @@ p {
 
 }
 
-/* .buttonrow{
-    text-align: center;
-    margin-top: 4cm;
-} */
-
+.buttonrow img {
+    display: block;
+    padding: 8px;
+}
 
 hr{
     width: 50%;

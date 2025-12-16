@@ -12,15 +12,16 @@
   gtag('config', 'G-GMM8GRX6JC');
 </script>
 
-<title>Junkyard</title>
+<title>Math Scraps</title>
 <script src="https://kit.fontawesome.com/28200a00ab.js" crossorigin="anonymous"></script>
+
 <link rel="icon" type="image/x-icon" href="dice.svg">
 <link rel="canonical" href="https://nicholashayek.com/bits.html">
 <link rel="stylesheet" href="style/style.css">
 
-<!-- <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script> -->
-<!-- <script type="text/javascript" src="/scripts/mathjax/MathJax.js?config=TeX-AMS_HTML"></script> -->
-<!-- <script type="text/javascript" src="scripts/mathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js"></script> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -202,12 +203,7 @@
 </style>
 
 <body>
-    <!-- <h1 class="top">
-        Junkyard
-    </h1>  -->
-    <!-- <h3 style="font-size: 11pt;">Skip to: <a href="#BEZ"class="shortcutButtons">Bézier stuff</a>, <a href="#SEC" class="shortcutButtons">the k-strategy</a>, <a href="#MUS"class="shortcutButtons">music</a>, <a href="#VST"class="shortcutButtons">Steinway sampler</a></h3> -->
-    <br>
-    <h2 style="text-decoration: underline;">Could be Catastrophic, but OK on Average</h2>
+    <h2>Could be Catastrophic, but OK on Average</h2>
     <p>
     During partial pivoting Guassian elimination (PPGE) of a matrix (just like regular GE, except we choose as a pivot the element which satisfies \({\max}_i|a_{ij}|\) for each column \(A^{(j)}\)), one sometimes accumulates large intermediate values&mdash;&mdash;so much so that the final result in unreachable because of overflow. The following is a classical example:
     \[
@@ -416,9 +412,8 @@
     </p>
 
     <hr color="black">
-    <h2>Virtual Record Collection <a href="https://www.discogs.com/user/Nicholas_Hayek/collection?header=1" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: .3cm; border: none;"><b>(and my actual collection)</b></a></h2>
-    <br><br>
-    <a id="MUS" style="visibility: hidden;"></a>
+    <h2><a href="https://www.discogs.com/user/Nicholas_Hayek/collection?header=1" target="_blank" class="inline">My Virtual Record Collection</a></h2>
+    <!-- <a id="MUS" style="visibility: hidden;"></a>
 
     <div class="albums">
         <div class="div7">
@@ -471,18 +466,17 @@
                 <img src="images/janis.webp" class="albumImages">
             </a>
         </div>
-    </div>
-    <br><br><br>
+    </div> -->
     <p style="text-align: center; line-height: 0;">
     <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/track/6v8mOtpRlXbG3BOauqPRHC?utm_source=generator&theme=0" width="40%" height="130" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </p>
 
 
 
-    <p style="position: relative; bottom: 0; right: 0; text-align: right;">
-        <a href="index.html" style="border: transparent; margin-right: 0vw; padding: 40px 10px  10px  10px ;">
-            <img src="images/home.svg" width="50vw">
+     <div style="position: relative; bottom: 0; text-align: right;">
+        <a href="index.html" class="nav-link" style="border: none; padding: 8px;">
+            <img style="display: block;" src="images/home.svg" width="45vw">
         </a>
-    </p>
+    </div >
 </body>
 </html>
