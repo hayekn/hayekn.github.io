@@ -73,7 +73,7 @@ a.inline {
 
 a.inlineinfo {
     background-color: #ddd;
-    padding: 0px 5px;
+    padding: 3px 8px;
     font-size: 10pt; 
     margin-left: 1vw; 
     border: none;
@@ -93,15 +93,15 @@ a:visited {
 }
 a:active{
     background-color: rgb(255, 160, 70) !important;
-    -webkit-background-clip: none !important;
-    -webkit-text-fill-color: black !important;
+    /* -webkit-background-clip: none !important;
+    -webkit-text-fill-color: black !important; */
 
 
 }
 a:hover {
     background-color: rgb(255, 205, 158) !important;
-    -webkit-background-clip: border-box !important;
-    -webkit-text-fill-color: black !important;
+    /* -webkit-background-clip: border-box !important;
+    -webkit-text-fill-color: black !important; */
 
 
 }
