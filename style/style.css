@@ -76,7 +76,9 @@ a.inlineinfo {
     padding: 3px 8px;
     font-size: clamp(8pt, 10pt, 12pt);
     margin-left: 1vw; 
+    line-height: 1.2;
     border: none;
+    display: inline-block;
 }
 
 a.nav-link {
