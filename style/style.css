@@ -74,7 +74,7 @@ a.inline {
 a.inlineinfo {
     background-color: #ddd;
     padding: 3px 8px;
-    font-size: 10pt; 
+    font-size: clamp(8pt, 10pt, 12pt);
     margin-left: 1vw; 
     border: none;
 }
