@@ -83,27 +83,21 @@ a.nav-link {
     display: inline-block;
     border: 3px double rgb(59, 59, 59);
     padding: 0.4rem 1rem;
-    font-size: clamp(1.1rem, 1vw, 1.1rem);
-    margin: 0 .5rem;
+    font-size: clamp(1rem, 1.2rem, 2rem);
+    margin: 0 .25rem;
     font-weight: 500;
 }
 
 a:visited {
     color: black;
 }
-a:active{
-    background-color: rgb(255, 160, 70) !important;
-    /* -webkit-background-clip: none !important;
-    -webkit-text-fill-color: black !important; */
-
-
-}
 a:hover {
     background-color: rgb(255, 205, 158) !important;
-    /* -webkit-background-clip: border-box !important;
-    -webkit-text-fill-color: black !important; */
-
-
+    background-clip: padding-box !important;
+}
+a:active{
+    background-color: rgb(255, 160, 70) !important;
+    background-clip: padding-box !important;
 }
 
 .MJX-TEX { 
@@ -120,9 +114,9 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;       
-    text-align: center;
-    align-items: flex-start;
+    /* gap: 1rem;        */
+    gap: clamp(.5rem, 1.5rem, 2rem);
+    align-items: center;
 
 }
 

@@ -27,7 +27,6 @@
 
 </head>
 <style>
-
     .emailButton{
         border: none;
         border-width: 1.5px;
@@ -44,27 +43,21 @@
     .emailButton:active{
         background-color: rgb(255, 177, 104);}
 
-    .emailButton:focus span{
+    .emailButton.copied span{
         display: none;
     }
-    .emailButton:focus:after {
-        transition: 3s;
+    .emailButton.copied::after {
         content: "In your clipboard!";
         font-size: 12pt;
         line-height: 45px; 
     }
-
-
-
 </style>
 
 
 <body>
-
     <h1 class="top">
         Nicholas Hayek
     </h1>
-
     <p>
         is an undergraduate at McGill University in beautiful <a href="https://en.wikipedia.org/wiki/Montreal" class="inline" target="_blank">Montreal, Quebec</a>. My spare time
         is spent at the piano, occasionally in service
@@ -73,7 +66,7 @@
         or buried in the basement of <a href="https://www.thetribune.ca/opinion/point-counterpoint-a-debate-on-the-aesthetic-of-burnside-hall/" class="inline" target="_blank">a brutalist building</a>.
     <p>   
     <div style="margin-top: 5rem;"></div>
-    <p class="buttonrow">
+    <div class="buttonrow">
         <a class="nav-link" href = https://nicholashayek.com/notes.html>
             Course Notes
         </a>
@@ -83,14 +76,15 @@
         <!-- style="background: url(./images/sparkles.gif) no-repeat; background-size: cover; 
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;" -->
         <a class="nav-link" href = "goodcalendar" style="background: url(./images/sparkles.gif) no-repeat; background-size: cover; 
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            -webkit-background-clip: text !important; -webkit-text-fill-color: transparent;">
             Good Calendar
         </a>
          <a class="nav-link" href = "https://pictures.nicholashayek.com/" style="background-color: black; color: white; border-color: gray; font-family: 'Courier New', Courier, monospace;">
             Pics
         </a>
-    </p>
-    <p class="buttonrow">
+    </div>
+    <div style="margin-top: 1.5rem;"></div>
+    <div class="buttonrow">
         <a class="nav-link" href = "proj.html">
             Virtual Piano
         </a>
@@ -100,18 +94,29 @@
         <a class="nav-link" target="_blank" href = "https://nicholashayek.com/tex/git_cv/NicholasHayekCV.pdf">
             CV
         </a>
-    </p>
+    </div>
     <div style="margin-top: 7rem;"></div>
     <p class="buttonrow">
         <a href="https://www.instagram.com/nicholas_hayek/" style="border: none;"  target="_blank"><img src="images/insta.svg" width="30vw"></a>
 
-        <button onclick=copyText() class="emailButton" style="font-style:italic"><span><img src="images/envelope.svg" style="display: block;" width="30vw"></span></button>
+        <button class="emailButton" style="font-style:italic"><span><img src="images/envelope.svg" style="display: block;" width="30vw"></span></button>
         <script>
-            function copyText() {
-                navigator.clipboard.writeText
-                    ("nicholas.hayek@mail.mcgill.ca");
+            const btn = document.querySelector(".emailButton");
+
+            btn.addEventListener("click", () => {
+                navigator.clipboard.writeText("email@example.com");
+                btn.classList.add("copied");
+
+                setTimeout(() => {
+                    btn.classList.remove("copied");
+                }, 3000);
+            });
+
+            // function copyText() {
+            //     navigator.clipboard.writeText
+            //         ("nicholas.hayek@mail.mcgill.ca");
                 
-            }
+            // }
         </script>
 
         <a href="https://www.linkedin.com/in/nicholas-hayek-b24b1a243/" target="_blank">

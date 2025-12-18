@@ -64,9 +64,12 @@
       transition: max-height 0.4s ease;
     }
 
-    /* Collapsed state */
     .button-group.hidden {
       max-height: 0;
+    }
+
+    .collapsible-line {
+      margin-bottom: 1rem;
     }
 
     .arrow {
@@ -92,16 +95,6 @@
     .button-group.show button:nth-child(2) { transition-delay: 0.2s; }
     .button-group.show button:nth-child(3) { transition-delay: 0.3s; }
 
-    /* a {
-      display: inline-block;
-      border: 1.5px solid black;
-      border-radius: 5px;
-      padding: .7rem 1.5rem;
-      text-decoration: none;
-      color: black;
-      transition: 0.4s;
-      margin: 0 .5rem;
-    } */
   </style>
   <div>
     <div id="collapsible-line" class="collapsible-line">
@@ -110,7 +103,6 @@
     </div>
 
     <div class="button-group hidden" id="button-group">
-        <br>
         <a href="https://nicholashayek.com/tex/MATH/325/ODE%20Notes.pdf" class="nav-link" target="_blank">
             MATH 325 &mdash; ODEs
         </a>
@@ -127,52 +119,42 @@
         <a href="https://www.mcgill.ca/study/2023-2024/courses/math-235" target="_blank" class="inlineinfo"><b>Info</b></a>
         <br><br>
     </div>
-  </div>
 
-<script>
-  const arrow = document.getElementById("toggle-arrow");
-  const buttonGroup = document.getElementById("button-group");
-  const collapsibleLine = document.getElementById("collapsible-line"); // Make the whole line clickable
+    <div id="collapsible-line" class="collapsible-line">
+    <img id="toggle-arrow" class="arrow" style="padding: 0;" src="images/arrow-circle-right-solid.svg" width="25px">
+    <span class="arrow" style="transform: none;">&nbsp; $\LaTeX$ Template</span>
+    </div>
 
-  collapsibleLine.addEventListener("click", () => {
-    const isHidden = buttonGroup.classList.contains("hidden");
-
-    buttonGroup.classList.toggle("hidden");
-
-    if (isHidden) {
-      requestAnimationFrame(() => {
-        buttonGroup.classList.add("show");
-      });
-    } else {
-      buttonGroup.classList.remove("show");
-    }
-
-    arrow.classList.toggle("collapsed");
-  });
-</script>
-
-    
-    <div style="text-align: center; margin-top: 2rem">
-       <div style="display: inline-block; text-align: left; margin-left: 2rem;">
+    <div class="button-group hidden" id="button-group">
         <a href = "https://nicholashayek.com/tex/hayektex.cls" download="hayektex.cls" class="nav-link">
-            $\LaTeX$ Template (.cls)
+            Template (.cls)
         </a> <a  href = "tex/README.pdf" class="nav-link" target="_blank">
-            Readme
+            Guide
         </a>
         <br><br>
+    </div>
+  </div>  
+  <script>
+    document.querySelectorAll(".collapsible-line").forEach(line => {
+    line.addEventListener("click", () => {
+      const buttonGroup = line.nextElementSibling;
+      const arrows = line.querySelectorAll(".arrow");
 
-        <!-- <a href = "https://nicholashayek.com/tex/MATH/235/Algebra%20Notes.pdf", target="_blank">
-            MATH 235 &mdash; Algebra 1
-        </a>
-        <a href="https://www.mcgill.ca/study/2023-2024/courses/math-235" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br> -->
-        
-        <!-- <a href = "tex/MATH/248/Vector Calculus Notes.pdf", target="_blank">
-            MATH 248 &mdash; Vector Calculus<sup>†</sup>
-        </a>
-        <a href="https://www.mcgill.ca/study/2024-2025/courses/math-248" target="_blank" class="inline" style="color: rgb(51, 51, 51); font-size: 10pt; margin-left: 1vw; border: none;"><b>Info</b></a>
-        <br><br> -->
-        
+      const isHidden = buttonGroup.classList.contains("hidden");
+
+      // Toggle collapse state
+      buttonGroup.classList.toggle("hidden");
+      buttonGroup.classList.toggle("show", isHidden);
+
+      // Rotate BOTH arrow elements (img + text span)
+      arrows.forEach(arrow => {
+        arrow.classList.toggle("collapsed", isHidden);
+      });
+    });
+  });
+  </script>
+  <div style="text-align: center; margin-top: 2rem">
+       <div style="display: inline-block; text-align: left; margin-left: 2rem;">
         <a href = "https://nicholashayek.com/tex/MATH/251/Algebra%202%20Notes.pdf", class="nav-link", target="_blank">
             MATH 251 &mdash; Algebra 2
         </a>
@@ -250,7 +232,7 @@
         </a> -->
         </div>
         <br><br><div style="font-style: italic;">
-        All this and more at <a href="https://sumsmcgill.ca/sums-notesbank/" target="_blank" class="inline">sumsmcgill.ca</a>
+        Find more at <a href="https://sumsmcgill.ca/sums-notesbank/" target="_blank" class="inline">sumsmcgill.ca</a>
         </div>
     </div>
     <div style="text-align: right; position: relative;">
