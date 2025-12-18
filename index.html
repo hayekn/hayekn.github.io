@@ -99,24 +99,18 @@
     <p class="buttonrow">
         <a href="https://www.instagram.com/nicholas_hayek/" style="border: none;"  target="_blank"><img src="images/insta.svg" width="30vw"></a>
 
-        <button class="emailButton" style="font-style:italic"><span><img src="images/envelope.svg" style="display: block;" width="30vw"></span></button>
+        <button class="emailButton" style="font-style:italic; color: black;"><span><img src="images/envelope.svg" style="display: block;" width="30vw"></span></button>
         <script>
             const btn = document.querySelector(".emailButton");
 
             btn.addEventListener("click", () => {
-                navigator.clipboard.writeText("email@example.com");
+                navigator.clipboard.writeText("nicholas.hayek@mail.mcgill.ca");
                 btn.classList.add("copied");
 
                 setTimeout(() => {
                     btn.classList.remove("copied");
                 }, 3000);
             });
-
-            // function copyText() {
-            //     navigator.clipboard.writeText
-            //         ("nicholas.hayek@mail.mcgill.ca");
-                
-            // }
         </script>
 
         <a href="https://www.linkedin.com/in/nicholas-hayek-b24b1a243/" target="_blank">
