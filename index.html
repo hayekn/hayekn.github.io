@@ -56,17 +56,27 @@
         display: inline-block;
         transform: translateY(-2px);
     }
+    .audio-hint {
+        font-size: 11px;
+        color: #999;
+        font-style: italic;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+    .audio-hint.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
 </style>
 
 
 <body>
     <h1 class="top" id="interactive-name"></h1>
-
     <script>
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext();
 
-const notes = [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, 369.99, 392.00, 466.16, 523.25, 622.25, 698.46];
+    const notes = [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, 369.99, 392.00, 466.16, 523.25, 622.25, 698.46];
 
     function playNote(frequency) {
         if (audioCtx.state === 'suspended') return;
@@ -75,7 +85,7 @@ const notes = [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, 369.
         osc.connect(gain);
         gain.connect(audioCtx.destination);
         osc.frequency.value = frequency;
-        osc.type = 'sine';
+        osc.type = 'triangle';
         const now = audioCtx.currentTime;
         gain.gain.setValueAtTime(0, now);
         gain.gain.linearRampToValueAtTime(0.3, now + 0.01);
@@ -87,12 +97,15 @@ const notes = [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, 369.
     const name = "Nicholas Hayek";
     const container = document.getElementById('interactive-name');
 
-    name.split('').forEach((char, i) => {
+     name.split('').forEach((char, i) => {
         const span = document.createElement('span');
         span.textContent = char;
-        span.style.cursor = 'pointer';
         if (char !== ' ') {
+            span.style.cursor = 'pointer';
             span.addEventListener('mouseenter', () => playNote(notes[i % notes.length]));
+        } else {
+            span.style.display = 'inline-block';
+            span.style.width = '0.3em';
         }
         container.appendChild(span);
     });
@@ -100,6 +113,7 @@ const notes = [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, 369.
     document.addEventListener('click', () => {
             if (audioCtx.state === 'suspended') {
                 audioCtx.resume();
+                document.getElementById('audio-hint').classList.add('hidden');
             }
         }, { once: true });
 
@@ -110,7 +124,7 @@ const notes = [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, 369.
         to the <a href="https://www.thetribune.ca/" class="inline" target="_blank">school paper</a>, and <a href="https://www.goodreads.com/user/show/143174413-nicholas" class="inline" target="_blank">reading</a>. You can find me sitting in <a href="https://www.google.com/maps/place/Saint-Louis+Square/@45.5169784,-73.5725182,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91bb5422a897f:0x247ab8001d20d276!8m2!3d45.5169784!4d-73.5699433!16s%2Fm%2F0b6kn7y?hl=en&entry=ttu" class="inline" target="_blank">St. Louis Square</a> (weather permitting),
         rooting for the <a href="https://bleacherreport.com/articles/2625556-apples-siri-pinpoints-browns-stadium-as-sadness-in-cleveland" target="_blank" class="inline">Cleveland Browns</a> (in vain),
         or buried in the basement of <a href="https://www.thetribune.ca/opinion/point-counterpoint-a-debate-on-the-aesthetic-of-burnside-hall/" class="inline" target="_blank">a brutalist building</a>.
-    <p>   
+    <p>  
     <div style="margin-top: 5rem;"></div>
     <div class="buttonrow">
         <a class="nav-link" href = https://nicholashayek.com/notes.html>
@@ -162,8 +176,9 @@ const notes = [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, 369.
         <a href="https://www.linkedin.com/in/nicholas-hayek-b24b1a243/" target="_blank">
             <img src="images/linkedin.svg" width="30fr">
         </a>
-
     </p>
+    <div class="audio-hint" id="audio-hint">click anywhere to enable sound</div> 
+
 
 </body>
 </html>
