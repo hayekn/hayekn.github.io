@@ -51,13 +51,59 @@
         font-size: 12pt;
         line-height: 45px; 
     }
+    .top span:hover {
+        color: rgb(255, 160, 70);
+        display: inline-block;
+        transform: translateY(-2px);
+    }
 </style>
 
 
 <body>
-    <h1 class="top">
-        Nicholas Hayek
-    </h1>
+    <h1 class="top" id="interactive-name"></h1>
+
+    <script>
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const audioCtx = new AudioContext();
+
+const notes = [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, 369.99, 392.00, 466.16, 523.25, 622.25, 698.46];
+
+    function playNote(frequency) {
+        if (audioCtx.state === 'suspended') return;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.frequency.value = frequency;
+        osc.type = 'sine';
+        const now = audioCtx.currentTime;
+        gain.gain.setValueAtTime(0, now);
+        gain.gain.linearRampToValueAtTime(0.3, now + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.8);
+        osc.start(now);
+        osc.stop(now + 0.8);
+    }
+
+    const name = "Nicholas Hayek";
+    const container = document.getElementById('interactive-name');
+
+    name.split('').forEach((char, i) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.cursor = 'pointer';
+        if (char !== ' ') {
+            span.addEventListener('mouseenter', () => playNote(notes[i % notes.length]));
+        }
+        container.appendChild(span);
+    });
+
+    document.addEventListener('click', () => {
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }, { once: true });
+
+    </script>
     <p>
         is an undergraduate at McGill University in beautiful <a href="https://en.wikipedia.org/wiki/Montreal" class="inline" target="_blank">Montreal, Quebec</a>. My spare time
         is spent at the piano, occasionally in service
