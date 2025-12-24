@@ -51,13 +51,20 @@
         font-size: 12pt;
         line-height: 45px; 
     }
-    .top span:hover {
+    .note-span:hover {
         color: rgb(255, 160, 70);
         display: inline-block;
         transform: translateY(-2px);
     }
+
+    .note-span.held {
+        color: rgb(255, 131, 15);
+        transform: translateY(-2px);
+        display: inline-block;
+    }
+
     .audio-hint {
-        font-size: 11px;
+        font-size: 12px;
         color: #999;
         font-style: italic;
         opacity: 1;
@@ -76,10 +83,34 @@
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext();
 
-    const notes = [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, 369.99, 392.00, 466.16, 523.25, 622.25, 698.46];
+    const CBluesEb = 
+    [155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, 349.23, null, 369.99, 392.00, 466.16, 523.25, 622.25];
+    const EbMajor = 
+    [155.55, 174.61, 196, 207.65, 233.08, 261.63, 293.66, 311.13, null, 349.23, 392.00, 415.3, 466.16, 523.25];
+
+    const CBluesC = 
+    [130.81, 155.55, 174.61, 185.00, 196, 233.08, 261.63, 311.13, null, 349.23, 369.99, 392.00, 466.16, 523.25];
+    const chromatic = 
+    [130.81, 138.59, 146.83, 155.55, 164.81, 174.61, 185.00, 196, null, 207.65, 220, 233.08, 246.94, 261.63];
+    const chromaticUp = 
+    [261.63, 277.18, 293.66, 311.13, 329.63, 349.23, 369.99, 392.00, null, 415.30, 440.00, 466.16, 493.88, 523.25];
+    const wholetone = 
+    [130.81, 146.83, 164.81, 185.00, 207.65, 233.08, 261.63, 293.66, null, 329.63, 369.99, 415.30, 466.16, 523.25]; 
+    const prometheus = 
+    [130.81, 146.83, 164.81, 185.00, 220, 233.08, 261.63, 293.66, null, 329.63, 369.99, 440, 466.16, 523.25];
+    const hijaz_kar = 
+    [130.81, 138.59, 164.81, 174.61, 207.65, 246.94, 261.63, 277.18, null, 329.63, 349.23, 415.3, 493.88, 523.25];
+
+
+    const scales = {'whole-tone': wholetone, 'C blues': CBluesC, 'chromatic': chromaticUp, 'hijaz kar' : hijaz_kar};
 
     function playNote(frequency) {
         if (audioCtx.state === 'suspended') return;
+
+        const numNotes = 1 + heldNotes.size;
+        const baseVolume = 0.3;
+        const adjustedVolume = Math.min(baseVolume / Math.sqrt(numNotes), baseVolume);
+
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.connect(gain);
@@ -88,21 +119,43 @@
         osc.type = 'triangle';
         const now = audioCtx.currentTime;
         gain.gain.setValueAtTime(0, now);
-        gain.gain.linearRampToValueAtTime(0.3, now + 0.01);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.8);
+        gain.gain.linearRampToValueAtTime(adjustedVolume, now + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 1);
         osc.start(now);
         osc.stop(now + 0.8);
     }
 
+    const heldNotes = new Set();
     const name = "Nicholas Hayek";
     const container = document.getElementById('interactive-name');
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
 
-     name.split('').forEach((char, i) => {
+    name.split('').forEach((char, i) => {
         const span = document.createElement('span');
         span.textContent = char;
         if (char !== ' ') {
             span.style.cursor = 'pointer';
-            span.addEventListener('mouseenter', () => playNote(notes[i % notes.length]));
+            span.classList.add('note-span');
+            
+            span.addEventListener('mouseenter', () => {
+                playNote(notes[i % notes.length]);
+                heldNotes.forEach(freq => playNote(freq));
+            });
+            
+            if (!isMobile) {
+                span.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const freq = notes[i % notes.length];
+                    
+                    if (heldNotes.has(freq)) {
+                        heldNotes.delete(freq);
+                        span.classList.remove('held');
+                    } else {
+                        heldNotes.add(freq);
+                        span.classList.add('held');
+                    }
+                });
+            }
         } else {
             span.style.display = 'inline-block';
             span.style.width = '0.3em';
@@ -110,12 +163,39 @@
         container.appendChild(span);
     });
 
+    let currentScale = Object.keys(scales)[0];
+    let notes = scales[currentScale];
+
     document.addEventListener('click', () => {
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-                document.getElementById('audio-hint').classList.add('hidden');
-            }
-        }, { once: true });
+        if (audioCtx.state === 'suspended') {
+            audioCtx.resume();
+            const hintEl = document.getElementById('audio-hint');
+            hintEl.textContent = '';
+            
+            Object.keys(scales).forEach(scaleName => {
+                const option = document.createElement('span');
+                option.textContent = scaleName;
+                option.style.cursor = 'pointer';
+                option.style.marginRight = '15px';
+                
+                if (scaleName === currentScale) {
+                    option.style.textDecoration = 'underline';
+                }
+                
+                option.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    notes = scales[scaleName];
+                    currentScale = scaleName;
+                    hintEl.querySelectorAll('span').forEach(s => {
+                        s.style.textDecoration = 'none';
+                    });
+                    option.style.textDecoration = 'underline';
+                });
+                
+                hintEl.appendChild(option);
+            });
+        }
+    }, { once: true });
 
     </script>
     <p>
@@ -155,7 +235,7 @@
             CV
         </a>
     </div>
-    <div style="margin-top: 7rem;"></div>
+    <div style="margin-top: 5rem;"></div>
     <p class="buttonrow">
         <a href="https://www.instagram.com/nicholas_hayek/" style="border: none;"  target="_blank"><img src="images/insta.svg" width="30vw"></a>
 
