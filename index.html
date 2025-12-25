@@ -102,7 +102,7 @@
     [130.81, 138.59, 164.81, 174.61, 207.65, 246.94, 261.63, 277.18, null, 329.63, 349.23, 415.3, 493.88, 523.25];
 
 
-    const scales = {'whole-tone': wholetone, 'C blues': CBluesC, 'chromatic': chromaticUp, 'hijaz kar' : hijaz_kar};
+    const scales = {'blues': CBluesC, 'whole-tone': wholetone, 'chromatic': chromaticUp, 'hijaz kar' : hijaz_kar};
 
     function playNote(frequency) {
         if (audioCtx.state === 'suspended') return;
@@ -141,7 +141,6 @@
                 playNote(notes[i % notes.length]);
                 heldNotes.forEach(freq => playNote(freq));
             });
-            
             if (!isMobile) {
                 span.addEventListener('click', (e) => {
                     e.stopPropagation();
@@ -170,6 +169,14 @@
         if (audioCtx.state === 'suspended') {
             audioCtx.resume();
             const hintEl = document.getElementById('audio-hint');
+            const topName = document.getElementById('interactive-name');
+            topName.style.transition = 'all 0.15s ease-in-out';
+            topName.style.transform = 'translateY(-6px)';
+            
+            setTimeout(() => {
+                topName.style.transform = 'translateY(0px)';
+            }, 100); 
+
             hintEl.textContent = '';
             
             Object.keys(scales).forEach(scaleName => {
