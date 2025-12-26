@@ -38,6 +38,10 @@
     object-fit: contain;
 }
 
+:root {
+    --background-white:#F8F8F8;
+}
+
 .top {
     color: rgb(51, 51, 51);
     font-weight: 700;
@@ -53,12 +57,12 @@ body {
     font-weight: 475;
     font-style: normal;
     font-family:  -apple-system, 'Inter', sans-serif, 'Comic Sans', 'MyComic', 'Slab', 'Georgia';
-    background-color: #F8F8F8;
+    background-color: var(--background-white);
 }
 
 a {
     border-radius: 5px;
-    background-color: #F8F8F8;
+    background-color: var(--background-white);
     font-size: 14pt;
     transition-duration: .4s;
     text-decoration: none;
