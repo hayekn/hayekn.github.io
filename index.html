@@ -166,7 +166,7 @@
     let notes = scales[currentScale];
 
     document.addEventListener('click', (event) => {
-        if (audioCtx.state === 'suspended') {
+        // if (audioCtx.state === 'suspended') {
             audioCtx.resume();
             const hintEl = document.getElementById('audio-hint');
             const topName = document.getElementById('interactive-name');
@@ -201,7 +201,7 @@
                 
                 hintEl.appendChild(option);
             });
-        }
+        // }
     }, { once: true });
 
     </script>
