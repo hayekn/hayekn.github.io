@@ -165,8 +165,37 @@
     let currentScale = Object.keys(scales)[0];
     let notes = scales[currentScale];
 
+    document.addEventListener("DOMContentLoaded", function(event) {
+      if (audioCtx.state != 'suspended') {
+        const hintEl = document.getElementById('audio-hint');
+        hintEl.textContent = '';
+        
+        Object.keys(scales).forEach(scaleName => {
+            const option = document.createElement('span');
+            option.textContent = scaleName;
+            option.style.cursor = 'pointer';
+            option.style.marginRight = '15px';
+            
+            if (scaleName === currentScale) {
+                option.style.textDecoration = 'underline';
+            }
+            
+            option.addEventListener('click', (e) => {
+                e.stopPropagation();
+                notes = scales[scaleName];
+                currentScale = scaleName;
+                hintEl.querySelectorAll('span').forEach(s => {
+                    s.style.textDecoration = 'none';
+                });
+                option.style.textDecoration = 'underline';
+            });
+            
+            hintEl.appendChild(option);
+        });
+      }
+    });
     document.addEventListener('click', (event) => {
-        // if (audioCtx.state === 'suspended') {
+        if (audioCtx.state === 'suspended') {
             audioCtx.resume();
             const hintEl = document.getElementById('audio-hint');
             const topName = document.getElementById('interactive-name');
@@ -201,7 +230,7 @@
                 
                 hintEl.appendChild(option);
             });
-        // }
+        }
     }, { once: true });
 
     </script>
