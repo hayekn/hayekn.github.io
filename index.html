@@ -166,7 +166,6 @@
     let notes = scales[currentScale];
 
     document.addEventListener('click', (event) => {
-        event.preventDefault(); 
         if (audioCtx.state === 'suspended') {
             audioCtx.resume();
             const hintEl = document.getElementById('audio-hint');
