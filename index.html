@@ -51,17 +51,17 @@
         font-size: 12pt;
         line-height: 45px; 
     }
-    .note-span:hover {
+    /* .note-span:hover {
         color: rgb(255, 160, 70);
         display: inline-block;
         transform: translateY(-2px);
-    }
+    } */
 
-    .note-span.held {
+    /* .note-span.held {
         color: rgb(255, 131, 15);
         transform: translateY(-2px);
         display: inline-block;
-    }
+    } */
 
     .audio-hint {
         font-size: 13px;
@@ -128,8 +128,12 @@
     const heldNotes = new Set();
     const name = "Nicholas Hayek";
     const container = document.getElementById('interactive-name');
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || window.innerWidth <= 500;
 
+
+    let touchDevice = false;
+
+    //DESKTOP BEHAVIOR
     name.split('').forEach((char, i) => {
         const span = document.createElement('span');
         span.textContent = char;
@@ -138,29 +142,148 @@
             span.classList.add('note-span');
             
             span.addEventListener('mouseenter', () => {
-                playNote(notes[i % notes.length]);
+                if (touchDevice) return;
+
                 heldNotes.forEach(freq => playNote(freq));
+                const freq = notes[i % notes.length];
+
+                if (!heldNotes.has(freq)) {
+                    if (audioCtx.state !== 'suspended') {
+                        playNote(notes[i % notes.length]);
+                        console.log("Played note from hover")
+                    }
+                    span.style.color = 'rgb(255, 160, 70)';
+                    span.style.transform = 'translateY(-2px)';
+                    span.style.display = 'inline-block';
+                }
             });
+
+            span.addEventListener('mouseleave', () => {
+                if (touchDevice) return;
+                
+                const freq = notes[i % notes.length];
+                if (!heldNotes.has(freq)) {
+                    span.style.color = '';
+                    span.style.transform = 'translateY(0px)';
+                }
+                console.log("Left note.")
+            });
+            
+            // double checking not on mobile
             if (!isMobile) {
                 span.addEventListener('click', (e) => {
-                    e.stopPropagation();
+                    if (touchDevice) return;
+                    if (audioCtx.state === 'suspended') return;
                     const freq = notes[i % notes.length];
                     
                     if (heldNotes.has(freq)) {
+                        span.style.color = '';
+                        span.style.transform = 'translateY(0px)';
                         heldNotes.delete(freq);
                         span.classList.remove('held');
+                        console.log("Updated held note: removed "+i)
                     } else {
+                        span.style.color = 'rgb(255, 131, 15)';
+                        span.style.transform = 'translateY(-2px)';
                         heldNotes.add(freq);
                         span.classList.add('held');
+                        console.log("Updated held note: added "+i)
                     }
                 });
             }
         } else {
+            span.classList.add('note-span');
             span.style.display = 'inline-block';
             span.style.width = '0.3em';
         }
         container.appendChild(span);
     });
+
+
+    let touchActive = false;
+    let touchStartTime = 0;
+    let lastTouchedElement = null;
+    let touchStartElement = null;
+    const playedDuringSwipe = new Set();
+
+    //MOBILE BEHAVIOR
+    container.addEventListener('touchstart', (e) => {
+        touchDevice = true;
+        const element = e.target;
+        if (element.classList.contains('note-span')) {
+            console.log("Played first note in swipe")
+            touchActive = true;
+            touchStartTime = Date.now();
+            touchStartElement = element;
+            playedDuringSwipe.clear();
+            
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            const spans = Array.from(container.querySelectorAll('.note-span'));
+            const index = spans.indexOf(element);
+
+            playNote(notes[index % notes.length]);
+            playedDuringSwipe.add(element);
+            
+            element.style.color = 'rgb(255, 160, 70)';
+            element.style.transform = 'translateY(-2px)';
+            element.style.display = 'inline-block';
+
+            setTimeout(() => {
+                element.style.color = '';
+                element.style.transform = 'translateY(0px)';
+            }, 200);
+        }
+    }, { passive: true });
+
+    container.addEventListener('touchmove', (e) => {
+        if (!touchActive) return;
+        
+        const touch = e.touches[0];
+        const element = document.elementFromPoint(touch.clientX, touch.clientY);
+        
+        if (element && element.classList.contains('note-span')) {
+            if (element !== touchStartElement) {
+                touchStartElement = null;
+            }
+            
+            if (element !== lastTouchedElement) {
+                console.log("Played a note within swipe")
+                const spans = Array.from(container.querySelectorAll('.note-span'));
+                const index = spans.indexOf(element);
+                
+                playNote(notes[index % notes.length]);
+                // playedDuringSwipe.add(element);
+                
+                element.style.color = 'rgb(255, 160, 70)';
+                element.style.transform = 'translateY(-2px)';
+                element.style.display = 'inline-block';
+
+                setTimeout(() => {
+                    element.style.color = '';
+                    element.style.transform = 'translateY(0px)';
+                }, 200);
+            }
+            
+            lastTouchedElement = element;
+        }
+    }, { passive: false });
+
+    container.addEventListener('touchend', () => {        
+        touchActive = false;
+        touchStartElement = null;
+        playedDuringSwipe.clear();
+    });
+
+    container.addEventListener('touchcancel', () => {
+        touchActive = false;
+        touchStartElement = null;
+        playedDuringSwipe.clear();
+    });
+
+    ///
 
     let currentScale = Object.keys(scales)[0];
     let notes = scales[currentScale];
@@ -232,7 +355,6 @@
             });
         }
     }, { once: true });
-
     </script>
     <p>
         is an undergraduate at McGill University in beautiful <a href="https://en.wikipedia.org/wiki/Montreal" class="inline" target="_blank">Montreal, Quebec</a>. My spare time
