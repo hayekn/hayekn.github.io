@@ -51,17 +51,6 @@
         font-size: 12pt;
         line-height: 45px; 
     }
-    /* .note-span:hover {
-        color: rgb(255, 160, 70);
-        display: inline-block;
-        transform: translateY(-2px);
-    } */
-
-    /* .note-span.held {
-        color: rgb(255, 131, 15);
-        transform: translateY(-2px);
-        display: inline-block;
-    } */
 
     .audio-hint {
         font-size: 13px;
@@ -102,7 +91,7 @@
     [130.81, 138.59, 164.81, 174.61, 207.65, 246.94, 261.63, 277.18, null, 329.63, 349.23, 415.3, 493.88, 523.25];
 
 
-    const scales = {'blues': CBluesC, 'whole-tone': wholetone, 'chromatic': chromaticUp, 'hijaz kar' : hijaz_kar};
+    const scales = {'blues': CBluesC, 'whole-tone': wholetone, 'hijaz kar' : hijaz_kar, 'chromatic': chromaticUp};
 
     function playNote(frequency) {
         if (audioCtx.state === 'suspended') return;
@@ -133,70 +122,95 @@
 
     let touchDevice = false;
 
-    //DESKTOP BEHAVIOR
-    name.split('').forEach((char, i) => {
-        const span = document.createElement('span');
-        span.textContent = char;
-        if (char !== ' ') {
-            span.style.cursor = 'pointer';
-            span.classList.add('note-span');
-            
-            span.addEventListener('mouseenter', () => {
-                if (touchDevice) return;
-
-                heldNotes.forEach(freq => playNote(freq));
-                const freq = notes[i % notes.length];
-
-                if (!heldNotes.has(freq)) {
-                    if (audioCtx.state !== 'suspended') {
-                        playNote(notes[i % notes.length]);
-                        console.log("Played note from hover")
-                    }
-                    span.style.color = 'rgb(255, 160, 70)';
-                    span.style.transform = 'translateY(-2px)';
-                    span.style.display = 'inline-block';
-                }
-            });
-
-            span.addEventListener('mouseleave', () => {
-                if (touchDevice) return;
-                
-                const freq = notes[i % notes.length];
-                if (!heldNotes.has(freq)) {
-                    span.style.color = '';
-                    span.style.transform = 'translateY(0px)';
-                }
-                console.log("Left note.")
-            });
-            
-            // double checking not on mobile
-            if (!isMobile) {
-                span.addEventListener('click', (e) => {
-                    if (touchDevice) return;
-                    if (audioCtx.state === 'suspended') return;
-                    const freq = notes[i % notes.length];
-                    
-                    if (heldNotes.has(freq)) {
-                        span.style.color = '';
-                        span.style.transform = 'translateY(0px)';
-                        heldNotes.delete(freq);
-                        span.classList.remove('held');
-                        console.log("Updated held note: removed "+i)
-                    } else {
-                        span.style.color = 'rgb(255, 131, 15)';
-                        span.style.transform = 'translateY(-2px)';
-                        heldNotes.add(freq);
-                        span.classList.add('held');
-                        console.log("Updated held note: added "+i)
-                    }
-                });
+    let allSpans = [];
+    function clearAllHeldNotes() {
+        heldNotes.clear();
+        allSpans.forEach(span => {
+            if (span.element.textContent !== ' ') {
+                span.element.style.color = '';
+                span.element.style.transform = 'translateY(0px)';
             }
+        });
+    }
+    function getFrequencyForSpan(span) {
+        return notes[span.index % notes.length];
+    }
+    function updateHeldNoteStyle(span, isHeld) {
+        if (isHeld) {
+                span.element.style.color = 'rgb(255, 131, 15)';
+                span.element.style.transform = 'translateY(-2px)';
+                span.element.style.display = 'inline-block';
         } else {
-            span.classList.add('note-span');
-            span.style.display = 'inline-block';
-            span.style.width = '0.3em';
+            span.element.style.color = '';
+            span.element.style.transform = 'translateY(0px)';
         }
-        container.appendChild(span);
+    }
+
+
+
+//DESKTOP BEHAVIOR
+name.split('').forEach((char, i) => {
+    const span = document.createElement('span');
+    span.textContent = char;
+    if (char !== ' ') {
+        span.style.cursor = 'pointer';
+        span.classList.add('note-span');
+        span.style.transition = 'all .05s ease-in-out'
+        const spanData = { element: span, index: i };
+        allSpans.push(spanData);
+        
+        span.addEventListener('mouseenter', () => {
+            if (touchDevice) return;
+
+            heldNotes.forEach(freq => playNote(freq));
+            const freq = getFrequencyForSpan(spanData);
+
+            if (!heldNotes.has(freq)) {
+                if (audioCtx.state !== 'suspended') {
+                    playNote(freq);
+                    console.log("Played note from hover")
+                }
+                span.style.color = 'rgb(255, 160, 70)';
+                span.style.transform = 'translateY(-2px)';
+                span.style.display = 'inline-block';
+            }
+        });
+
+        span.addEventListener('mouseleave', () => {
+            if (touchDevice) return;
+            const freq = getFrequencyForSpan(spanData);
+            if (!heldNotes.has(freq)) {
+                span.style.color = '';
+                span.style.transform = 'translateY(0px)';
+            }
+            console.log("Left note.")
+        });
+        
+        // double checking not on mobile
+        if (!isMobile) {
+            span.addEventListener('click', (e) => {
+                if (touchDevice) return;
+                if (audioCtx.state === 'suspended') return;
+                const freq = getFrequencyForSpan(spanData);
+                if (!freq) return;
+                
+                if (heldNotes.has(freq)) {
+                    heldNotes.delete(freq);
+                    updateHeldNoteStyle(spanData, false);
+                    console.log("Updated held note: removed "+i)
+                } else {
+                    heldNotes.add(freq);
+                    updateHeldNoteStyle(spanData, true);
+                    console.log("Updated held note: added "+i)
+                }
+            });
+        }
+    } else {
+        span.classList.add('note-span');
+        span.style.display = 'inline-block';
+        span.style.width = '0.3em';
+    }
+    container.appendChild(span);
     });
 
 
@@ -305,6 +319,7 @@
             
             option.addEventListener('click', (e) => {
                 e.stopPropagation();
+                clearAllHeldNotes();
                 notes = scales[scaleName];
                 currentScale = scaleName;
                 hintEl.querySelectorAll('span').forEach(s => {
@@ -343,6 +358,8 @@
                 
                 option.addEventListener('click', (e) => {
                     e.stopPropagation();
+                    clearAllHeldNotes();
+
                     notes = scales[scaleName];
                     currentScale = scaleName;
                     hintEl.querySelectorAll('span').forEach(s => {
