@@ -1,0 +1,235 @@
+\documentclass[title, toc, copyright, labelbox, index]{hayektexreview}
+\title{Read Me}
+\titlepic[.2]{pic}
+\subtitle{A Subtitle}
+\stitle{an optional title for headers}
+\note{And a note}
+\email{you@yourweb.com}
+\author{Your Name}
+\newcommand{\readmedef}[1]{\code{$\backslash$#1\{...\}}}
+\begin{document}
+	\section{Options Cheatsheet}
+	\begin{center}
+		\begin{tabular}{|ll|}\hline
+		\textbf{Class Option} & \textbf{Function}\\\hline
+		\code{title} & makes title page\\
+		\code{toc} & makes table of contents\\
+		\code{index} & makes index of definitions\\
+		\code{center} & centered margins\\
+		\code{authhead} & author replaces part name on odd page headers\\
+		\code{copyright} & creates copyright at bottom of table of contents\\
+		\code{labelbox} & all labels are placed in small, gray boxes\\
+		\code{linkpropthm} & propositions and theorems have unified indexing\\\hline
+	\end{tabular}
+	\end{center}
+	\part{Document Setup}
+	\section{Requirements}
+	\begin{itemize}
+		\item The document class is loaded using \code{$\backslash$documentclass[\textit{options}]\{hayektex\}}.
+		\item You must declare a title using \readmedef{title}, even if you do not print a title page.
+	\end{itemize}
+	\section{Page Setup}
+	\subsection{Margins}
+	\begin{itemize}
+		\item By default, pages are asymmetric and letter-sized, with margin sizes alternating between $[T,L,B,R]=[1.25, 1, 1, 1.6]$ (even) or [1.25, 1.6, 1, 1] (odd), in inches.
+		\begin{itemize}
+			\item To change to symmetric margins, with 1.25 inches on each side, using the \code{center} class option.
+			\item Margins can be further customized using \code{geometry} package commands. 
+		\end{itemize}
+	\end{itemize} 
+	\subsection{Title Page}
+	\begin{itemize}
+		\item To create a title page, use the \code{title} class option. The title page can accommodate a few elements:
+		\begin{itemize}
+			\item By defining \readmedef{subtitle}, a subtitle will appear immediately below the title.
+			\item By defining \readmedef{author}, an author will appear at the bottom of the title page. 
+			\item By defining \readmedef{note}, an italicized note will appear at the bottom of the title page and below the author, if defined.
+			\item By defining \code{$\backslash$titlepic[{<scale>}]\{<relative path>\}}, a picture will appear in the center of the title page, between the title/subtitle and author/note. 
+		\end{itemize}
+	\end{itemize}
+	\subsection{Table of Contents}
+	\begin{itemize}
+		\item To create a table of contents, use the \code{toc} class option. The table of contents will appear below the title page, if it exists, or as the first page otherwise.
+		\item By default, the table of contents will display parts, sections, and subsections, with leaders on sections, and page numbers displayed for parts and sections.
+		\item To create a copyright notice, use the \code{copyright} class option. A notice will appear at the bottom of the table of contents, in the format \textcopyright \; <Year> \, <Author>.
+		\begin{itemize}
+			\item By defining \readmedef{email}, the notice will appear as \textcopyright \; <Year> \, <Author> \href{mailto:you@youremail.com}{\faEnvelope}, where the envelope is a link to your email.
+		\end{itemize} 
+	\end{itemize}
+	\subsection{Index of Definitions}
+	\begin{itemize}
+		\item Using the \code{index} class option, an link-able index of definitions will appear at the end of the document. "Index of Definitions" will also appear in the table of contents.
+		\item One can customize the index's style by inspecting the \code{<document name>.ist} file.
+	\end{itemize}
+	\section{Headers}
+	\begin{itemize}
+		\item By default, the current {part name will appear in odd page headers}.
+		\begin{itemize}
+			\item Using the class option \code{authhead}, the author will appear on odd page headers.
+		\end{itemize} 
+		\item By default, the title of the document will be displayed on even page headers.
+		\begin{itemize}
+			\item By defining \readmedef{stitle}, a custom (e.g. shorter) title will appear on even page headers in the place of the title defined by \readmedef{title}.
+		\end{itemize}
+	\end{itemize}
+	\part{Environments and Labels}
+	\section{Definitions}
+	Definitions are created with the command \readmedef{define}, e.g. \define{a def}. The following features are associated with definitions:
+	\begin{itemize}
+		\item A label will appear in the margin displaying the definition's ID, in the format <Current Part>.<Definition within Part>. 
+		\begin{itemize}
+			\item Using the class option \code{labelbox}, the definition label will appear in a gray box (as currently displayed). Otherwise, it will appear without the box.
+		\end{itemize}
+		\item A page link is created that targets the location of the definition label. It is accessed using \code{$\backslash$deflink\{<def name>\}}. For example, \code{$\backslash$deflink\{a def\}} generates \deflink{a def}.
+		\begin{itemize}
+			\item By using \code{$\backslash$define[<link name>]\{<def name>\}}, the associated page link is referenced using the link name provided. This is necessary if the definition involves a mathematical symbol. 
+			\\For example, if \define[eNASH]{$\varepsilon$-NASH} is created with  \code{$\backslash$define[eNASH]\{$\varepsilon$-NASH\}}, we can make a page link with \code{$\backslash$deflink\{eNASH\}}, which generates \deflink{eNASH}.
+		\end{itemize}
+		\item The definition ID and name will be added to the index page, if it exists.
+	\end{itemize}
+	\section{Propositions}
+	Propositions are labeled by inserting \code{$\backslash$prop[label offset]} at the start of the line. These labels follow the convention <Current Part>.<Proposition within Part>. For example:
+	\\\prop\code{$\backslash\backslash\backslash$prop} $a^2+b^2=c^2$ \code{$\backslash\backslash\backslash$prop[.2cm]}\prop[.2cm] A proposition on the same line, whose label is offset.
+	\begin{itemize}
+		\item As with definitions, the \code{labelbox} class option dictates whether the proposition label will be contained in a gray box.
+		\item A page link is created that targets the location of the proposition label. It is accessed using \code{$\backslash$proplink\{<label ID>\}}. For example, \code{$\backslash$proplink\{2.1\}} will generate \proplink{2.1}.
+	\end{itemize}
+	\section{Environments}
+	\subsection{Theorems and Examples}
+	Theorems and examples have dedicated environments, accessed with
+	\\\indent\code{$\backslash$begin\{theorem\}[name]\; $\backslash\backslash$<content>\;$\backslash$end\{theorem\}}
+	\\and
+	\\\indent\code{$\backslash$begin\{eg\}\; $\backslash$item <content>\;$\backslash$end\{eg\}}
+	\\respectively. Notice that the example environment follows similar conventions to the enumerate and itemize environments. In particular, the use of \code{$\backslash$item} is necessary. Notice also that \code{$\backslash\backslash$} is placed before starting the theorem. For example:
+	\begin{theorem}[Name]
+		\\The theorem statement.
+	\end{theorem}
+	\begin{eg}
+		\item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel pretium leo. Fusce consequat posuere mauris. Fusce sem lectus, fermentum nec mauris a, commodo ornare nisi. Curabitur vitae tempus eros. Sed non blandit sem. Nullam at nulla ut ex pretium tincidunt in non libero. Duis non felis nec nisl lacinia hendrerit. Aliquam mattis mollis nisl sed pulvinar.
+		\item Another example...
+	\end{eg}
+	\begin{eg}
+		\item A separate example box.
+	\end{eg}
+	As with definitions and propositions, we can link to theorems and examples from anywhere in the document.
+	\begin{itemize}
+		\item \code{$\backslash$thmlink\{<label ID>\}} will create a theorem link. For example, \code{$\backslash$thmlink\{2.1\}} generates \thmlink{2.1}. 
+		\item \code{$\backslash$eglink\{<item ID>\}} will create an example link. For example, \code{$\backslash$eglink\{2.2\}} generates \eglink{2.2}. 
+	\end{itemize}
+	\subsection{Proofs}
+	Proofs may be written inside the proof environment, accessed with
+	\\\code{$\backslash$begin\{proof\}[QED symbol][label]\; <proof>\;\;$\backslash$end\{proof\}}
+	\\The following are proof examples, given various combinations of environment options.
+	\begin{proof}
+		\code{$\backslash$begin\{proof\} Default \;\;$\backslash$end\{proof\}}
+	\end{proof}
+	\begin{proof}[]
+		\code{$\backslash$begin\{proof\}[] No QED \;\;$\backslash$end\{proof\}}
+	\end{proof}
+	\begin{proof}[$\clubsuit$]
+		\code{$\backslash$begin\{proof\}[\$$\backslash$clubsuit\$] Custom QED \;\;$\backslash$end\{proof\}}
+	\end{proof}
+	\begin{proof}[\qed][]
+		\code{$\backslash$begin\{proof\}[$\backslash$qed][] No Label \;\;$\backslash$end\{proof\}}
+	\end{proof}
+	\begin{proof}[\qed][claim a]
+		\code{$\backslash$begin\{proof\}[$\backslash$qed][claim a] Custom Label \;\;$\backslash$end\{proof\}}
+	\end{proof}
+	\begin{proof}[$\clubsuit$][claim a]
+		\code{$\backslash$begin\{proof\}[\$$\backslash$clubsuit\$][claim a] Custom Label and QED \;\;$\backslash$end\{proof\}}
+	\end{proof}
+	 As before, the \code{labelbox} class option dictates whether the proof label will be contained in a gray box.
+	\section{Margin Text}
+	\begin{itemize}
+		\item Margin text can be placed using \readmedef{mt}\mt{Lorem ipsum dolor sit amet, consectetur adipiscing elit.}. Note that margins are vertically aligned to the line in which \readmedef{mt}  is invoked. Thus, one must be careful not to overlap margin text-boxes.
+		\item \readmedef{say} is shorthand for small-caps labels, placed alongside proof, proposition, and definition labels in the opposite margin. Because of how margins are set up, these labels, if used, must be one line maximum.\say{a thing} 
+		\begin{itemize}
+			\item Once again, the \code{labelbox} class option is used to control the gray box.
+		\end{itemize}
+	\end{itemize}
+	\part{Customization}
+	\section{Extra Commands and Options}
+	\begin{itemize}
+		\item \readmedef{code} will generate the monospace font and color you see throughout this guide.
+		\item \readmedef{mtr} will allow one to place margin text in the smaller margin, normally reserved for labels.
+		\item The \code{linkpropthm} class option will unify theorem and proposition indexing. For example, if Part 1 contains one proposition followed by one theorem, they will be labeled Prop 1.1 and Theorem 1.2, respectively. Default behavior would index these as Prop 1.1 and Theorem 1.1.
+		\item \code{$\backslash\backslash$} is the default newline character. It is equivalent to \code{$\backslash$par$\backslash$vspace\{1.5ex\}$\backslash$noindent}.
+		\item \code{$\backslash$thecurpart} contains the name of the current part, without indexing. If one wishes to manually set how the part is displayed in the headers, one changes this macro.
+		\item \code{\$$\backslash$1\$} and \code{\$$\backslash$0\$} will generate $\1$ and $\0$, respectively.
+	\end{itemize}
+	\section{Colors}
+	$X$ is any any dvipsnames, x11names, or xcolor-supported color:
+	\begin{itemize}
+		\item The color of the theorem box is controlled using the command \code{$\backslash$theoremcolor\{$X$\}}.
+		\item Similarly, the color of page links, hyperlinks, and definitions hypertargets is controlled using \code{$\backslash$accentcolor\{$X$\}}.
+		\item The color of the code box, which has usage \readmedef{code}, is controlled using \code{$\backslash$codecolor\{$X$\}}.
+	\end{itemize}
+	
+	
+	
+	
+%	
+%	\section{Environments}
+%	All counters are generated. The first number is the current part.  
+%		\begin{theorem}[Optional Theorem Name]
+%	\\\code{$\backslash$begin\{theorem\}[name]...$\backslash$end\{theorem\}} bubble theorem environment
+%		\begin{itemize}
+%			\item \code{$\backslash$theoremcolor\{\textit{any dvipsnames color}\}} to redefine theorem color
+%			\item Numbering is current part (dot) theorem number.
+%			\item To display a hyperlink to your theorem, e.g. \thmlink{1.1}, write  \code{$\backslash$thmlink\{$x.y$\}}.
+%		\end{itemize}
+%		\end{theorem}
+%		\define To define something, write $\backslash$\code{define}. 
+%		\begin{proof}
+%			To set up a proof, write $$\code{$\backslash$begin\{proof\}[endsymbol][margin]...$\backslash$end\{proof\}}$$
+%		A \qedsymbol \; is placed at the end by default. One can edit the first flag to change this symbol. Additionally,  "\runin{proof.}" is put in the margins. The second flag allows you to customize this. Both flags are optional.
+%		\end{proof}
+%	\begin{eg}
+%		 \code{$\backslash$begin\{example\}...$\backslash$end\{example\}} will make a box that looks like this.
+% \end{eg}
+%\\\prop Write \code{$\backslash$prop[height]} for a proposition. Optionally, one uses the flag to displace the margin text $\pm$ \code{height} (in cm).
+%		
+%\section{Pre-defined commands}
+%\begin{enumerate}
+%	\item \code{$\backslash$margintext\{...\}} will place text in the side margins\margintext{Some margin text}
+%	\item \code{$\backslash$runin\{...\}} will make small-caps \runin{text}.
+%	\item \code{$\backslash$say\{...\}} will put small-caps text in the margin\say{like so}
+%	\item \code{$\backslash$code\{...\}} will make inline code, as displayed here. 
+%	\\(This is equivalent to $\backslash$\code{texttt\{$\backslash$footnotesize\{...\}\}})
+%	\item If one wishes to differentiate between the part name and how it's displayed in the odd header, one can redefine \noindent\code{$\backslash$renewcommand\{$\backslash$thecurpart\}\{...\}}. Otherwise, this is automatically updated.
+%\end{enumerate}
+%\newpage\section{Hyperlinks}
+%\renewcommand{\arraystretch}{1.3}
+%You can make a hyperlink to any one of your definitions, proposition, examples, or theorems. 
+%\begin{center}
+%	\begin{tabular}{l|l|ll}
+%		\textbf{Element} & \textbf{Insert Hyperlink} & \textbf{Example} \\\hline\hline
+%		Definition & \code{$\backslash$deflink\{defNum\}} & \code{$\backslash$deflink\{1.1\}} &$\to$ \deflink{1.1}\\\hline
+%		
+%		Proposition & \code{$\backslash$proplink\{propNum\}} & \code{$\backslash$proplink\{1.1\}} &$\to$  \proplink{1.1}\\\hline
+%		
+%		Example & \code{$\backslash$eglink\{egNum\}} & \code{$\backslash$eglink\{1.1\}}  &$\to$ \eglink{1.1}\\\hline
+%		
+%		Theorem & \code{$\backslash$thmlink\{thmNum\}} & \code{$\backslash$thmlink\{1.1\}}&  $\to$ \thmlink{1.1}
+%	\end{tabular}
+%\end{center}
+\section{Hidden Counters}
+The following counters are ticking behind the scenes, and can be manipulated if needed.
+\begin{center}
+	\begin{tabular}{|llll|}\hline
+		\textbf{Element} & \textbf{Counter Name} & \textbf{Default Value} & \textbf{Note} \\\hline
+		Part & \code{partNum} & 0&\\
+		Definition & \code{defNum} &\code{partNum}.1&\\
+		Proposition & \code{propNum} &\code{partNum}.1&\\
+		Theorem & \code{thmNum} & \code{partNum}.1&\\
+		Example & \code{exampleitem} & \code{partNum}.1& increments each \code{$\backslash$item} \\
+		Contents Depth & \code{tocdepth} & 2& {up to subsection}\\\hline
+	\end{tabular}
+\end{center}
+\section{Miscellaneous}
+\begin{itemize}
+	\item You can inspect the \code{.cls} file for full list of pre-installed packages.
+	\item Some of this template, including its font and small-caps sectioning, is inspired by {\href{https://vhbelvadi.com/latex-lecture-notes-class}{V.H. Belvadi's} }essay template.
+	\item To help populate the index: \define{starting} \define{now}, \define{each} \define{word} \define{in} \define{this} \define{sentence} \define{is} \define{a} \define{new} \define{definition}.\margintext{Recall that labels are vertically aligned with the line in which the definition is invoked, so the only label that appears is Def 3.11, due to overlapping.}
+\end{itemize}
+\end{document}

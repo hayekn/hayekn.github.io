@@ -1,4 +1,3 @@
-\babel@toc {english}{}\relax 
-\contentsline {part}{I \hskip 1em\relax Introduction}{3}{section*.1}%
+\contentsline {part}{\makebox [1.25em][l]{I} \hskip 1em\relax I \hskip 1em\relax Introduction}{3}{section*.1}%
 \contentsline {section}{\underline {The Meaning of Life}}{3}{section*.2}%
 \contentsline {subsection}{Let's Talk About It}{3}{subsection*.3}%

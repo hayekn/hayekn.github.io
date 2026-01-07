@@ -1,22 +1,18 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{hayektexreview}[2026/01/06]
+\ProvidesClass{hayektexreview}[2024/04/25]
 
-\usepackage{filecontents}
-\begin{filecontents*}{\jobname.ist}
-	item_0 "\n \\item \\small "
-	delim_0 " \\hfill "
-	delim_1 " \\hfill "
-	delim_2 " \\hfill "
-\end{filecontents*}
+%Adapted from V.H. Belvadi's essay template
+%Check out his work at https://vhbelvadi.com/
 
 %OPTIONS{
 \DeclareOption{center}{\newcommand{\@wantscenter}{}}
-\DeclareOption{index}{\newcommand{\@wantsindex}{}}
+\DeclareOption{copyright}{\newcommand{\@copyright}{}}
 \DeclareOption{authhead}{\newcommand{\@authhead}{}}
 \DeclareOption{toc}{\newcommand{\@toc}{}}
 \DeclareOption{title}{\newcommand{\@titpage}{}}
-\DeclareOption{copyright}{\newcommand{\@copyright}{}}
-\DeclareOption{labelbox}{\newcommand{\@labelbox}{}}
+\DeclareOption{oldtitle}{\newcommand{\@oldtitpage}{}}
+\DeclareOption{seccount}{\newcommand{\@seccount}{}}
+%\DeclareOption{pic}{\newcommand{\@pic}{}}
 \DeclareOption{linkpropthm}{\newcommand{\@linkpropthm}{}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -28,17 +24,8 @@
 
 %PACKAGES{
 
-%Fonts and colors
 \RequirePackage[widermath]{kpfonts}
 \RequirePackage[dvipsnames,x11names]{xcolor}
-\newcommand{\@theoremcolor}{Maroon}
-\newcommand{\theoremcolor}[1]{\renewcommand{\@theoremcolor}{#1}}
-\newcommand{\@accentcolor}{purple}
-\newcommand{\accentcolor}[1]{\renewcommand{\@accentcolor}{#1}}
-\newcommand{\@codecolor}{OliveGreen}
-\newcommand{\codecolor}[1]{\renewcommand{\@codecolor}{#1}}
-
-
 \RequirePackage{tikz}
 \RequirePackage{etoolbox}
 \RequirePackage{enumitem}
@@ -51,7 +38,7 @@
 \RequirePackage{sourcecodepro}
 \RequirePackage{geometry}
 \RequirePackage{ifthen}
-\ifthenelse{\isundefined{\@wantscenter}}{\geometry{verbose,letterpaper,top=1.25in,bottom=1in,left=1in,right=1.6in,asymmetric,twoside,marginparwidth=1.15in,marginparsep=15pt}}{\geometry{verbose,letterpaper,top=1.25in,bottom=1in,left=1.25in,right=1.25in,asymmetric,twoside}}
+\ifthenelse{\isundefined{\@wantscenter}}{\geometry{verbose,letterpaper,top=1.25in,bottom=1in,left=1in,right=1.7in,asymmetric,twoside,marginparwidth=1.25in,marginparsep=15pt}}{\geometry{verbose,letterpaper,top=1.45in,bottom=1.35in,left=1.25in,right=1.25in,asymmetric,twoside}}
 \RequirePackage{empheq}
 \RequirePackage[framemethod=TikZ, xcolor]{mdframed}
 \RequirePackage{fancyhdr}
@@ -87,47 +74,48 @@
 \RequirePackage{mathrsfs}
 \RequirePackage{marginnote}
 \RequirePackage{imakeidx}
-\RequirePackage[colorlinks,linkcolor=\@accentcolor,urlcolor=\@accentcolor,citecolor=black]{hyperref}
+\RequirePackage[colorlinks,linkcolor=purple,urlcolor=purple,citecolor=black]{hyperref}
 %}
 
 %SECTION FORMATTING{
+%\newcommand{\@stitle}{}
 \renewcommand{\@author}{}
-\newcommand{\email}[1]{\newcommand{\@email}{#1}}
+\newcommand{\@email}{}
+\newcommand{\email}[1]{\renewcommand{\@email}{#1}}
 \newcommand{\subtitle}[1]{\newcommand{\@subtitle}{#1}}
 \newcommand{\subsubtitle}[1]{\newcommand{\@subsubtitle}{#1}}
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
 \newcommand{\note}[1]{\newcommand{\@note}{#1}}
 \renewcommand{\title}[1]{\renewcommand{\@title}{#1}}
 \newcommand{\stitle}[1]{\renewcommand{\@stitle}{#1}}
-\newcommand{\titlepic}[2][1]{\newcommand{\@pic}{#2}\newcommand{\@picsize}{#1}}
+\newcommand{\pic}[2][1]{\newcommand{\@pic}{#2}\newcommand{\@picsize}{#1}}
 
 \titleformat{\section}{\relax\centering\large\lsstyle}{}{0.5em}{\otherscshape\MakeLowercase}
-\titleformat{\subsection}{\relax}{}{1em}{\large\itshape}
-\titleformat{\subsubsection}{\relax}{}{0em}{\normalsize\otherscshape\MakeLowercase}
-\titleformat{\paragraph}[runin]{}{}{}{\normalsize\bfseries}
+\titleformat{\subsection}{\relax\centering}{}{1em}{\large\itshape}
+\titleformat{\subsubsection}{\relax}{}{0em}{\normalsize\textbf}
+\titleformat{\paragraph}[runin]{}{}{}{\normalsize\smallcaps}
+
 
 \newcounter{partNum}
+\newcounter{secNum}
 
 \newcommand{\thecurpart}{}
 \let\oldpart\part
 \renewcommand{\part}[1]{\stepcounter{partNum}\oldpart{\makebox[1.25em][l]{\Roman{partNum}} \quad #1}\renewcommand{\thecurpart}{#1}}
 
+\pretocmd{\section}{\stepcounter{secNum}}{}{}
+%\let\oldsection\section
+%\renewcommand{\section}[1]{\stepcounter{secNum}\oldsection{#1}}
 
 \renewcommand{\cftsecfont}{}
 \setcounter{secnumdepth}{-1}
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{3}
 %}
 
 %TEXT MACROS{
 \newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
-\newcommand{\say}[1]{\mtr{
-			\ifthenelse{\isundefined{\@labelbox}}{%
-					\runin{#1}%
-				}{%
-					\colorbox{gray!10}{\runin{#1}}%
-				}%
-			}%
-		}%
+\newcommand{\say}[1]{\mtr{\runin{#1}}}
+
 \renewcommand*{\marginfont}{\footnotesize}
 
 \newcommand{\mtr}[1]{\reversemarginpar\marginnote{#1}\normalmarginpar}
@@ -136,6 +124,7 @@
 %Old macro
 \newcommand{\margintext}{\mt}
 %}
+
 
 %TITLE PAGE AND TOC{
 \renewcommand{\maketitle}{
@@ -152,7 +141,7 @@
 			\includegraphics[scale=\@picsize]{\@pic}
 		\end{center}
 		
-	}
+		}
 	
 	
 	\vfill
@@ -164,46 +153,40 @@
 	\restoregeometry
 }
 
+\newcommand{\makeoldtitle}{
+	\newgeometry{left=1in,right=1in}
+	\begin{center}
+			\rule{10cm}{0.4pt}\vspace{1cm}\\
+			\large{\smallcaps{\textls[150]{\MakeUppercase{\@title}}}}
+			
+			\ifthenelse{\isundefined{\@subtitle}}{}{{\vskip 1.5ex\large\smallcaps{\textls[100]{\protect\MakeLowercase{\protect\otherscshape{\@subtitle}}}}}}
+			
+			\ifthenelse{\isundefined{\@author}}{}{{\vskip 1.5ex\large\smallcaps{\textls[100]{\protect\MakeLowercase{\protect\otherscshape{\@author}}}}}}
+			\ifthenelse{\isundefined{\@note}}{}{{\vskip 2.5ex\textit{\@note}}}
+			\\\vspace{2.5ex}\rule{3.5cm}{0.4pt}
+			\newpage
+		\end{center}
+	\newpage
+	\restoregeometry
+}
+
+
 \AtBeginDocument{
 	\pagenumbering{gobble}
 	\newcounter{frontpages}
-	\renewcommand{\cftpartpagefont}{\Large\bfseries}
-	
 	\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-	\renewcommand{\cftsecpagefont}{\normalfont}
-	\renewcommand{\cftsecindent}{2.75em}
-	
 	\renewcommand{\cftsubsecleader}{\hfill}
-	\renewcommand{\cftsubsecpagefont}{\hphantom}
-	\renewcommand{\cftsubsecfont}{\small\itshape}
-	\renewcommand{\cftsubsecindent}{3.5em}
-	\setlength{\cftbeforesecskip}{.6em}
 	\ifthenelse{\isundefined{\@titpage}}{}{\maketitle\stepcounter{frontpages}}
+	\ifthenelse{\isundefined{\@oldtitpage}}{}{\makeoldtitle\stepcounter{frontpages}}
 	\ifthenelse{\isundefined{\@toc}}{}{\newgeometry{left=2in,right=2in,bottom=.5in, top=1in}\tableofcontents
-		
-	\ifthenelse{\isundefined{\@copyright}}{}{%
-		\vspace{\fill}\\\textcopyright \;\the\year \,\@author\;
-			\ifthenelse{\isundefined{\@email}}{}{%
-				\href{mailto:\@email}{\faEnvelope[regular]}%
-			}%
-	}\restoregeometry%
-	
-	\newpage\stepcounter{frontpages}
+		\ifthenelse{\isundefined{\@copyright}}{}{\vspace{\fill}\\\textcopyright \; \@author\; \the\year{} \;\; \href{mailto:\@email}{\faEnvelope[regular]}}\restoregeometry%
+		\newpage\stepcounter{frontpages}
 	}
 	\pagestyle{fancy}
 	\pagenumbering{arabic}
 	\setcounter{page}{\value{frontpages}}
 	\stepcounter{page}
 	\\
-}
-%Index creation
-\ifthenelse{\isundefined{\@wantsindex}}{}{%
-	\indexsetup{toclevel=part}
-	\makeindex[title=Index of Definitions, intoc, options= -s \jobname.ist]	
-	\AtEndDocument{%	
-		\clearpage\pagenumbering{gobble}
-		\printindex
-	}%
 }
 
 
@@ -225,16 +208,16 @@
 %}
 
 %ENVIORNMENTS{
-\newcommand{\code}[1]{\textcolor{\@codecolor}{\texttt{\footnotesize#1}}}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+%\newcommand{\code}[1]{\colorbox{backcolour}{\texttt{\footnotesize#1}}}
+\newcommand{\code}[1]{\texttt{\footnotesize#1}}
+
+
+\newcommand{\@theoremcolor}{Maroon}
+\newcommand{\theoremcolor}[1]{\renewcommand{\@theoremcolor}{#1}}
 \mdfdefinestyle{theorem}{
-	roundcorner=5pt,
-	innertopmargin=6pt,
-	innerbottommargin=6pt,
-	innerleftmargin=6pt,
-	innerrightmargin=10pt,
-	linewidth=1pt,
-	skipabove=10pt,
-	skipbelow=10pt,
+	roundcorner=10pt,
+	linewidth=2pt,
 	backgroundcolor=\@theoremcolor!20,
 	linecolor=\@theoremcolor,
 	nobreak=true}
@@ -243,34 +226,22 @@
 	linewidth=0pt,
 	backgroundcolor=gray!10,
 	usetwoside=false,
+%	tikzsetting={draw=white,line width=1pt,%
+%		dashed}
 }
-\mdfdefinestyle{example}{
-	linecolor=black,
-	style=dashed,
-	linewidth=1pt,
-	roundcorner=5pt,
-	innertopmargin=6pt,
-	innerbottommargin=6pt,
-	innerleftmargin=6pt,
-	innerrightmargin=10pt,
-	skipabove=10pt,
-	skipbelow=10pt
-}
-\newcounter{propNum}[partNum]
 
-\newcommand{\prop}[1][-.45cm]{%
+\ifthenelse{\isundefined{\@seccount}}{\newcounter{propNum}[partNum]}{\newcounter{propNum}[secNum]}
+
+%\newcounter{propNum}[partNum]
+\newcommand{\prop}[1][-.2]{%
 	\noindent\stepcounter{propNum}%
 	\mtr{%
-		\vspace{#1}\\%
+		\vspace{#1cm}%
 		\hypertarget{%
 			prop\arabic{partNum}.\arabic{propNum}%
 			}{%
-			\ifthenelse{\isundefined{\@labelbox}}{%
+			\colorbox{gray!20}{%
 				\runin{\textbf{prop \scriptsize{\arabic{partNum}.\arabic{propNum}}}}%
-			}{%
-				\colorbox{gray!10}{%
-					\runin{\textbf{prop \scriptsize{\arabic{partNum}.\arabic{propNum}}}}%
-				}%
 			}%
 		}%
 	}%
@@ -287,20 +258,16 @@
 \newcommand{\define}[2][]{%
 	\edef\thisdefkey{%
 		\if\relax\detokenize{#1}\relax#2%
-		\else#1\fi%
+		\else #1 \fi%
 	}%
-	\textcolor{\@accentcolor}{\textit{#2}}%
+	\textcolor{purple}{\textit{#2}}%
 	\noindent%
 	\stepcounter{defNum}%
 	\edef\thisdeflabel{\arabic{partNum}.\arabic{defNum}}%
 	\expandafter\xdef\csname deflabel@\thisdefkey\endcsname{\thisdeflabel}%
 	\mtr{
 		\vspace{-.2cm}\hypertarget{def\thisdeflabel}{%
-			\ifthenelse{\isundefined{\@labelbox}}{%
-				\runin{def \scriptsize{\thisdeflabel}}%
-			}{%
-				\colorbox{gray!10}{\runin{def \scriptsize{\thisdeflabel}}}%
-			}%
+			\colorbox{gray!20}{\runin{def \scriptsize{\thisdeflabel}}}
 		}%
 	}%
 	\index{#2@#2\;\defindexentry{\thisdeflabel}|NoPage}%
@@ -312,51 +279,70 @@
 }
 
 \newcounter{theoremNum}[partNum]
-
 \ifthenelse{\isundefined{\@linkpropthm}}{
 	
-	\newenvironment{theorem}[1][]{\stepcounter{theoremNum}\begin{mdframed}[style=theorem]\renewcommand{\\}{\par\vspace{1.5ex}\noindent}\hypertarget{thm\arabic{partNum}.\arabic{theoremNum}}{\textbf{Theorem \arabic{partNum}.\arabic{theoremNum}\quad #1}}}
-		{\end{mdframed}}
+\newenvironment{theorem}[1][]{\stepcounter{theoremNum}\begin{mdframed}[style=theorem]\renewcommand{\\}{\par\vspace{1.5ex}\noindent}\hypertarget{thm\arabic{partNum}.\arabic{theoremNum}}{\textbf{Theorem \arabic{partNum}.\arabic{theoremNum}\quad #1}}}
+	{\end{mdframed}}
 
 }{
 
-	\newenvironment{theorem}[1][]{\stepcounter{propNum}\begin{mdframed}[style=theorem]\renewcommand{\\}{\par\vspace{1.5ex}\noindent}\hypertarget{thm\arabic{partNum}.\arabic{propNum}}{\textbf{\arabic{partNum}.\arabic{propNum}\quad #1}}}
-		{\end{mdframed}}
+\newenvironment{theorem}[1][]{\stepcounter{propNum}\begin{mdframed}[style=theorem]\renewcommand{\\}{\par\vspace{1.5ex}\noindent}\hypertarget{thm\arabic{partNum}.\arabic{propNum}}{\textbf{\arabic{partNum}.\arabic{propNum}\quad #1}}}
+	{\end{mdframed}}
 
 }
+
 \newcommand{\thmlink}[1]{\hyperlink{thm#1}{\uline{Thm #1}}}
 
+\newcounter{egNum}[partNum]
 
-%EXAMPLE ENVIRONMENT
-\newcounter{exampleitem}[partNum]
+\mdfdefinestyle{example}{
+	linecolor=black,
+	style=dashed,
+	linewidth=1pt,
+	roundcorner=5pt,
+	innertopmargin=6pt,
+	innerbottommargin=6pt,
+	innerleftmargin=6pt,
+	innerrightmargin=10pt,
+	skipabove=10pt,
+	skipbelow=10pt
+}
 \newlist{examplelist}{enumerate}{1}
 \setlist[examplelist,1]{
-	label=\textbf{Eg. \arabic{partNum}.\arabic{examplelisti}},
-	ref=\arabic{partNum}.\arabic{examplelisti},
+	label=\textbf{Eg. \arabic{partNum}.\arabic{egNum}.\arabic*},
 	leftmargin=*,
-	align=left,
-	resume=exampleitem,
-	before={\setcounter{examplelisti}{\value{exampleitem}}\let\olditem\item\renewcommand{\item}{\olditem\hypertarget{eg\arabic{partNum}.\arabic{examplelisti}}{}}},
-	after=\setcounter{exampleitem}{\value{examplelisti}}
-}
+	align=left}
+
+%\newenvironment{eg}{
+%\vspace{-.2cm}\stepcounter{egNum}\mt{\\\hypertarget{eg\arabic{partNum}.\arabic{egNum}}{\runin{e.g. \scriptsize{\arabic{partNum}.\arabic{egNum}}}}}\begin{mdframed}[style=example]\renewcommand{\\}{\par\vspace{1.5ex}\noindent}\begin{examplelist}
+%}{
+%\end{examplelist}\end{mdframed}
+%}
+
 \newenvironment{eg}{
-	\vspace{-.2cm}\begin{mdframed}[style=example]\renewcommand{\\}{\par\vspace{1.5ex}\noindent}\begin{examplelist}
+	\vspace{-.2cm}\stepcounter{egNum}\begin{mdframed}[style=example]\renewcommand{\\}{\par\vspace{1.5ex}\noindent}\hypertarget{eg\arabic{partNum}.\arabic{egNum}}{}\begin{examplelist}
 		}{
 	\end{examplelist}\end{mdframed}
 }
+
+
+\newenvironment{example}{
+	\stepcounter{egNum}\noindent\xrfill[2pt]{.75pt}[black]\,$\spadesuit$\,\textit{Examples}\,$\clubsuit$\,\xrfill[2pt]{.75pt}[black]
+	\mtr{\vspace*{-.1cm}\hypertarget{eg\arabic{partNum}.\arabic{egNum}}{\runin{e.g. \scriptsize{\arabic{partNum}.\arabic{egNum}}}}}
+	\\\noindent\ignorespaces
+}{
+	\\\noindent\xrfill[2pt]{.75pt}[black]
+}
 \newcommand{\eglink}[1]{\hyperlink{eg#1}{\uline{Example #1}}}
+
+%\renewenvironmentx{proof}[2][1=\qed, 2=proof.]{\def\endArg{#1}\say{\vspace{.5cm}\\#2}\MakeFramed\\}
+%		{\hfill\endArg\endMakeFramed}
 
 \renewenvironmentx{proof}[2][1=\qed,2=proof.]{%
 	\def\endArg{#1}%
 	\begin{mdframed}[style=proof]%
 		\renewcommand{\\}{\par\vspace{1.5ex}\noindent}%
-		\reversemarginpar\mt{\vspace{-.55cm}\\%
-			\ifthenelse{\isundefined{\@labelbox}}{%
-				\runin{#2}%
-			}{%
-			\ifstrempty{#2}{}{\colorbox{gray!10}{\runin{#2}}}%
-			}%
-		}%
+		\reversemarginpar\mt{\vspace{-.5cm}\\\colorbox{gray!20}{\runin{#2}}}%
 	}{%
 		\hfill\endArg\normalmarginpar\end{mdframed}%
 	}

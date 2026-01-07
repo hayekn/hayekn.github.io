@@ -1,0 +1,22 @@
+\contentsline {section}{Options Cheatsheet}{3}{section*.1}%
+\contentsline {part}{\makebox [1.25em][l]{I} \hskip 1em\relax Document Setup}{3}{section*.2}%
+\contentsline {section}{Requirements}{3}{section*.3}%
+\contentsline {section}{Page Setup}{3}{section*.4}%
+\contentsline {subsection}{Margins}{3}{subsection*.5}%
+\contentsline {subsection}{Title Page}{3}{subsection*.6}%
+\contentsline {subsection}{Table of Contents}{4}{subsection*.7}%
+\contentsline {subsection}{Index of Definitions}{4}{subsection*.8}%
+\contentsline {section}{Headers}{4}{section*.9}%
+\contentsline {part}{\makebox [1.25em][l]{II} \hskip 1em\relax Environments and Labels}{4}{section*.10}%
+\contentsline {section}{Definitions}{4}{section*.11}%
+\contentsline {section}{Propositions}{5}{section*.12}%
+\contentsline {section}{Environments}{5}{section*.13}%
+\contentsline {subsection}{Theorems and Examples}{5}{subsection*.14}%
+\contentsline {subsection}{Proofs}{6}{subsection*.15}%
+\contentsline {section}{Margin Text}{6}{section*.16}%
+\contentsline {part}{\makebox [1.25em][l]{III} \hskip 1em\relax Customization}{7}{section*.17}%
+\contentsline {section}{Extra Commands and Options}{7}{section*.18}%
+\contentsline {section}{Colors}{7}{section*.19}%
+\contentsline {section}{Hidden Counters}{7}{section*.20}%
+\contentsline {section}{Miscellaneous}{8}{section*.21}%
+\contentsline {part}{Index of Definitions}{}{section*.22}%

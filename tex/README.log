@@ -1,14 +1,30 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.12.14)  6 JAN 2026 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.12.14)  6 JAN 2026 21:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./sample.tex
-(sample.tex
+**./README.tex
+(README.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
 (hayektexreview.cls
-Document Class: hayektexreview 2024/04/25
-LaTeX Info: Redefining \\ on input line 20.
+Document Class: hayektexreview 2026/01/06
+
+(C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/filecontents\fileconten
+ts.sty
+Package: filecontents 2023/04/02 v1.5a Create an external file from within a La
+TeX document
+
+
+Package filecontents Warning: This package is obsolete. Disabling it and
+(filecontents)                passing control to the filecontents environment
+(filecontents)                defined by the LaTeX kernel.
+
+)
+
+LaTeX Info: File `README.ist' already exists on the system.
+            Not generating it from this source.
+
+LaTeX Info: Redefining \\ on input line 24.
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
@@ -2042,83 +2058,87 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip189
 )
 \c@partNum=\count391
-\c@secNum=\count392
-\c@propNum=\count393
-\c@defNum=\count394
-\c@theoremNum=\count395
-\c@egNum=\count396
-\c@examplelisti=\count397
-\enitdp@examplelist=\count398
+\README@idxfile=\write4
+\openout4 = `README.idx'.
+
+
+Writing index file README.idx
+\c@propNum=\count392
+\c@defNum=\count393
+\c@theoremNum=\count394
+\c@exampleitem=\count395
+\c@examplelisti=\count396
+\enitdp@examplelist=\count397
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (sample.aux)
-\openout1 = `sample.aux'.
+ (README.aux)
+\openout1 = `README.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkpw/m/it on input line 18.
+LaTeX Font Info:    Checking defaults for OML/jkpw/m/it on input line 10.
 LaTeX Font Info:    Trying to load font information for OML+jkpw on input line 
-18.
+10.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omljkpw.fd
 File: omljkpw.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/jkpw/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/jkpw/m/n on input line 10.
 LaTeX Font Info:    Trying to load font information for OMS+jkpw on input line 
-18.
+10.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omsjkpw.fd
 File: omsjkpw.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 10.
 LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 1
-8.
+0.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 10.
 LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 
-18.
+10.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 10.
 LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 1
-8.
+0.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/ly1\ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count399
+\scratchcounter=\count398
 \scratchdimen=\dimen356
 \scratchbox=\box150
-\nofMPsegments=\count400
-\nofMParguments=\count401
+\nofMPsegments=\count399
+\nofMParguments=\count400
 \everyMPshowfont=\toks60
-\MPscratchCnt=\count402
+\MPscratchCnt=\count401
 \MPscratchDim=\dimen357
-\MPnumerator=\count403
-\makeMPintoPDFobject=\count404
+\MPnumerator=\count402
+\makeMPintoPDFobject=\count403
 \everyMPtoPDFconversion=\toks61
 )
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -2135,7 +2155,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 18.
+ on input line 10.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2145,20 +2165,20 @@ your preamble.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(72.26999pt, 419.16624pt, 122.85876pt)
+* h-part:(L,W,R)=(72.26999pt, 426.39258pt, 115.63243pt)
 * v-part:(T,H,B)=(90.3375pt, 632.3625pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=419.16624pt
+* \textwidth=426.39258pt
 * \textheight=632.3625pt
 * \oddsidemargin=0.0pt
-* \evensidemargin=50.58878pt
+* \evensidemargin=43.36244pt
 * \topmargin=-18.9325pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=90.3375pt
+* \marginparwidth=83.11005pt
 * \marginparsep=15.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.0pt plus 4.0pt minus 2.0pt
@@ -2171,13 +2191,13 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 18.
-Package microtype Info: Applying patch `item' on input line 18.
-Package microtype Info: Applying patch `toc' on input line 18.
-Package microtype Info: Applying patch `eqnum' on input line 18.
-Package microtype Info: Applying patch `footnote' on input line 18.
-Package microtype Info: Applying patch `verbatim' on input line 18.
-LaTeX Info: Redefining \microtypesetup on input line 18.
+LaTeX Info: Redefining \microtypecontext on input line 10.
+Package microtype Info: Applying patch `item' on input line 10.
+Package microtype Info: Applying patch `toc' on input line 10.
+Package microtype Info: Applying patch `eqnum' on input line 10.
+Package microtype Info: Applying patch `footnote' on input line 10.
+Package microtype Info: Applying patch `verbatim' on input line 10.
+LaTeX Info: Redefining \microtypesetup on input line 10.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2192,13 +2212,55 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `jkp' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring ON on input line 18.
-(sample.out) (sample.out)
-\@outlinefile=\write4
-\openout4 = `sample.out'.
+Package hyperref Info: Link coloring ON on input line 10.
+(README.out) (README.out)
+\@outlinefile=\write5
+\openout5 = `README.out'.
 
-\c@frontpages=\count405
+\c@frontpages=\count404
 
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(108.405pt, 397.485pt, 108.405pt)
+* v-part:(T,H,B)=(144.54pt, 505.89pt, 144.54pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=397.485pt
+* \textheight=505.89pt
+* \oddsidemargin=36.13501pt
+* \evensidemargin=36.13501pt
+* \topmargin=35.27pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=83.11005pt
+* \marginparsep=15.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<pic.jpg, id=94, 1410.0178pt x 697.8572pt>
+File: pic.jpg Graphic file (type jpg)
+<use pic.jpg>
+Package pdftex.def Info: pic.jpg  used on input line 10.
+(pdftex.def)             Requested size: 281.99857pt x 139.56895pt.
+[1
+
+
+{C:/Users/hayek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/haye
+k/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./pic.jpg>]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -2218,7 +2280,7 @@ Package hyperref Info: Link coloring ON on input line 18.
 * \headsep=25.0pt
 * \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=90.3375pt
+* \marginparwidth=83.11005pt
 * \marginparsep=15.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.0pt plus 4.0pt minus 2.0pt
@@ -2232,7 +2294,7 @@ Package hyperref Info: Link coloring ON on input line 18.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for T1+jkpk on input line 1
-8.
+0.
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\t1jkpk.fd
 File: t1jkpk.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkpk.
 )
@@ -2241,7 +2303,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OT1+jkp on input line 1
-8.
+0.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ot1jkp.fd
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
@@ -2251,12 +2313,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for U+jkpmiaw on input line
- 18.
+ 10.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ujkpmiaw.fd
 File: ujkpmiaw.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
 
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -2265,7 +2327,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
 
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -2275,81 +2337,85 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+jkpsyc on input line 
-18.
+10.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-8.
+0.
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 10
 .
 
 (C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-(sample.toc)
-\tf@toc=\write5
-\openout5 = `sample.toc'.
+(README.toc)
+\tf@toc=\write6
+\openout6 = `README.toc'.
 
- [1
+LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 1
+0.
+
+(C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/kpfonts\ts1jkp.fd
+File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `jkp' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
+nput line 10.
+
+(C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontaweso
+mefree1.fd)
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.10 \begin{document}
+                      [2
 
 
-{C:/Users/hayek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/haye
-k/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-large-sc.enc}{C
-:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+{C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts-l
+arge-sc.enc}{C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fonta
+wesome5/fa5free1.enc}]
+LaTeX Font Info:    Trying to load font information for T1+SourceCodePro-TLF on
+ input line 15.
+
+(C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/sourcecodepro\t1sourcec
+odepro-tlf.fd
+File: T1SourceCodePro-TLF.fd 2025/04/07 (autoinst) Font definitions for T1/Sour
+ceCodePro-TLF.
+)
+LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/regular/n' aliased to
+(Font)              `T1/SourceCodePro-TLF/m/n' on input line 15.
+LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 15.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `SourceCodePro-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/regular/n' aliased to
+(Font)              `T1/SourceCodePro-TLF/m/n' on input line 15.
+LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 15.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 20.
+(hyperref)                removing `\@ifnextchar' on input line 25.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 20.
+(hyperref)                replaced by space on input line 25.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 20.
-
-
-! LaTeX Error: Command \partcontent undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 	\renewcommand\partcontent
-                               {Introduction}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@underline' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 24.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 24.
-
+LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/regular/it' aliased to
+(Font)              `T1/SourceCodePro-TLF/m/it' on input line 28.
+LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/it' will be
+(Font)              scaled to size 9.0pt on input line 28.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/jkp/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2362,47 +2428,267 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3
 
-]
+{C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/sourcecodepro/a_r
+zhnou.enc}]
 
-Package marginnote Warning: Consecutive odd pages found.
-(marginnote)                Note, it is not recommended to use consecutive
-(marginnote)                odd pages in a double-ended document.
-(marginnote)                The pages of your document should always
-(marginnote)                be a sequence: odd-even-odd-even-...
-(marginnote)                Maybe you've forgotten a \cleardoublepage before
-(marginnote)                changing the page numbering on page 3.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 75.
 
-Package marginnote Info: Using workaround for absolute page number on input lin
-e 28.
-(sample.aux)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 75.
+
+Package marginnote Info: Margin note 4.1 is on absolute page 4 on input line 77
+.
+Package marginnote Info: xpos seems to be 429.1317pt on input line 77.
+Package marginnote Info: Margin note 4.2 is on absolute page 5 on input line 86
+.
+Package marginnote Info: xpos seems to be 238.40868pt on input line 86.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4]
+Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 92
+.
+Package marginnote Info: xpos seems to be 72.26999pt on input line 92.
+Package marginnote Info: Margin note 5.2 is on absolute page 5 on input line 92
+.
+Package marginnote Info: xpos seems to be 235.01538pt on input line 92.
+Package mdframed Info: mdframed works in twoside mode on input line 104.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 104.
+
+
+Package mdframed Warning: Unknown definedstyle dashed
+ You have to define a style 
+ via \mdfdefinedstyle
+(mdframed)                 on input line 107.
+
+Package mdframed Info: mdframed works in twoside mode on input line 107.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 107.
+
+Package mdframed Warning: Unknown definedstyle dashed
+ You have to define a style 
+ via \mdfdefinedstyle
+(mdframed)                 on input line 111.
+
+Package mdframed Info: mdframed works in twoside mode on input line 111.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 111.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[5{C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/kpfonts/kpfonts
+-expert.enc}]
+Package mdframed Info: Not enough space on this page on input line 113.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 124.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 124.
+Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 12
+4.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 124.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 127.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 127.
+Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 12
+7.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 127.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 130.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 130.
+Package marginnote Info: Margin note 6.3 is on absolute page 6 on input line 13
+0.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 130.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 132.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 132.
+Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 13
+3.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 133.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 135.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 135.
+Package marginnote Info: Margin note 6.5 is on absolute page 6 on input line 13
+6.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 136.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 138.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 138.
+Package marginnote Info: Margin note 6.6 is on absolute page 6 on input line 13
+9.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 139.
+Package marginnote Info: Margin note 6.7 is on absolute page 6 on input line 14
+4.
+Package marginnote Info: xpos seems to be 342.6941pt on input line 144.
+Package marginnote Info: Margin note 6.8 is on absolute page 6 on input line 14
+5.
+Package marginnote Info: xpos seems to be 378.26776pt on input line 145.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 150.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 150.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[6]
+LaTeX Font Info:    Trying to load font information for U+BOONDOX-ds on input l
+ine 158.
+
+(C:\Users\hayek\AppData\Local\Programs\MiKTeX\tex/latex/boondox\uboondox-ds.fd
+File: uboondox-ds.fd 2011/04/26 Fontinst v1.933 font definitions for U/BOONDOX-
+ds.
+)
+Overfull \hbox (18.44156pt too wide) in paragraph at lines 165--166
+[]\T1/jkp/m/n/10.95 (-20) The color of the code box, which has us-age []$\OMS/j
+kpw/m/n/9 n$\T1/SourceCodePro-TLF/m/n/9 code{...}[]\T1/jkp/m/n/10.95 (-20) , is
+ con-trolled us-ing []$\OMS/jkpw/m/n/9 n$\T1/SourceCodePro-TLF/m/n/9 codecolor{
+$\OML/jkpw/m/it/9 X$\T1/SourceCodePro-TLF/m/n/9 }[]\T1/jkp/m/n/10.95 (-20) . 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[7]
+Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 23
+3.
+Package marginnote Info: xpos seems to be 311.98064pt on input line 233.
+Package marginnote Info: Margin note 8.2 is on absolute page 8 on input line 23
+3.
+Package marginnote Info: xpos seems to be 333.72249pt on input line 233.
+Package marginnote Info: Margin note 8.3 is on absolute page 8 on input line 23
+3.
+Package marginnote Info: xpos seems to be 358.96718pt on input line 233.
+Package marginnote Info: Margin note 8.4 is on absolute page 8 on input line 23
+3.
+Package marginnote Info: xpos seems to be 384.45282pt on input line 233.
+Package marginnote Info: Margin note 8.5 is on absolute page 8 on input line 23
+3.
+Package marginnote Info: xpos seems to be 396.48314pt on input line 233.
+Package marginnote Info: Margin note 8.6 is on absolute page 8 on input line 23
+3.
+Package marginnote Info: xpos seems to be 415.83197pt on input line 233.
+Package marginnote Info: Margin note 8.7 is on absolute page 8 on input line 23
+3.
+Package marginnote Info: xpos seems to be 456.09547pt on input line 233.
+Package marginnote Info: Margin note 8.8 is on absolute page 8 on input line 23
+3.
+Package marginnote Info: xpos seems to be 466.14055pt on input line 233.
+Package marginnote Info: Margin note 8.9 is on absolute page 8 on input line 23
+3.
+Package marginnote Info: xpos seems to be 474.10382pt on input line 233.
+Package marginnote Info: Margin note 8.10 is on absolute page 8 on input line 2
+33.
+Package marginnote Info: xpos seems to be 495.19109pt on input line 233.
+Package marginnote Info: Margin note 8.11 is on absolute page 8 on input line 2
+33.
+Package marginnote Info: xpos seems to be 541.22786pt on input line 233.
+Package marginnote Info: Margin note 8.12 is on absolute page 8 on input line 2
+34.
+Package marginnote Info: xpos seems to be 143.00749pt on input line 234.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8]
+runsystem(makeindex -s README.ist README.idx)...executed safely (allowed).
+
+ (README.ind)
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.235 \end{document}
+                     [1
+
+
+
+] (README.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
  ***********
-Package rerunfilecheck Info: File `sample.out' has not changed.
-(rerunfilecheck)             Checksum: 8CEBDF051409DE9DD906B8CA1CB5A593;520.
+
+
+Package rerunfilecheck Warning: File `README.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `README.out':
+(rerunfilecheck)             Before: 699B972B71C23510F58E75D19C9258CA;2982
+(rerunfilecheck)             After:  3B0CAF0328B2819A7D78424BECCB2942;3012.
  ) 
 Here is how much of TeX's memory you used:
- 46159 strings out of 467870
- 1037311 string characters out of 5418354
- 1599094 words of memory out of 5000000
- 74049 multiletter control sequences out of 15000+600000
- 744290 words of font info for 247 fonts, out of 8000000 for 9000
+ 46866 strings out of 467870
+ 1050988 string characters out of 5418354
+ 1623957 words of memory out of 5000000
+ 74483 multiletter control sequences out of 15000+600000
+ 871994 words of font info for 416 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,13n,121p,1005b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpb
-n8a.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfont
-s/jkpex.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type1/public/kp
-fonts/jkpexa.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/kpfonts/jkpkmsc.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/kpfonts/jkpmi.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/kpfonts/jkpmit8a.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/hayek/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Users/hayek/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb>
-Output written on sample.pdf (2 pages, 84706 bytes).
+ 117i,13n,121p,1005b,1119s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5
+/FontAwesome5Free-Regular.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/hayek/AppData
+/Local/Programs/MiKTeX/fonts/type1/adobe/sourcecodepro/SourceCodePro-It.pfb><C:
+/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/sourcecodepro/Sour
+ceCodePro-Regular.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/kpfonts/jkpbn8a.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/kpfonts/jkpbsc8a.pfb><C:/Users/hayek/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/kpfonts/jkpkbsc.pfb><C:/Users/hayek/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/kpfonts/jkpkmsc.pfb><C:/Users/hayek/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/kpfonts/jkpmi.pfb><C:/Users/hayek/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmit8a.pfb><C:/Users/hayek/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmn8a.pfb><C:/Users/hayek
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmne.pfb><C:/Users/
+hayek/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:
+/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type1/public/kpfonts/jkpsy.pfb
+><C:/Users/hayek/AppData/Local/Programs/MiKTeX/fonts/type1/public/boondox/zxxrl
+8a.pfb>
+Output written on README.pdf (9 pages, 319641 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 87589 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 129218 words of extra memory for PDF output out of 154059 (max. 10000000)
 
