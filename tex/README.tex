@@ -1,5 +1,5 @@
-\documentclass[title, toc, copyright, labelbox, index]{hayektex}
-\title{Read Me}
+\documentclass[title, toc, copyright, index]{hayektex}
+\title{Template Guide}
 \titlepic[.2]{pic}
 \subtitle{A Subtitle}
 \stitle{an alternative title for headers}
@@ -77,9 +77,6 @@
 	Definitions are created with the command \readmedef{define}, e.g. \define{a def}. The following features are associated with definitions:
 	\begin{itemize}
 		\item A label will appear in the margin displaying the definition's ID, in the format <Current Part>.<Definition within Part>. 
-		\begin{itemize}
-			\item Using the class option \code{labelbox}, the definition label will appear in a gray box (as currently displayed). Otherwise, it will appear without the box.
-		\end{itemize}
 		\item A page link is created that targets the location of the definition label. It is accessed using \code{$\backslash$deflink\{<def name>\}}. For example, \code{$\backslash$deflink\{a def\}} generates \deflink{a def}.
 		\begin{itemize}
 			\item By using \code{$\backslash$define[<link name>]\{<def name>\}}, the associated page link is referenced using the link name provided. This is necessary if the definition involves a mathematical symbol. 
@@ -90,10 +87,7 @@
 	\section{Propositions}
 	Propositions are labeled by inserting \code{$\backslash$prop[label offset]} at the start of the line. These labels follow the convention <Current Part>.<Proposition within Part>. For example:
 	\\\prop\code{$\backslash\backslash\backslash$prop} $a^2+b^2=c^2$ \code{$\backslash\backslash\backslash$prop[.2cm]}\prop[.2cm] A proposition on the same line, whose label is offset.
-	\begin{itemize}
-		\item As with definitions, the \code{labelbox} class option dictates whether the proposition label will be contained in a gray box.
-		\item A page link is created that targets the location of the proposition label. It is accessed using \code{$\backslash$proplink\{<label ID>\}}. For example, \code{$\backslash$proplink\{2.1\}} will generate \proplink{2.1}.
-	\end{itemize}
+	\\A page link is created that targets the location of the proposition label. It is accessed using \code{$\backslash$proplink\{<label ID>\}}. For example, \code{$\backslash$proplink\{2.1\}} will generate \proplink{2.1}.
 	\section{Environments}
 	\subsection{Theorems and Examples}
 	Theorems and examples have dedicated environments, accessed with
@@ -138,15 +132,13 @@
 	\begin{proof}[$\clubsuit$][claim a]
 		\code{$\backslash$begin\{proof\}[\$$\backslash$clubsuit\$][claim a] Custom Label and QED \;\;$\backslash$end\{proof\}}
 	\end{proof}
-	 As before, the \code{labelbox} class option dictates whether the proof label will be contained in a gray box.
 	\section{Margin Text}
 	\begin{itemize}
 		\item Margin text can be placed using \readmedef{mt}\mt{Lorem ipsum dolor sit amet, consectetur adipiscing elit.}. Note that margins are vertically aligned to the line in which \readmedef{mt}  is invoked. Thus, one must be careful not to overlap margin text-boxes.
 		\item \readmedef{say} is shorthand for small-caps labels, placed alongside proof, proposition, and definition labels in the opposite margin. Because of how margins are set up, these labels, if used, must be one line maximum.\say{a thing} 
-		\begin{itemize}
-			\item Once again, the \code{labelbox} class option is used to control the gray box.
-		\end{itemize}
 	\end{itemize}
+	\section{Labels}
+	All labels (generated from definitions, propositions, theorems, or \readmedef{say}) may be placed into a small, gray background box using the \code{labelbox} class option.\say{\colorbox{gray!10}{example}}
 	\part{Customization}
 	\section{Extra Commands and Options}
 	\begin{itemize}
@@ -164,6 +156,7 @@
 		\item Similarly, the color of page links, hyperlinks, and definition hypertargets is controlled using \code{$\backslash$accentcolor\{$X$\}}.
 		\item The color of the code text styling is controlled using \code{$\backslash$codecolor\{$X$\}}.
 	\end{itemize}
+	
 	
 	
 	
@@ -230,6 +223,6 @@ The following counters are ticking behind the scenes, and can be manipulated if 
 \begin{itemize}
 	\item You can inspect the \code{.cls} file for full list of pre-installed packages.
 	\item Some of this template, including its font and small-caps sectioning, is inspired by {\href{https://vhbelvadi.com/latex-lecture-notes-class}{V.H. Belvadi's} }essay template.
-	\item To help populate the index: \define{starting} \define{now}, \define{each} \define{word} \define{in} \define{this} \define{sentence} \define{is} \define{a} \define{new} \define{definition}.\margintext{Recall that labels are vertically aligned with the line in which the definition is invoked, so the only label that appears is Def 3.11, due to overlapping.}
+	\item To help populate the index: \define{starting} \define{now}, \define{each} \define{word} \define{in} \define{this} \define{sentence} \define{is} \define{a} \define{new} \define{definition}.\margintext{Recall that labels are vertically aligned with the line in which the definition is invoked, so they overlap here.}
 \end{itemize}
 \end{document}

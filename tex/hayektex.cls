@@ -86,6 +86,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{mathrsfs}
 \RequirePackage{marginnote}
+\usepackage[color=none, linecolor=none, bordercolor=none]{todonotes}
 \RequirePackage{imakeidx}
 \RequirePackage[colorlinks,linkcolor=\@accentcolor,urlcolor=\@accentcolor,citecolor=black]{hyperref}
 %}
@@ -118,7 +119,7 @@
 \setcounter{tocdepth}{2}
 %}
 
-%TEXT MACROS{
+%MARGIN MACROS{
 \newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
 \newcommand{\say}[1]{\mtr{
 			\ifthenelse{\isundefined{\@labelbox}}{%
@@ -129,7 +130,6 @@
 			}%
 		}%
 \renewcommand*{\marginfont}{\footnotesize}
-
 \newcommand{\mtr}[1]{\reversemarginpar\marginnote{#1}\normalmarginpar}
 \newcommand{\mt}[1]{\marginnote{#1}}
 
@@ -168,33 +168,31 @@
 	\pagenumbering{gobble}
 	\newcounter{frontpages}
 	\renewcommand{\cftpartpagefont}{\Large\bfseries}
-	
 	\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 	\renewcommand{\cftsecpagefont}{\normalfont}
 	\renewcommand{\cftsecindent}{2.75em}
-	
 	\renewcommand{\cftsubsecleader}{\hfill}
 	\renewcommand{\cftsubsecpagefont}{\hphantom}
 	\renewcommand{\cftsubsecfont}{\small\itshape}
 	\renewcommand{\cftsubsecindent}{3.5em}
 	\setlength{\cftbeforesecskip}{.6em}
+	%
 	\ifthenelse{\isundefined{\@titpage}}{}{\maketitle\stepcounter{frontpages}}
-	\ifthenelse{\isundefined{\@toc}}{}{\newgeometry{left=2in,right=2in,bottom=.5in, top=1in}\tableofcontents
-		
-	\ifthenelse{\isundefined{\@copyright}}{}{%
+	\ifthenelse{\isundefined{\@toc}}{}{%
+		\newgeometry{left=2in,right=2in,bottom=.5in, top=1in}\tableofcontents
+		\ifthenelse{\isundefined{\@copyright}}{}{%
 		\vspace{\fill}\\\textcopyright \;\the\year \,\@author\;
 			\ifthenelse{\isundefined{\@email}}{}{%
 				\href{mailto:\@email}{\faEnvelope[regular]}%
 			}%
-	}\restoregeometry%
-	
-	\newpage\stepcounter{frontpages}
-	}
+		}\restoregeometry%
+	%
+		\newpage\stepcounter{frontpages}%
+	}%
 	\pagestyle{fancy}
 	\pagenumbering{arabic}
 	\setcounter{page}{\value{frontpages}}
 	\stepcounter{page}
-	\\
 }
 %Index creation
 \ifthenelse{\isundefined{\@wantsindex}}{}{%
@@ -258,7 +256,7 @@
 }
 \newcounter{propNum}[partNum]
 
-\newcommand{\prop}[1][-.45cm]{%
+\newcommand{\prop}[1][-.35cm]{%
 	\noindent\stepcounter{propNum}%
 	\mtr{%
 		\vspace{#1}\\%
@@ -295,7 +293,7 @@
 	\edef\thisdeflabel{\arabic{partNum}.\arabic{defNum}}%
 	\expandafter\xdef\csname deflabel@\thisdefkey\endcsname{\thisdeflabel}%
 	\mtr{
-		\vspace{-.2cm}\hypertarget{def\thisdeflabel}{%
+		\vspace{-.35cm}\\\hypertarget{def\thisdeflabel}{%
 			\ifthenelse{\isundefined{\@labelbox}}{%
 				\runin{def \scriptsize{\thisdeflabel}}%
 			}{%

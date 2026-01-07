@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.27)  6 JAN 2026 21:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.27)  7 JAN 2026 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7,11 +7,7 @@ entering extended mode
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 (./hayektex.cls
-
-LaTeX Warning: You have requested document class `hayektex',
-               but the document class provides `hayektexreview'.
-
-Document Class: hayektexreview 2026/01/06
+Document Class: hayektex 2026/01/06
 (/usr/local/texlive/2022/texmf-dist/tex/latex/filecontents/filecontents.sty
 Package: filecontents 2023/04/02 v1.5a Create an external file from within a La
 TeX document
@@ -1846,20 +1842,30 @@ LaTeX Font Info:    Redeclaring math alphabet \mathscr on input line 9.
 Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
 \c@mn@abspage=\count354
 )
+(/usr/local/texlive/2022/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
+Package: todonotes 2024/01/05
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+\c@@todonotes@numberoftodonotes=\count355
+)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/imakeidx/imakeidx.sty
 Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
 nous mode
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
-\c@tracingmulticols=\count355
+\c@tracingmulticols=\count356
 \mult@box=\box104
 \multicol@leftmargin=\dimen336
-\c@unbalance=\count356
-\c@collectmore=\count357
-\doublecol@number=\count358
-\multicoltolerance=\count359
-\multicolpretolerance=\count360
+\c@unbalance=\count357
+\c@collectmore=\count358
+\doublecol@number=\count359
+\multicoltolerance=\count360
+\multicolpretolerance=\count361
 \full@width=\dimen337
 \page@free=\dimen338
 \premulticols=\dimen339
@@ -1910,15 +1916,15 @@ Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
 \@tempa=\box145
 \@tempa=\box146
 \@tempa=\box147
-\c@minrows=\count361
-\c@columnbadness=\count362
-\c@finalcolumnbadness=\count363
+\c@minrows=\count362
+\c@columnbadness=\count363
+\c@finalcolumnbadness=\count364
 \last@try=\dimen342
 \multicolovershoot=\dimen343
 \multicolundershoot=\dimen344
 \mult@nat@firstbox=\box148
 \colbreak@box=\box149
-\mc@col@check@num=\count364
+\mc@col@check@num=\count365
 ))
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
@@ -1939,14 +1945,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count365
+\c@section@level=\count366
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \@linkdim=\dimen345
-\Hy@linkcounter=\count366
-\Hy@pagecounter=\count367
+\Hy@linkcounter=\count367
+\Hy@pagecounter=\count368
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
@@ -1956,7 +1962,7 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count368
+\Hy@SavedSpaceFactor=\count369
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
@@ -1971,7 +1977,7 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count369
+\c@Hy@tempcnt=\count370
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip23
@@ -1987,7 +1993,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count370
+\Fld@menulength=\count371
 \Field@Width=\dimen347
 \Fld@charsize=\dimen348
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -2002,9 +2008,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count371
-\c@Item=\count372
-\c@Hfootnote=\count373
+\Hy@abspage=\count372
+\c@Item=\count373
+\c@Hfootnote=\count374
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -2016,9 +2022,9 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\HyAnn@Count=\count374
-\Fld@listcount=\count375
-\c@bookmark@seq@number=\count376
+\HyAnn@Count=\count375
+\Fld@listcount=\count376
+\c@bookmark@seq@number=\count377
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -2031,18 +2037,18 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip189
 )
-\c@partNum=\count377
+\c@partNum=\count378
 \README@idxfile=\write4
 \openout4 = `README.idx'.
 
 
 Writing index file README.idx
-\c@propNum=\count378
-\c@defNum=\count379
-\c@theoremNum=\count380
-\c@exampleitem=\count381
-\c@examplelisti=\count382
-\enitdp@examplelist=\count383
+\c@propNum=\count379
+\c@defNum=\count380
+\c@theoremNum=\count381
+\c@exampleitem=\count382
+\c@examplelisti=\count383
+\enitdp@examplelist=\count384
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
@@ -2102,16 +2108,16 @@ LaTeX Font Info:    ... okay on input line 10.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count384
+\scratchcounter=\count385
 \scratchdimen=\dimen349
 \scratchbox=\box150
-\nofMPsegments=\count385
-\nofMParguments=\count386
+\nofMPsegments=\count386
+\nofMParguments=\count387
 \everyMPshowfont=\toks60
-\MPscratchCnt=\count387
+\MPscratchCnt=\count388
 \MPscratchDim=\dimen350
-\MPnumerator=\count388
-\makeMPintoPDFobject=\count389
+\MPnumerator=\count389
+\makeMPintoPDFobject=\count390
 \everyMPtoPDFconversion=\toks61
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -2188,7 +2194,7 @@ Package hyperref Info: Link coloring ON on input line 10.
 \@outlinefile=\write5
 \openout5 = `README.out'.
 
-\c@frontpages=\count390
+\c@frontpages=\count391
 
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -2222,7 +2228,7 @@ Package hyperref Info: Link coloring ON on input line 10.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<pic.jpg, id=95, 1410.0178pt x 697.8572pt>
+<pic.jpg, id=99, 1410.0178pt x 697.8572pt>
 File: pic.jpg Graphic file (type jpg)
 <use pic.jpg>
 Package pdftex.def Info: pic.jpg  used on input line 10.
@@ -2411,9 +2417,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package marginnote Info: Margin note 4.1 is on absolute page 4 on input line 77
 .
 Package marginnote Info: xpos seems to be 429.1317pt on input line 77.
-Package marginnote Info: Margin note 4.2 is on absolute page 5 on input line 86
+Package marginnote Info: Margin note 4.2 is on absolute page 4 on input line 83
 .
-Package marginnote Info: xpos seems to be 238.40868pt on input line 86.
+Package marginnote Info: xpos seems to be 281.77112pt on input line 83.
 
 
 
@@ -2424,37 +2430,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [4]
-Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 92
+Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 89
 .
-Package marginnote Info: xpos seems to be 72.26999pt on input line 92.
-Package marginnote Info: Margin note 5.2 is on absolute page 5 on input line 92
+Package marginnote Info: xpos seems to be 72.26999pt on input line 89.
+Package marginnote Info: Margin note 5.2 is on absolute page 5 on input line 89
 .
-Package marginnote Info: xpos seems to be 235.01538pt on input line 92.
-Package mdframed Info: mdframed works in twoside mode on input line 104.
+Package marginnote Info: xpos seems to be 235.01538pt on input line 89.
+Package mdframed Info: mdframed works in twoside mode on input line 98.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 104.
+(mdframed)              on input line 98.
 
 
 Package mdframed Warning: Unknown definedstyle dashed
  You have to define a style 
  via \mdfdefinedstyle
-(mdframed)                 on input line 107.
+(mdframed)                 on input line 101.
 
-Package mdframed Info: mdframed works in twoside mode on input line 107.
+Package mdframed Info: mdframed works in twoside mode on input line 101.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 107.
+(mdframed)              on input line 101.
 
 Package mdframed Warning: Unknown definedstyle dashed
  You have to define a style 
  via \mdfdefinedstyle
-(mdframed)                 on input line 111.
+(mdframed)                 on input line 105.
 
-Package mdframed Info: mdframed works in twoside mode on input line 111.
+Package mdframed Info: mdframed works in twoside mode on input line 105.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 111.
+(mdframed)              on input line 105.
 
 
 
@@ -2466,29 +2472,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.en
 c}]
-Package mdframed Info: Not enough space on this page on input line 113.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 118.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 118.
+Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 11
+8.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 118.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 121.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 121.
+Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 12
+1.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 121.
 Package mdframed Info: mdframed inside twoside mode but
 (mdframed)             works with oneside mode on input line 124.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 124.
-Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 12
+Package marginnote Info: Margin note 6.3 is on absolute page 6 on input line 12
 4.
 Package marginnote Info: xpos seems to be 125.63243pt on input line 124.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 127.
+(mdframed)             works with oneside mode on input line 126.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 127.
-Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 12
+(mdframed)              on input line 126.
+Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 12
 7.
 Package marginnote Info: xpos seems to be 125.63243pt on input line 127.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 130.
+(mdframed)             works with oneside mode on input line 129.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 130.
-Package marginnote Info: Margin note 6.3 is on absolute page 6 on input line 13
+(mdframed)              on input line 129.
+Package marginnote Info: Margin note 6.5 is on absolute page 6 on input line 13
 0.
 Package marginnote Info: xpos seems to be 125.63243pt on input line 130.
 Package mdframed Info: mdframed inside twoside mode but
@@ -2496,40 +2517,27 @@ Package mdframed Info: mdframed inside twoside mode but
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 132.
-Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 13
+Package marginnote Info: Margin note 6.6 is on absolute page 6 on input line 13
 3.
 Package marginnote Info: xpos seems to be 125.63243pt on input line 133.
-Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 135.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 135.
-Package marginnote Info: Margin note 6.5 is on absolute page 6 on input line 13
-6.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 136.
-Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 138.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 138.
-Package marginnote Info: Margin note 6.6 is on absolute page 6 on input line 13
-9.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 139.
-Package marginnote Info: Margin note 6.7 is on absolute page 6 on input line 14
-4.
-Package marginnote Info: xpos seems to be 342.6941pt on input line 144.
-Package marginnote Info: Margin note 6.8 is on absolute page 6 on input line 14
-5.
-Package marginnote Info: xpos seems to be 378.26776pt on input line 145.
+Package marginnote Info: Margin note 6.7 is on absolute page 6 on input line 13
+7.
+Package marginnote Info: xpos seems to be 342.6941pt on input line 137.
+Package marginnote Info: Margin note 6.8 is on absolute page 6 on input line 13
+8.
+Package marginnote Info: xpos seems to be 378.26776pt on input line 138.
+Package marginnote Info: Margin note 6.9 is on absolute page 6 on input line 14
+1.
+Package marginnote Info: xpos seems to be 472.08931pt on input line 141.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 150.
+(hyperref)                removing `\@ifnextchar' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 150.
+(hyperref)                replaced by space on input line 142.
 
 
 
@@ -2542,11 +2550,48 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 LaTeX Font Info:    Trying to load font information for U+BOONDOX-ds on input l
-ine 158.
+ine 150.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/boondox/uboondox-ds.fd
 File: uboondox-ds.fd 2011/04/26 Fontinst v1.933 font definitions for U/BOONDOX-
 ds.
 )
+Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 22
+6.
+Package marginnote Info: xpos seems to be 268.6182pt on input line 226.
+Package marginnote Info: Margin note 7.2 is on absolute page 7 on input line 22
+6.
+Package marginnote Info: xpos seems to be 290.36005pt on input line 226.
+Package marginnote Info: Margin note 7.3 is on absolute page 7 on input line 22
+6.
+Package marginnote Info: xpos seems to be 315.60474pt on input line 226.
+Package marginnote Info: Margin note 7.4 is on absolute page 7 on input line 22
+6.
+Package marginnote Info: xpos seems to be 341.09038pt on input line 226.
+Package marginnote Info: Margin note 7.5 is on absolute page 7 on input line 22
+6.
+Package marginnote Info: xpos seems to be 353.1207pt on input line 226.
+Package marginnote Info: Margin note 7.6 is on absolute page 7 on input line 22
+6.
+Package marginnote Info: xpos seems to be 372.46953pt on input line 226.
+Package marginnote Info: Margin note 7.7 is on absolute page 7 on input line 22
+6.
+Package marginnote Info: xpos seems to be 412.73303pt on input line 226.
+Package marginnote Info: Margin note 7.8 is on absolute page 7 on input line 22
+6.
+Package marginnote Info: xpos seems to be 422.7781pt on input line 226.
+Package marginnote Info: Margin note 7.9 is on absolute page 7 on input line 22
+6.
+Package marginnote Info: xpos seems to be 430.74138pt on input line 226.
+Package marginnote Info: Margin note 7.10 is on absolute page 7 on input line 2
+26.
+Package marginnote Info: xpos seems to be 451.82864pt on input line 226.
+Package marginnote Info: Margin note 7.11 is on absolute page 7 on input line 2
+26.
+Package marginnote Info: xpos seems to be 497.86542pt on input line 226.
+Package marginnote Info: Margin note 7.12 is on absolute page 7 on input line 2
+27.
+Package marginnote Info: xpos seems to be 99.64505pt on input line 227.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2556,52 +2601,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [7]
-Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 23
-3.
-Package marginnote Info: xpos seems to be 311.98064pt on input line 233.
-Package marginnote Info: Margin note 8.2 is on absolute page 8 on input line 23
-3.
-Package marginnote Info: xpos seems to be 333.72249pt on input line 233.
-Package marginnote Info: Margin note 8.3 is on absolute page 8 on input line 23
-3.
-Package marginnote Info: xpos seems to be 358.96718pt on input line 233.
-Package marginnote Info: Margin note 8.4 is on absolute page 8 on input line 23
-3.
-Package marginnote Info: xpos seems to be 384.45282pt on input line 233.
-Package marginnote Info: Margin note 8.5 is on absolute page 8 on input line 23
-3.
-Package marginnote Info: xpos seems to be 396.48314pt on input line 233.
-Package marginnote Info: Margin note 8.6 is on absolute page 8 on input line 23
-3.
-Package marginnote Info: xpos seems to be 415.83197pt on input line 233.
-Package marginnote Info: Margin note 8.7 is on absolute page 8 on input line 23
-3.
-Package marginnote Info: xpos seems to be 456.09547pt on input line 233.
-Package marginnote Info: Margin note 8.8 is on absolute page 8 on input line 23
-3.
-Package marginnote Info: xpos seems to be 466.14055pt on input line 233.
-Package marginnote Info: Margin note 8.9 is on absolute page 8 on input line 23
-3.
-Package marginnote Info: xpos seems to be 474.10382pt on input line 233.
-Package marginnote Info: Margin note 8.10 is on absolute page 8 on input line 2
-33.
-Package marginnote Info: xpos seems to be 495.19109pt on input line 233.
-Package marginnote Info: Margin note 8.11 is on absolute page 8 on input line 2
-33.
-Package marginnote Info: xpos seems to be 541.22786pt on input line 233.
-Package marginnote Info: Margin note 8.12 is on absolute page 8 on input line 2
-34.
-Package marginnote Info: xpos seems to be 143.00749pt on input line 234.
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[8]
 runsystem(makeindex -s README.ist README.idx)...executed safely (allowed).
 
  (./README.ind)
@@ -2611,27 +2610,39 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.235 \end{document}
+l.228 \end{document}
                      [1
 
 
 
-] (./README.aux)
+]
+
+Package marginnote Warning: Consecutive odd pages found.
+(marginnote)                Note, it is not recommended to use consecutive
+(marginnote)                odd pages in a double-ended document.
+(marginnote)                The pages of your document should always
+(marginnote)                be a sequence: odd-even-odd-even-...
+(marginnote)                Maybe you've forgotten a \cleardoublepage before
+(marginnote)                changing the page numbering on page .
+
+Package marginnote Info: Using workaround for absolute page number on input lin
+e 228.
+(./README.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
 Package rerunfilecheck Info: File `README.out' has not changed.
-(rerunfilecheck)             Checksum: 3B0CAF0328B2819A7D78424BECCB2942;3012.
+(rerunfilecheck)             Checksum: 70B26D4B82D28C539DF3E00E718AFB8C;3099.
  ) 
 Here is how much of TeX's memory you used:
- 46802 strings out of 473207
- 1043061 string characters out of 5716282
- 1606769 words of memory out of 5000000
- 68781 multiletter control sequences out of 15000+600000
- 803113 words of font info for 412 fonts, out of 8000000 for 9000
+ 47086 strings out of 473207
+ 1050673 string characters out of 5716282
+ 1610877 words of memory out of 5000000
+ 69066 multiletter control sequences out of 15000+600000
+ 802265 words of font info for 406 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,13n,121p,1003b,1136s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,14n,121p,1003b,1138s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
 me5Free-Regular.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/font
 awesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
@@ -2648,10 +2659,10 @@ type1/public/kpfonts/jkpmn8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
 lic/kpfonts/jkpmsc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /kpfonts/jkpsy.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/boond
 ox/zxxrl8a.pfb>
-Output written on README.pdf (9 pages, 299301 bytes).
+Output written on README.pdf (8 pages, 298240 bytes).
 PDF statistics:
- 296 PDF objects out of 1000 (max. 8388607)
- 251 compressed objects within 3 object streams
+ 297 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
  52 named destinations out of 1000 (max. 500000)
- 129218 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 129226 words of extra memory for PDF output out of 154059 (max. 10000000)
 
