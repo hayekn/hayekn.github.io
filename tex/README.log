@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.27)  7 JAN 2026 13:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.27)  7 JAN 2026 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2055,56 +2055,56 @@ Package csquotes Info: ... none found.
  (./README.aux)
 \openout1 = `README.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/jkpw/m/it on input line 11.
+LaTeX Font Info:    Checking defaults for OML/jkpw/m/it on input line 12.
 LaTeX Font Info:    Trying to load font information for OML+jkpw on input line 
-11.
+12.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/kpfonts/omljkpw.fd
 File: omljkpw.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/jkpw/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/jkpw/m/n on input line 12.
 LaTeX Font Info:    Trying to load font information for OMS+jkpw on input line 
-11.
+12.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/kpfonts/omsjkpw.fd
 File: omsjkpw.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/jkp/m/n on input line 12.
 LaTeX Font Info:    Trying to load font information for OMX+jkp on input line 1
-1.
+2.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/kpfonts/omxjkp.fd
 File: omxjkp.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/jkpexa/m/n on input line 12.
 LaTeX Font Info:    Trying to load font information for U+jkpexa on input line 
-11.
+12.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/kpfonts/ujkpexa.fd
 File: ujkpexa.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 12.
 LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 1
-1.
+2.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -2132,7 +2132,7 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 11.
+ on input line 12.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2168,20 +2168,20 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 11.
-Package microtype Info: Applying patch `item' on input line 11.
-Package microtype Info: Applying patch `toc' on input line 11.
-Package microtype Info: Applying patch `eqnum' on input line 11.
-Package microtype Info: Applying patch `footnote' on input line 11.
-Package microtype Info: Applying patch `verbatim' on input line 11.
-LaTeX Info: Redefining \microtypesetup on input line 11.
+LaTeX Info: Redefining \microtypecontext on input line 12.
+Package microtype Info: Applying patch `item' on input line 12.
+Package microtype Info: Applying patch `toc' on input line 12.
+Package microtype Info: Applying patch `eqnum' on input line 12.
+Package microtype Info: Applying patch `footnote' on input line 12.
+Package microtype Info: Applying patch `verbatim' on input line 12.
+LaTeX Info: Redefining \microtypesetup on input line 12.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 11.
+LaTeX Info: Redefining \showhyphens on input line 12.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -2189,7 +2189,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `jkp' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring ON on input line 11.
+Package hyperref Info: Link coloring ON on input line 12.
 (./README.out) (./README.out)
 \@outlinefile=\write5
 \openout5 = `README.out'.
@@ -2231,7 +2231,7 @@ Package hyperref Info: Link coloring ON on input line 11.
 <pic.jpg, id=99, 1410.0178pt x 697.8572pt>
 File: pic.jpg Graphic file (type jpg)
 <use pic.jpg>
-Package pdftex.def Info: pic.jpg  used on input line 11.
+Package pdftex.def Info: pic.jpg  used on input line 12.
 (pdftex.def)             Requested size: 281.99857pt x 139.56895pt.
 
 
@@ -2273,7 +2273,7 @@ al/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc} <./pic.jpg>]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for T1+jkpk on input line 1
-1.
+2.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/kpfonts/t1jkpk.fd
 File: t1jkpk.fd 2007/01/24 Fontinst v1.928 font definitions for T1/jkpk.
 )
@@ -2282,7 +2282,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OT1+jkp on input line 1
-1.
+2.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/kpfonts/ot1jkp.fd
 File: ot1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for OT1/jkp.
@@ -2292,12 +2292,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for U+jkpmiaw on input line
- 11.
+ 12.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/kpfonts/ujkpmiaw.fd
 File: ujkpmiaw.fd 2006/08/15 v1.0
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
 
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -2306,7 +2306,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
 
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -2316,16 +2316,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+jkpsyc on input line 
-11.
+12.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/kpfonts/ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
-1.
+2.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 12
 .
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -2335,7 +2335,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \openout6 = `README.toc'.
 
 LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 1
-1.
+2.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/kpfonts/ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 )
@@ -2344,7 +2344,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 11.
+nput line 12.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd
 )
@@ -2354,7 +2354,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.11 \begin{document}
+l.12 \begin{document}
                       [2
 
 
@@ -2362,7 +2362,7 @@ l.11 \begin{document}
 c}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc
 }]
 LaTeX Font Info:    Trying to load font information for T1+SourceCodePro-TLF on
- input line 16.
+ input line 17.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/sourcecodepro/T1SourceCodePro-TLF
 .fd
@@ -2370,25 +2370,25 @@ File: T1SourceCodePro-TLF.fd 2018/02/18 (autoinst) Font definitions for T1/Sour
 ceCodePro-TLF.
 )
 LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 16.
+(Font)              scaled to size 10.95pt on input line 17.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `SourceCodePro-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 16.
+(Font)              scaled to size 9.0pt on input line 17.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 26.
+(hyperref)                removing `\@ifnextchar' on input line 27.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 26.
+(hyperref)                replaced by space on input line 27.
 
 LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 29.
+(Font)              scaled to size 9.0pt on input line 30.
 
 
 Package microtype Info: Character `029' is missing
@@ -2405,21 +2405,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc}
 ]
+Package marginnote Info: Margin note 4.1 is on absolute page 4 on input line 59
+.
+LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 59.
+
+Overfull \hbox (13.594pt too wide) in paragraph at lines 59--59
+ []$\OMS/jkpw/m/n/8 n$\T1/SourceCodePro-TLF/m/n/8 date{2$$\OMS/jkpw/m/n/8 n$\T1
+/SourceCodePro-TLF/m/n/8 tilde{0}$26}[]
+ []
+
+Package marginnote Info: xpos seems to be 519.47578pt on input line 59.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 77.
+(hyperref)                removing `\@ifnextchar' on input line 79.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 77.
+(hyperref)                replaced by space on input line 79.
 
-Package marginnote Info: Margin note 4.1 is on absolute page 4 on input line 79
+Package marginnote Info: Margin note 4.2 is on absolute page 4 on input line 81
 .
-Package marginnote Info: xpos seems to be 429.1317pt on input line 79.
-Package marginnote Info: Margin note 4.2 is on absolute page 5 on input line 85
+Package marginnote Info: xpos seems to be 429.1317pt on input line 81.
+Package marginnote Info: Margin note 4.3 is on absolute page 5 on input line 87
 .
-Package marginnote Info: xpos seems to be 238.40868pt on input line 85.
+Package marginnote Info: xpos seems to be 238.40868pt on input line 87.
 
 
 
@@ -2430,37 +2441,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [4]
-Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 91
+Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 93
 .
-Package marginnote Info: xpos seems to be 72.26999pt on input line 91.
-Package marginnote Info: Margin note 5.2 is on absolute page 5 on input line 91
+Package marginnote Info: xpos seems to be 72.26999pt on input line 93.
+Package marginnote Info: Margin note 5.2 is on absolute page 5 on input line 93
 .
-Package marginnote Info: xpos seems to be 235.01538pt on input line 91.
-Package mdframed Info: mdframed works in twoside mode on input line 100.
+Package marginnote Info: xpos seems to be 235.01538pt on input line 93.
+Package mdframed Info: mdframed works in twoside mode on input line 102.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 100.
+(mdframed)              on input line 102.
 
 
 Package mdframed Warning: Unknown definedstyle dashed
  You have to define a style 
  via \mdfdefinedstyle
-(mdframed)                 on input line 103.
+(mdframed)                 on input line 105.
 
-Package mdframed Info: mdframed works in twoside mode on input line 103.
+Package mdframed Info: mdframed works in twoside mode on input line 105.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 103.
+(mdframed)              on input line 105.
 
 Package mdframed Warning: Unknown definedstyle dashed
  You have to define a style 
  via \mdfdefinedstyle
-(mdframed)                 on input line 107.
+(mdframed)                 on input line 109.
 
-Package mdframed Info: mdframed works in twoside mode on input line 107.
+Package mdframed Info: mdframed works in twoside mode on input line 109.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 107.
+(mdframed)              on input line 109.
 
 
 
@@ -2473,71 +2484,71 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [5{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.en
 c}]
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 120.
+(mdframed)             works with oneside mode on input line 122.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 120.
+(mdframed)              on input line 122.
 Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 12
-0.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 120.
+2.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 122.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 123.
+(mdframed)             works with oneside mode on input line 125.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 123.
+(mdframed)              on input line 125.
 Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 12
-3.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 123.
-Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 126.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 126.
-Package marginnote Info: Margin note 6.3 is on absolute page 6 on input line 12
-6.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 126.
+5.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 125.
 Package mdframed Info: mdframed inside twoside mode but
 (mdframed)             works with oneside mode on input line 128.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 128.
-Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 12
-9.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 129.
+Package marginnote Info: Margin note 6.3 is on absolute page 6 on input line 12
+8.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 128.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 131.
+(mdframed)             works with oneside mode on input line 130.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 131.
+(mdframed)              on input line 130.
+Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 13
+1.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 131.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 133.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 133.
 Package marginnote Info: Margin note 6.5 is on absolute page 6 on input line 13
-2.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 132.
+4.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 134.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 134.
+(mdframed)             works with oneside mode on input line 136.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 134.
+(mdframed)              on input line 136.
 Package marginnote Info: Margin note 6.6 is on absolute page 6 on input line 13
-5.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 135.
-Package marginnote Info: Margin note 6.7 is on absolute page 6 on input line 13
-9.
-Package marginnote Info: xpos seems to be 342.6941pt on input line 139.
+7.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 137.
+Package marginnote Info: Margin note 6.7 is on absolute page 6 on input line 14
+1.
+Package marginnote Info: xpos seems to be 342.6941pt on input line 141.
 Package marginnote Info: Margin note 6.8 is on absolute page 6 on input line 14
-0.
-Package marginnote Info: xpos seems to be 378.26776pt on input line 140.
+2.
+Package marginnote Info: xpos seems to be 378.26776pt on input line 142.
 Package marginnote Info: Margin note 6.9 is on absolute page 7 on input line 14
-3.
-Package marginnote Info: xpos seems to be 428.72687pt on input line 143.
+5.
+Package marginnote Info: xpos seems to be 428.72687pt on input line 145.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 144.
+(hyperref)                removing `\@ifnextchar' on input line 146.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 144.
+(hyperref)                replaced by space on input line 146.
 
 
 
@@ -2550,7 +2561,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 LaTeX Font Info:    Trying to load font information for U+BOONDOX-ds on input l
-ine 152.
+ine 154.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/boondox/uboondox-ds.fd
 File: uboondox-ds.fd 2011/04/26 Fontinst v1.933 font definitions for U/BOONDOX-
 ds.
@@ -2564,42 +2575,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [7]
-Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 22
-8.
-Package marginnote Info: xpos seems to be 311.98064pt on input line 228.
-Package marginnote Info: Margin note 8.2 is on absolute page 8 on input line 22
-8.
-Package marginnote Info: xpos seems to be 333.72249pt on input line 228.
-Package marginnote Info: Margin note 8.3 is on absolute page 8 on input line 22
-8.
-Package marginnote Info: xpos seems to be 358.96718pt on input line 228.
-Package marginnote Info: Margin note 8.4 is on absolute page 8 on input line 22
-8.
-Package marginnote Info: xpos seems to be 384.45282pt on input line 228.
-Package marginnote Info: Margin note 8.5 is on absolute page 8 on input line 22
-8.
-Package marginnote Info: xpos seems to be 396.48314pt on input line 228.
-Package marginnote Info: Margin note 8.6 is on absolute page 8 on input line 22
-8.
-Package marginnote Info: xpos seems to be 415.83197pt on input line 228.
-Package marginnote Info: Margin note 8.7 is on absolute page 8 on input line 22
-8.
-Package marginnote Info: xpos seems to be 456.09547pt on input line 228.
-Package marginnote Info: Margin note 8.8 is on absolute page 8 on input line 22
-8.
-Package marginnote Info: xpos seems to be 466.14055pt on input line 228.
-Package marginnote Info: Margin note 8.9 is on absolute page 8 on input line 22
-8.
-Package marginnote Info: xpos seems to be 474.10382pt on input line 228.
+Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 23
+0.
+Package marginnote Info: xpos seems to be 311.98064pt on input line 230.
+Package marginnote Info: Margin note 8.2 is on absolute page 8 on input line 23
+0.
+Package marginnote Info: xpos seems to be 333.72249pt on input line 230.
+Package marginnote Info: Margin note 8.3 is on absolute page 8 on input line 23
+0.
+Package marginnote Info: xpos seems to be 358.96718pt on input line 230.
+Package marginnote Info: Margin note 8.4 is on absolute page 8 on input line 23
+0.
+Package marginnote Info: xpos seems to be 384.45282pt on input line 230.
+Package marginnote Info: Margin note 8.5 is on absolute page 8 on input line 23
+0.
+Package marginnote Info: xpos seems to be 396.48314pt on input line 230.
+Package marginnote Info: Margin note 8.6 is on absolute page 8 on input line 23
+0.
+Package marginnote Info: xpos seems to be 415.83197pt on input line 230.
+Package marginnote Info: Margin note 8.7 is on absolute page 8 on input line 23
+0.
+Package marginnote Info: xpos seems to be 456.09547pt on input line 230.
+Package marginnote Info: Margin note 8.8 is on absolute page 8 on input line 23
+0.
+Package marginnote Info: xpos seems to be 466.14055pt on input line 230.
+Package marginnote Info: Margin note 8.9 is on absolute page 8 on input line 23
+0.
+Package marginnote Info: xpos seems to be 474.10382pt on input line 230.
 Package marginnote Info: Margin note 8.10 is on absolute page 8 on input line 2
-28.
-Package marginnote Info: xpos seems to be 495.19109pt on input line 228.
+30.
+Package marginnote Info: xpos seems to be 495.19109pt on input line 230.
 Package marginnote Info: Margin note 8.11 is on absolute page 8 on input line 2
-28.
-Package marginnote Info: xpos seems to be 541.22786pt on input line 228.
+30.
+Package marginnote Info: xpos seems to be 541.22786pt on input line 230.
 Package marginnote Info: Margin note 8.12 is on absolute page 8 on input line 2
-29.
-Package marginnote Info: xpos seems to be 143.00749pt on input line 229.
+31.
+Package marginnote Info: xpos seems to be 143.00749pt on input line 231.
 
 
 
@@ -2619,7 +2630,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.230 \end{document}
+l.232 \end{document}
                      [1
 
 
@@ -2633,11 +2644,11 @@ Package rerunfilecheck Info: File `README.out' has not changed.
 (rerunfilecheck)             Checksum: 70B26D4B82D28C539DF3E00E718AFB8C;3099.
  ) 
 Here is how much of TeX's memory you used:
- 47086 strings out of 473207
- 1050668 string characters out of 5716282
- 1610940 words of memory out of 5000000
- 69069 multiletter control sequences out of 15000+600000
- 801992 words of font info for 403 fonts, out of 8000000 for 9000
+ 47138 strings out of 473207
+ 1051624 string characters out of 5716282
+ 1610996 words of memory out of 5000000
+ 69115 multiletter control sequences out of 15000+600000
+ 809694 words of font info for 425 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,13n,121p,1003b,1138s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
@@ -2656,10 +2667,10 @@ type1/public/kpfonts/jkpmn8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
 lic/kpfonts/jkpmsc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /kpfonts/jkpsy.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/boond
 ox/zxxrl8a.pfb>
-Output written on README.pdf (9 pages, 324757 bytes).
+Output written on README.pdf (9 pages, 325293 bytes).
 PDF statistics:
  303 PDF objects out of 1000 (max. 8388607)
  258 compressed objects within 3 object streams
  53 named destinations out of 1000 (max. 500000)
- 129226 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 133834 words of extra memory for PDF output out of 154059 (max. 10000000)
 

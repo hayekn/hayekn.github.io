@@ -91,10 +91,11 @@
 %}
 
 %SECTION FORMATTING{
-\renewcommand{\@author}{}
-
 \newcommand{\email}[1]{\newcommand{\@email}{#1}}
 \newcommand{\website}[1]{\newcommand{\@website}{#1}}
+\renewcommand{\date}[1]{\newcommand{\@mydate}{#1}}
+
+\renewcommand{\@author}{}
 \newcommand{\subtitle}[1]{\newcommand{\@subtitle}{#1}}
 \newcommand{\subsubtitle}[1]{\newcommand{\@subsubtitle}{#1}}
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
@@ -182,13 +183,17 @@
 	\ifthenelse{\isundefined{\@toc}}{}{%
 		\newgeometry{left=2in,right=2in,bottom=.5in, top=1in}\tableofcontents
 		\ifthenelse{\isundefined{\@copyright}}{}{%
-		\vspace{\fill}\\\textcopyright \;\the\year \,\@author\;
-			\ifthenelse{\isundefined{\@email}}{}{%
-				\href{mailto:\@email}{\faEnvelope[regular]}%
-			}%
-			\ifthenelse{\isundefined{\@website}}{}{%
-				\href{\@website}{\faGlobeAmericas}%
-			}%
+		\vspace{\fill}\\\textcopyright \;%
+		\ifthenelse{\isundefined{\@mydate}}{\the\year}{%
+			\@mydate
+		}%
+		\,\@author\;%
+		\ifthenelse{\isundefined{\@email}}{}{%
+			\href{mailto:\@email}{\faEnvelope[regular]}%
+		}%
+		\ifthenelse{\isundefined{\@website}}{}{%
+			\href{\@website}{\faGlobeAmericas}%
+		}%
 		}\restoregeometry%
 	%
 		\newpage\stepcounter{frontpages}%

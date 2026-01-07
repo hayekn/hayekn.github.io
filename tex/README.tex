@@ -6,6 +6,7 @@
 \note{And a note}
 \email{you@youremail.com}
 \website{www.google.com}
+\date{2$\tilde{0}$26}
 \author{Your Name}
 \newcommand{\readmedef}[1]{\code{$\backslash$#1\{...\}}}
 \begin{document}
@@ -42,20 +43,21 @@
 	\begin{itemize}
 		\item To create a title page, use the \code{title} class option. The title page can accommodate a few elements:
 		\begin{itemize}
-			\item By defining \readmedef{subtitle}, a subtitle will appear immediately below the title.
-			\item By defining \readmedef{author}, an author will appear at the bottom of the title page. 
-			\item By defining \readmedef{note}, an italicized note will appear at the bottom of the title page and below the author, if defined.
-			\item By defining \code{$\backslash$titlepic[{<scale>}]\{<relative path>\}}, a picture will appear in the center of the title page, between the title/subtitle and author/note. 
+			\item By setting \readmedef{subtitle}, a subtitle will appear immediately below the title.
+			\item By setting \readmedef{author}, an author will appear at the bottom of the title page. 
+			\item By setting \readmedef{note}, an italicized note will appear at the bottom of the title page and below the author, if defined.
+			\item By setting \code{$\backslash$titlepic[{<scale>}]\{<relative path>\}}, a picture will appear in the center of the title page, between the title/subtitle and author/note. 
 		\end{itemize}
 	\end{itemize}
 	\subsection{Table of Contents}
 	\begin{itemize}
 		\item To create a table of contents, use the \code{toc} class option. The table of contents will appear below the title page, if it exists, or as the first page otherwise.
 		\item By default, the table of contents will display parts, sections, and subsections, with leaders on sections, and page numbers displayed for parts and sections.
-		\item To create a copyright notice, use the \code{copyright} class option. A notice will appear at the bottom of the table of contents, in the format \textcopyright \; <Year> \, <Author>.
+		\item To create a copyright notice, use the \code{copyright} class option. A notice will appear at the bottom of the table of contents, in the format \textcopyright \; <Current Year> \, <Author>.
 		\begin{itemize}
-			\item By defining \readmedef{email}, \href{mailto:you@youremail.com}{\faEnvelope} will appear to the right of the notice, where the envelope is a link to your email.
-			\item By defining \readmedef{website},  \href{www.google.com}{\faGlobeAmericas} will appear to the right of the notice (and the email, if it exists), where the globe is a link to a website.
+			\item By setting \readmedef{date}, one can customize the <Current Year> displayed.\mt{For demonstration, this guide is set with \code{\scriptsize$\backslash$date\{2\$$\backslash$tilde\{0\}\$26\}}}
+			\item By setting \readmedef{email}, \href{mailto:you@youremail.com}{\faEnvelope} will appear to the right of the notice, where the envelope is a link to your email.
+			\item By setting \readmedef{website},  \href{www.google.com}{\faGlobeAmericas} will appear to the right of the notice (and the email, if it exists), where the globe is a link to a website.
 		\end{itemize} 
 	\end{itemize}
 	\subsection{Index of Definitions}
@@ -71,7 +73,7 @@
 		\end{itemize} 
 		\item By default, the title of the document will be displayed on even page headers.
 		\begin{itemize}
-			\item By defining \readmedef{stitle}, a custom (e.g. shorter) title will appear on even page headers in the place of the title defined by \readmedef{title}.
+			\item By setting \readmedef{stitle}, a custom (e.g. shorter) title will appear on even page headers in the place of the title defined by \readmedef{title}.
 		\end{itemize}
 	\end{itemize}
 	\part{Environments and Labels}
