@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{hayektexreview}[2026/01/06]
+\ProvidesClass{hayektex}[2026/01/06]
 
 \usepackage{filecontents}
 \begin{filecontents*}{\jobname.ist}
