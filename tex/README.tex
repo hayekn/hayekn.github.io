@@ -1,8 +1,8 @@
-\documentclass[title, toc, copyright, labelbox, index]{hayektexreview}
+\documentclass[title, toc, copyright, labelbox, index]{hayektex}
 \title{Read Me}
 \titlepic[.2]{pic}
 \subtitle{A Subtitle}
-\stitle{an optional title for headers}
+\stitle{an alternative title for headers}
 \note{And a note}
 \email{you@yourweb.com}
 \author{Your Name}
@@ -33,7 +33,7 @@
 	\begin{itemize}
 		\item By default, pages are asymmetric and letter-sized, with margin sizes alternating between $[T,L,B,R]=[1.25, 1, 1, 1.6]$ (even) or [1.25, 1.6, 1, 1] (odd), in inches.
 		\begin{itemize}
-			\item To change to symmetric margins, with 1.25 inches on each side, using the \code{center} class option.
+			\item To change to symmetric margins, with 1.25 inches on each side, use the \code{center} class option.
 			\item Margins can be further customized using \code{geometry} package commands. 
 		\end{itemize}
 	\end{itemize} 
@@ -58,7 +58,7 @@
 	\end{itemize}
 	\subsection{Index of Definitions}
 	\begin{itemize}
-		\item Using the \code{index} class option, an link-able index of definitions will appear at the end of the document. "Index of Definitions" will also appear in the table of contents.
+		\item Using the \code{index} class option, a link-able index of definitions will appear at the end of the document. "Index of Definitions" will also appear in the table of contents.
 		\item One can customize the index's style by inspecting the \code{<document name>.ist} file.
 	\end{itemize}
 	\section{Headers}
@@ -150,8 +150,8 @@
 	\part{Customization}
 	\section{Extra Commands and Options}
 	\begin{itemize}
-		\item \readmedef{code} will generate the monospace font and color you see throughout this guide.
-		\item \readmedef{mtr} will allow one to place margin text in the smaller margin, normally reserved for labels.
+		\item \readmedef{code} will style text using monospace font and color seen throughout this guide.
+		\item \readmedef{mtr} will allow one to place margin text in the smaller margin.
 		\item The \code{linkpropthm} class option will unify theorem and proposition indexing. For example, if Part 1 contains one proposition followed by one theorem, they will be labeled Prop 1.1 and Theorem 1.2, respectively. Default behavior would index these as Prop 1.1 and Theorem 1.1.
 		\item \code{$\backslash\backslash$} is the default newline character. It is equivalent to \code{$\backslash$par$\backslash$vspace\{1.5ex\}$\backslash$noindent}.
 		\item \code{$\backslash$thecurpart} contains the name of the current part, without indexing. If one wishes to manually set how the part is displayed in the headers, one changes this macro.
@@ -161,8 +161,8 @@
 	$X$ is any any dvipsnames, x11names, or xcolor-supported color:
 	\begin{itemize}
 		\item The color of the theorem box is controlled using the command \code{$\backslash$theoremcolor\{$X$\}}.
-		\item Similarly, the color of page links, hyperlinks, and definitions hypertargets is controlled using \code{$\backslash$accentcolor\{$X$\}}.
-		\item The color of the code box, which has usage \readmedef{code}, is controlled using \code{$\backslash$codecolor\{$X$\}}.
+		\item Similarly, the color of page links, hyperlinks, and definition hypertargets is controlled using \code{$\backslash$accentcolor\{$X$\}}.
+		\item The color of the code text styling is controlled using \code{$\backslash$codecolor\{$X$\}}.
 	\end{itemize}
 	
 	
