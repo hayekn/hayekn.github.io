@@ -4,7 +4,8 @@
 \subtitle{A Subtitle}
 \stitle{an alternative title for headers}
 \note{And a note}
-\email{you@yourweb.com}
+\email{you@youremail.com}
+\website{www.google.com}
 \author{Your Name}
 \newcommand{\readmedef}[1]{\code{$\backslash$#1\{...\}}}
 \begin{document}
@@ -17,7 +18,7 @@
 		\code{index} & makes index of definitions\\
 		\code{center} & centered margins\\
 		\code{authhead} & author replaces part name on odd page headers\\
-		\code{copyright} & creates copyright at bottom of table of contents\\
+		\code{copyright} & creates copyright notice (with links) at bottom of table of contents\\
 		\code{labelbox} & all labels are placed in small, gray boxes\\
 		\code{linkpropthm} & propositions and theorems have unified indexing\\\hline
 	\end{tabular}
@@ -53,7 +54,8 @@
 		\item By default, the table of contents will display parts, sections, and subsections, with leaders on sections, and page numbers displayed for parts and sections.
 		\item To create a copyright notice, use the \code{copyright} class option. A notice will appear at the bottom of the table of contents, in the format \textcopyright \; <Year> \, <Author>.
 		\begin{itemize}
-			\item By defining \readmedef{email}, the notice will appear as \textcopyright \; <Year> \, <Author> \href{mailto:you@youremail.com}{\faEnvelope}, where the envelope is a link to your email.
+			\item By defining \readmedef{email}, \href{mailto:you@youremail.com}{\faEnvelope} will appear to the right of the notice, where the envelope is a link to your email.
+			\item By defining \readmedef{website},  \href{www.google.com}{\faGlobeAmericas} will appear to the right of the notice (and the email, if it exists), where the globe is a link to a website.
 		\end{itemize} 
 	\end{itemize}
 	\subsection{Index of Definitions}

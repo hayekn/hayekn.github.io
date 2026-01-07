@@ -74,7 +74,6 @@
 \RequirePackage{multirow}
 \RequirePackage{csquotes}
 \RequirePackage{epigraph}
-%\RequirePackage{fontawesome}
 \RequirePackage[fixed]{fontawesome5}
 \DeclareMathAlphabet{\bignum}{U}{BOONDOX-ds}{m}{n}
 \newcommand{\1}{\bignum{1}}
@@ -93,7 +92,9 @@
 
 %SECTION FORMATTING{
 \renewcommand{\@author}{}
+
 \newcommand{\email}[1]{\newcommand{\@email}{#1}}
+\newcommand{\website}[1]{\newcommand{\@website}{#1}}
 \newcommand{\subtitle}[1]{\newcommand{\@subtitle}{#1}}
 \newcommand{\subsubtitle}[1]{\newcommand{\@subsubtitle}{#1}}
 \renewcommand{\author}[1]{\renewcommand{\@author}{#1}}
@@ -184,6 +185,9 @@
 		\vspace{\fill}\\\textcopyright \;\the\year \,\@author\;
 			\ifthenelse{\isundefined{\@email}}{}{%
 				\href{mailto:\@email}{\faEnvelope[regular]}%
+			}%
+			\ifthenelse{\isundefined{\@website}}{}{%
+				\href{\@website}{\faGlobeAmericas}%
 			}%
 		}\restoregeometry%
 	%

@@ -14,10 +14,10 @@
 \contentsline {subsection}{Theorems and Examples}{5}{subsection*.14}%
 \contentsline {subsection}{Proofs}{6}{subsection*.15}%
 \contentsline {section}{Margin Text}{6}{section*.16}%
-\contentsline {section}{Labels}{6}{section*.17}%
-\contentsline {part}{\makebox [1.25em][l]{III} \hskip 1em\relax Customization}{6}{section*.18}%
-\contentsline {section}{Extra Commands and Options}{6}{section*.19}%
+\contentsline {section}{Labels}{7}{section*.17}%
+\contentsline {part}{\makebox [1.25em][l]{III} \hskip 1em\relax Customization}{7}{section*.18}%
+\contentsline {section}{Extra Commands and Options}{7}{section*.19}%
 \contentsline {section}{Colors}{7}{section*.20}%
 \contentsline {section}{Hidden Counters}{7}{section*.21}%
-\contentsline {section}{Miscellaneous}{7}{section*.22}%
+\contentsline {section}{Miscellaneous}{8}{section*.22}%
 \contentsline {part}{Index of Definitions}{}{section*.23}%
