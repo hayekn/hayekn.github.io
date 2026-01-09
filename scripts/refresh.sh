@@ -12,6 +12,7 @@ rm "$GITREPO/tex/$1/$2/$3"
 ln "$SCHOOLDOCS/$1/$2/$3"  "$GITREPO/tex/$1/$2/$3"
 
 cd $GITREPO
+git add -A
 git commit -am "refresh $3"
 git push origin main
 
