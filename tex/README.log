@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.27)  7 JAN 2026 14:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.27)  10 JAN 2026 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2388,7 +2388,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                replaced by space on input line 27.
 
 LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 30.
+(Font)              scaled to size 9.0pt on input line 40.
 
 
 Package microtype Info: Character `029' is missing
@@ -2405,32 +2405,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/sourcecodepro/a_lutrty.enc}
 ]
-Package marginnote Info: Margin note 4.1 is on absolute page 4 on input line 59
+Package marginnote Info: Margin note 4.1 is on absolute page 4 on input line 69
 .
 LaTeX Font Info:    Font shape `T1/SourceCodePro-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 59.
+(Font)              scaled to size 8.0pt on input line 69.
 
-Overfull \hbox (13.594pt too wide) in paragraph at lines 59--59
+Overfull \hbox (13.594pt too wide) in paragraph at lines 69--69
  []$\OMS/jkpw/m/n/8 n$\T1/SourceCodePro-TLF/m/n/8 date{2$$\OMS/jkpw/m/n/8 n$\T1
 /SourceCodePro-TLF/m/n/8 tilde{0}$26}[]
  []
 
-Package marginnote Info: xpos seems to be 519.47578pt on input line 59.
+Package marginnote Info: xpos seems to be 519.47578pt on input line 69.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 79.
+(hyperref)                removing `\@ifnextchar' on input line 89.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 79.
+(hyperref)                replaced by space on input line 89.
 
-Package marginnote Info: Margin note 4.2 is on absolute page 4 on input line 81
+Package marginnote Info: Margin note 4.2 is on absolute page 5 on input line 91
 .
-Package marginnote Info: xpos seems to be 429.1317pt on input line 81.
-Package marginnote Info: Margin note 4.3 is on absolute page 5 on input line 87
-.
-Package marginnote Info: xpos seems to be 238.40868pt on input line 87.
+Package marginnote Info: xpos seems to be 385.76926pt on input line 91.
 
 
 
@@ -2441,37 +2438,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [4]
-Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 93
+Package marginnote Info: Margin note 5.1 is on absolute page 5 on input line 97
 .
-Package marginnote Info: xpos seems to be 72.26999pt on input line 93.
-Package marginnote Info: Margin note 5.2 is on absolute page 5 on input line 93
-.
-Package marginnote Info: xpos seems to be 235.01538pt on input line 93.
-Package mdframed Info: mdframed works in twoside mode on input line 102.
+Package marginnote Info: xpos seems to be 238.40868pt on input line 97.
+Package marginnote Info: Margin note 5.2 is on absolute page 5 on input line 10
+3.
+Package marginnote Info: xpos seems to be 72.26999pt on input line 103.
+Package marginnote Info: Margin note 5.3 is on absolute page 5 on input line 10
+3.
+Package marginnote Info: xpos seems to be 235.01538pt on input line 103.
+Package mdframed Info: mdframed works in twoside mode on input line 112.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 102.
+(mdframed)              on input line 112.
 
 
 Package mdframed Warning: Unknown definedstyle dashed
  You have to define a style 
  via \mdfdefinedstyle
-(mdframed)                 on input line 105.
+(mdframed)                 on input line 115.
 
-Package mdframed Info: mdframed works in twoside mode on input line 105.
+Package mdframed Info: mdframed works in twoside mode on input line 115.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 105.
-
-Package mdframed Warning: Unknown definedstyle dashed
- You have to define a style 
- via \mdfdefinedstyle
-(mdframed)                 on input line 109.
-
-Package mdframed Info: mdframed works in twoside mode on input line 109.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 109.
+(mdframed)              on input line 115.
 
 
 
@@ -2483,73 +2473,72 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.en
 c}]
-Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 122.
+Package mdframed Info: Not enough space on this page on input line 118.
+
+
+Package mdframed Warning: Unknown definedstyle dashed
+ You have to define a style 
+ via \mdfdefinedstyle
+(mdframed)                 on input line 119.
+
+Package mdframed Info: mdframed works in twoside mode on input line 119.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 122.
-Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 12
+(mdframed)              on input line 119.
+Package mdframed Info: mdframed inside twoside mode but
+(mdframed)             works with oneside mode on input line 132.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 132.
+Package marginnote Info: Margin note 6.1 is on absolute page 6 on input line 13
 2.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 122.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 132.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 125.
+(mdframed)             works with oneside mode on input line 135.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 125.
-Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 12
+(mdframed)              on input line 135.
+Package marginnote Info: Margin note 6.2 is on absolute page 6 on input line 13
 5.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 125.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 135.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 128.
+(mdframed)             works with oneside mode on input line 138.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 128.
-Package marginnote Info: Margin note 6.3 is on absolute page 6 on input line 12
+(mdframed)              on input line 138.
+Package marginnote Info: Margin note 6.3 is on absolute page 6 on input line 13
 8.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 128.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 138.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 130.
+(mdframed)             works with oneside mode on input line 140.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 130.
-Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 13
+(mdframed)              on input line 140.
+Package marginnote Info: Margin note 6.4 is on absolute page 6 on input line 14
 1.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 131.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 141.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 133.
+(mdframed)             works with oneside mode on input line 143.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 133.
-Package marginnote Info: Margin note 6.5 is on absolute page 6 on input line 13
+(mdframed)              on input line 143.
+Package marginnote Info: Margin note 6.5 is on absolute page 6 on input line 14
 4.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 134.
+Package marginnote Info: xpos seems to be 125.63243pt on input line 144.
 Package mdframed Info: mdframed inside twoside mode but
-(mdframed)             works with oneside mode on input line 136.
+(mdframed)             works with oneside mode on input line 146.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 136.
-Package marginnote Info: Margin note 6.6 is on absolute page 6 on input line 13
+(mdframed)              on input line 146.
+Package marginnote Info: Margin note 6.6 is on absolute page 6 on input line 14
 7.
-Package marginnote Info: xpos seems to be 125.63243pt on input line 137.
-Package marginnote Info: Margin note 6.7 is on absolute page 6 on input line 14
+Package marginnote Info: xpos seems to be 125.63243pt on input line 147.
+Package marginnote Info: Margin note 6.7 is on absolute page 7 on input line 15
 1.
-Package marginnote Info: xpos seems to be 342.6941pt on input line 141.
-Package marginnote Info: Margin note 6.8 is on absolute page 6 on input line 14
+Package marginnote Info: xpos seems to be 299.33167pt on input line 151.
+Package marginnote Info: Margin note 6.8 is on absolute page 7 on input line 15
 2.
-Package marginnote Info: xpos seems to be 378.26776pt on input line 142.
-Package marginnote Info: Margin note 6.9 is on absolute page 7 on input line 14
-5.
-Package marginnote Info: xpos seems to be 428.72687pt on input line 145.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 146.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \hskip 10.95pt
-(hyperref)                replaced by space on input line 146.
-
+Package marginnote Info: xpos seems to be 334.90532pt on input line 152.
 
 
 
@@ -2560,9 +2549,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [6]
+Package marginnote Info: Margin note 7.1 is on absolute page 7 on input line 15
+5.
+Package marginnote Info: xpos seems to be 428.72687pt on input line 155.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 156.
+
 LaTeX Font Info:    Trying to load font information for U+BOONDOX-ds on input l
-ine 154.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/boondox/uboondox-ds.fd
+ine 164.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/boondox/uboondox-ds.fd
 File: uboondox-ds.fd 2011/04/26 Fontinst v1.933 font definitions for U/BOONDOX-
 ds.
 )
@@ -2575,42 +2577,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [7]
-Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 23
+Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 24
 0.
-Package marginnote Info: xpos seems to be 311.98064pt on input line 230.
-Package marginnote Info: Margin note 8.2 is on absolute page 8 on input line 23
+Package marginnote Info: xpos seems to be 311.98064pt on input line 240.
+Package marginnote Info: Margin note 8.2 is on absolute page 8 on input line 24
 0.
-Package marginnote Info: xpos seems to be 333.72249pt on input line 230.
-Package marginnote Info: Margin note 8.3 is on absolute page 8 on input line 23
+Package marginnote Info: xpos seems to be 333.72249pt on input line 240.
+Package marginnote Info: Margin note 8.3 is on absolute page 8 on input line 24
 0.
-Package marginnote Info: xpos seems to be 358.96718pt on input line 230.
-Package marginnote Info: Margin note 8.4 is on absolute page 8 on input line 23
+Package marginnote Info: xpos seems to be 358.96718pt on input line 240.
+Package marginnote Info: Margin note 8.4 is on absolute page 8 on input line 24
 0.
-Package marginnote Info: xpos seems to be 384.45282pt on input line 230.
-Package marginnote Info: Margin note 8.5 is on absolute page 8 on input line 23
+Package marginnote Info: xpos seems to be 384.45282pt on input line 240.
+Package marginnote Info: Margin note 8.5 is on absolute page 8 on input line 24
 0.
-Package marginnote Info: xpos seems to be 396.48314pt on input line 230.
-Package marginnote Info: Margin note 8.6 is on absolute page 8 on input line 23
+Package marginnote Info: xpos seems to be 396.48314pt on input line 240.
+Package marginnote Info: Margin note 8.6 is on absolute page 8 on input line 24
 0.
-Package marginnote Info: xpos seems to be 415.83197pt on input line 230.
-Package marginnote Info: Margin note 8.7 is on absolute page 8 on input line 23
+Package marginnote Info: xpos seems to be 415.83197pt on input line 240.
+Package marginnote Info: Margin note 8.7 is on absolute page 8 on input line 24
 0.
-Package marginnote Info: xpos seems to be 456.09547pt on input line 230.
-Package marginnote Info: Margin note 8.8 is on absolute page 8 on input line 23
+Package marginnote Info: xpos seems to be 456.09547pt on input line 240.
+Package marginnote Info: Margin note 8.8 is on absolute page 8 on input line 24
 0.
-Package marginnote Info: xpos seems to be 466.14055pt on input line 230.
-Package marginnote Info: Margin note 8.9 is on absolute page 8 on input line 23
+Package marginnote Info: xpos seems to be 466.14055pt on input line 240.
+Package marginnote Info: Margin note 8.9 is on absolute page 8 on input line 24
 0.
-Package marginnote Info: xpos seems to be 474.10382pt on input line 230.
+Package marginnote Info: xpos seems to be 474.10382pt on input line 240.
 Package marginnote Info: Margin note 8.10 is on absolute page 8 on input line 2
-30.
-Package marginnote Info: xpos seems to be 495.19109pt on input line 230.
+40.
+Package marginnote Info: xpos seems to be 495.19109pt on input line 240.
 Package marginnote Info: Margin note 8.11 is on absolute page 8 on input line 2
-30.
-Package marginnote Info: xpos seems to be 541.22786pt on input line 230.
+40.
+Package marginnote Info: xpos seems to be 541.22786pt on input line 240.
 Package marginnote Info: Margin note 8.12 is on absolute page 8 on input line 2
-31.
-Package marginnote Info: xpos seems to be 143.00749pt on input line 231.
+41.
+Package marginnote Info: xpos seems to be 143.00749pt on input line 241.
 
 
 
@@ -2630,7 +2632,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.232 \end{document}
+l.242 \end{document}
                      [1
 
 
@@ -2644,11 +2646,11 @@ Package rerunfilecheck Info: File `README.out' has not changed.
 (rerunfilecheck)             Checksum: 70B26D4B82D28C539DF3E00E718AFB8C;3099.
  ) 
 Here is how much of TeX's memory you used:
- 47138 strings out of 473207
- 1051624 string characters out of 5716282
- 1610996 words of memory out of 5000000
- 69115 multiletter control sequences out of 15000+600000
- 809694 words of font info for 425 fonts, out of 8000000 for 9000
+ 47165 strings out of 473207
+ 1052075 string characters out of 5716282
+ 1614996 words of memory out of 5000000
+ 69128 multiletter control sequences out of 15000+600000
+ 821780 words of font info for 436 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,13n,121p,1003b,1138s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/fontawesome5/FontAweso
@@ -2667,10 +2669,10 @@ type1/public/kpfonts/jkpmn8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
 lic/kpfonts/jkpmsc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /kpfonts/jkpsy.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/boond
 ox/zxxrl8a.pfb>
-Output written on README.pdf (9 pages, 325293 bytes).
+Output written on README.pdf (9 pages, 326392 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 133834 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 262 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
+ 138954 words of extra memory for PDF output out of 154059 (max. 10000000)
 

@@ -27,6 +27,16 @@
 	\part{Document Setup}
 	\section{Requirements}
 	\begin{itemize}
+		\item There are two ways to make this package recognizable by your computer:
+		\begin{enumerate}
+				\item Place \code{hayektex.cls} in the same folder as your \code{.tex} project. You will be able to load the class on this project only.
+				\item 
+					For Windows users, create or locate the directory
+					$$\code{Users/<You>/texmf/tex/latex/local}$$
+					For Mac users, create or locate the directory
+					$$\code{Users/<You>/Library/texmf/tex/latex/local}$$
+					Place \code{hayektex.cls} in the \code{local} folder. \code{<You>} should be able to load the class from anywhere on your computer. Check out \href{https://tex.stackexchange.com/}{the Tex stack exchange} for help. 
+		\end{enumerate}
 		\item The document class is loaded using \code{$\backslash$documentclass[\textit{options}]\{hayektex\}}.
 		\item You must declare a title using \readmedef{title}, even if you do not print a title page.
 	\end{itemize}
