@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.27)  10 JAN 2026 16:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.27)  11 JAN 2026 00:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2228,7 +2228,7 @@ Package hyperref Info: Link coloring ON on input line 12.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<pic.jpg, id=99, 1410.0178pt x 697.8572pt>
+<pic.jpg, id=96, 1410.0178pt x 697.8572pt>
 File: pic.jpg Graphic file (type jpg)
 <use pic.jpg>
 Package pdftex.def Info: pic.jpg  used on input line 12.
@@ -2462,6 +2462,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 115.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 115.
+Package mdframed Info: Not enough space on this page on input line 118.
 
 
 
@@ -2563,7 +2564,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                replaced by space on input line 156.
 
 LaTeX Font Info:    Trying to load font information for U+BOONDOX-ds on input l
-ine 164.
+ine 165.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/boondox/uboondox-ds.fd
 File: uboondox-ds.fd 2011/04/26 Fontinst v1.933 font definitions for U/BOONDOX-
 ds.
@@ -2578,41 +2579,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7]
 Package marginnote Info: Margin note 8.1 is on absolute page 8 on input line 24
-0.
-Package marginnote Info: xpos seems to be 311.98064pt on input line 240.
+1.
+Package marginnote Info: xpos seems to be 311.98064pt on input line 241.
 Package marginnote Info: Margin note 8.2 is on absolute page 8 on input line 24
-0.
-Package marginnote Info: xpos seems to be 333.72249pt on input line 240.
+1.
+Package marginnote Info: xpos seems to be 333.72249pt on input line 241.
 Package marginnote Info: Margin note 8.3 is on absolute page 8 on input line 24
-0.
-Package marginnote Info: xpos seems to be 358.96718pt on input line 240.
+1.
+Package marginnote Info: xpos seems to be 358.96718pt on input line 241.
 Package marginnote Info: Margin note 8.4 is on absolute page 8 on input line 24
-0.
-Package marginnote Info: xpos seems to be 384.45282pt on input line 240.
+1.
+Package marginnote Info: xpos seems to be 384.45282pt on input line 241.
 Package marginnote Info: Margin note 8.5 is on absolute page 8 on input line 24
-0.
-Package marginnote Info: xpos seems to be 396.48314pt on input line 240.
+1.
+Package marginnote Info: xpos seems to be 396.48314pt on input line 241.
 Package marginnote Info: Margin note 8.6 is on absolute page 8 on input line 24
-0.
-Package marginnote Info: xpos seems to be 415.83197pt on input line 240.
+1.
+Package marginnote Info: xpos seems to be 415.83197pt on input line 241.
 Package marginnote Info: Margin note 8.7 is on absolute page 8 on input line 24
-0.
-Package marginnote Info: xpos seems to be 456.09547pt on input line 240.
+1.
+Package marginnote Info: xpos seems to be 456.09547pt on input line 241.
 Package marginnote Info: Margin note 8.8 is on absolute page 8 on input line 24
-0.
-Package marginnote Info: xpos seems to be 466.14055pt on input line 240.
+1.
+Package marginnote Info: xpos seems to be 466.14055pt on input line 241.
 Package marginnote Info: Margin note 8.9 is on absolute page 8 on input line 24
-0.
-Package marginnote Info: xpos seems to be 474.10382pt on input line 240.
+1.
+Package marginnote Info: xpos seems to be 474.10382pt on input line 241.
 Package marginnote Info: Margin note 8.10 is on absolute page 8 on input line 2
-40.
-Package marginnote Info: xpos seems to be 495.19109pt on input line 240.
-Package marginnote Info: Margin note 8.11 is on absolute page 8 on input line 2
-40.
-Package marginnote Info: xpos seems to be 541.22786pt on input line 240.
-Package marginnote Info: Margin note 8.12 is on absolute page 8 on input line 2
 41.
-Package marginnote Info: xpos seems to be 143.00749pt on input line 241.
+Package marginnote Info: xpos seems to be 495.19109pt on input line 241.
+Package marginnote Info: Margin note 8.11 is on absolute page 8 on input line 2
+41.
+Package marginnote Info: xpos seems to be 541.22786pt on input line 241.
+Package marginnote Info: Margin note 8.12 is on absolute page 8 on input line 2
+42.
+Package marginnote Info: xpos seems to be 143.00749pt on input line 242.
 
 
 
@@ -2632,7 +2633,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.242 \end{document}
+l.243 \end{document}
                      [1
 
 
@@ -2643,13 +2644,13 @@ LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
 Package rerunfilecheck Info: File `README.out' has not changed.
-(rerunfilecheck)             Checksum: 70B26D4B82D28C539DF3E00E718AFB8C;3099.
+(rerunfilecheck)             Checksum: B8899410D6A00D971DBBAE1268AAC1AB;3068.
  ) 
 Here is how much of TeX's memory you used:
- 47165 strings out of 473207
- 1052075 string characters out of 5716282
- 1614996 words of memory out of 5000000
- 69128 multiletter control sequences out of 15000+600000
+ 47161 strings out of 473207
+ 1052023 string characters out of 5716282
+ 1614093 words of memory out of 5000000
+ 69127 multiletter control sequences out of 15000+600000
  821780 words of font info for 436 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,13n,121p,1003b,1138s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2669,10 +2670,10 @@ type1/public/kpfonts/jkpmn8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type
 lic/kpfonts/jkpmsc8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /kpfonts/jkpsy.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/boond
 ox/zxxrl8a.pfb>
-Output written on README.pdf (9 pages, 326392 bytes).
+Output written on README.pdf (9 pages, 326589 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 262 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
+ 303 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
  138954 words of extra memory for PDF output out of 154059 (max. 10000000)
 

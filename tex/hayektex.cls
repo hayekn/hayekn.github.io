@@ -87,7 +87,7 @@
 \RequirePackage{marginnote}
 \usepackage[color=none, linecolor=none, bordercolor=none]{todonotes}
 \RequirePackage{imakeidx}
-\RequirePackage[colorlinks,linkcolor=\@accentcolor,urlcolor=\@accentcolor,citecolor=black]{hyperref}
+\RequirePackage[colorlinks, citecolor=black]{hyperref}
 %}
 
 %SECTION FORMATTING{
@@ -112,8 +112,17 @@
 \newcounter{partNum}
 
 \newcommand{\thecurpart}{}
+
 \let\oldpart\part
-\renewcommand{\part}[1]{\stepcounter{partNum}\oldpart{\makebox[1.25em][l]{\Roman{partNum}} \quad #1}\renewcommand{\thecurpart}{#1}}
+\renewcommand{\part}{\@ifstar{\@starpart}{\@nostarpart}}
+\newcommand{\@nostarpart}[1]{%
+		\stepcounter{partNum}\addcontentsline{toc}{part}{\makebox[1.25em][l]{\Roman{partNum}}\quad#1}{\\\vspace{3pt}\huge\bfseries\makebox[1.25em][l]{\Roman{partNum}}\quad#1}%
+		\renewcommand{\thecurpart}{#1}
+}
+\newcommand{\@starpart}[1]{%
+		\stepcounter{partNum}\addcontentsline{toc}{part}{#1}{\\\vspace{3pt}\huge\bfseries#1}%
+		\renewcommand{\thecurpart}{#1}
+}
 
 
 \renewcommand{\cftsecfont}{}
@@ -172,12 +181,13 @@
 	\renewcommand{\cftpartpagefont}{\Large\bfseries}
 	\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 	\renewcommand{\cftsecpagefont}{\normalfont}
-	\renewcommand{\cftsecindent}{2.75em}
+	\renewcommand{\cftsecindent}{2.5em}
 	\renewcommand{\cftsubsecleader}{\hfill}
 	\renewcommand{\cftsubsecpagefont}{\hphantom}
 	\renewcommand{\cftsubsecfont}{\small\itshape}
-	\renewcommand{\cftsubsecindent}{3.5em}
+	\renewcommand{\cftsubsecindent}{3.25em}
 	\setlength{\cftbeforesecskip}{.6em}
+	\hypersetup{linkcolor=\@accentcolor,urlcolor=\@accentcolor}
 	%
 	\ifthenelse{\isundefined{\@titpage}}{}{\maketitle\stepcounter{frontpages}}
 	\ifthenelse{\isundefined{\@toc}}{}{%
