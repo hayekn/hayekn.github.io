@@ -32,6 +32,11 @@
     src: url(Comic\ Sans\ MS.ttf);
 }
 
+@font-face{
+    font-family: Curta;
+    src: url(curta.ttf)
+}
+
 
 * {
     overflow-wrap: normal;
@@ -163,4 +168,17 @@ li{
     h3{
         font-weight: normal;
     }
+}
+
+.curta-btn {
+  display: inline-block;              /* allows sizing */
+  width: 75px;                  
+  height: 28px;
+
+  background-image: url("../images/curta.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;           
+background-clip: padding-box !important;
+  cursor: pointer;
 }
