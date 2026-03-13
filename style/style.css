@@ -37,6 +37,11 @@
     src: url(curta.ttf)
 }
 
+@font-face{
+    font-family: DM Mono;
+    src: url(DMMono-Regular.ttf)
+}
+
 
 * {
     overflow-wrap: normal;
