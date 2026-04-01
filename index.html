@@ -412,10 +412,33 @@ name.split('').forEach((char, i) => {
         </a>
     </div>
     <div style="margin-top: 5rem;"></div>
-    <p>
-    During my years at McGill, I've had the pleasure to work with <a href="https://www.math.mcgill.ca/darmon/" class="inline" target="_blank">Henri Darmon</a> on my <a href="https://nicholashayek.com/tex/MATH/470/470report.pdf" class="inline" target="_blank">undergraduate thesis</a>, and to interact with 
-    </p>
-    <div style="margin-top: 5rem;"></div>
+
+    <div id="collapsible-line" class="collapsible-line">
+        <img id="toggle-arrow" class="arrow" style="padding: 0;" src="images/arrow-circle-right-solid.svg" width="20px">
+        <span class="arrow" style="transform:translateY(.1rem); font-size: 1.15rem;">&nbsp;Friends, etc.</span>
+    </div>
+    <div class="button-group hidden" id="button-group">
+        Some of my friends have websites: check out <a href="https://louismeunier.net/" class="inline" target="_blank">Louis Meunier</a>,  <a href="https://elizabethvanoorschot.ca/" class="inline" target="_blank">Liz van Oorschot</a>, and <a href="https://maxliamgross.com/" class="inline" target="_blank">Max Gross</a>. I've also had the pleasure to work with <a href="https://www.math.mcgill.ca/darmon/" class="inline" target="_blank">Henri Darmon</a> on my <a href="https://nicholashayek.com/tex/MATH/470/470report.pdf" class="inline" target="_blank">undergraduate thesis</a>. 
+    </div>
+    <script>
+        document.querySelectorAll(".collapsible-line").forEach(line => {
+        line.addEventListener("click", () => {
+        const buttonGroup = line.nextElementSibling;
+        const arrows = line.querySelectorAll(".arrow");
+
+        const isHidden = buttonGroup.classList.contains("hidden");
+
+        buttonGroup.classList.toggle("hidden");
+        buttonGroup.classList.toggle("show", isHidden);
+
+        arrows.forEach(arrow => {
+            arrow.classList.toggle("collapsed", isHidden);
+        });
+        });
+    });
+    </script>
+    
+    <div style="margin-top: 1rem;"></div>
     <p class="buttonrow">
         <a href="https://www.instagram.com/nicholas_hayek/" style="border: none;"  target="_blank"><img src="images/insta.svg" width="30vw"></a>
 
